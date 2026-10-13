@@ -17,6 +17,7 @@ authors:
     affiliation: "CIAD UR 7533, UTBM"
 license: MIT
 version: "1.0.0"
+doi: "10.5281/zenodo.23344151"
 date-released: "2026-10-13"
 preferred-citation:
   type: article
