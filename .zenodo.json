@@ -4,11 +4,35 @@
   "upload_type": "software",
   "license": "MIT",
   "creators": [
-    {"name": "Kumar, Narendar", "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)", "orcid": "0009-0005-7765-7072"},
-    {"name": "Mualla, Yazan", "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)"},
-    {"name": "Hilaire, Vincent", "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)"},
-    {"name": "Galland, Stéphane", "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)"}
+    {
+      "name": "Kumar, Narendar",
+      "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)",
+      "orcid": "0009-0005-7765-7072"
+    },
+    {
+      "name": "Mualla, Yazan",
+      "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)",
+      "orcid": "0000-0002-6772-6135"
+    },
+    {
+      "name": "Hilaire, Vincent",
+      "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)",
+      "orcid": "0000-0003-2725-7140"
+    },
+    {
+      "name": "Galland, Stéphane",
+      "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)",
+      "orcid": "0000-0002-1559-7861"
+    }
   ],
-  "keywords": ["Minimum Sufficient Transparency", "multi-agent systems", "explainability", "trust calibration", "human oversight", "privacy", "SARL"],
+  "keywords": [
+    "Minimum Sufficient Transparency",
+    "multi-agent systems",
+    "explainability",
+    "trust calibration",
+    "human oversight",
+    "privacy",
+    "SARL"
+  ],
   "language": "eng"
 }

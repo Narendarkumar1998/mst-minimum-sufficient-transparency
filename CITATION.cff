@@ -9,12 +9,15 @@ authors:
   - family-names: Mualla
     given-names: Yazan
     affiliation: "CIAD UR 7533, UTBM"
+    orcid: "https://orcid.org/0000-0002-6772-6135"
   - family-names: Hilaire
     given-names: Vincent
     affiliation: "CIAD UR 7533, UTBM"
+    orcid: "https://orcid.org/0000-0003-2725-7140"
   - family-names: Galland
     given-names: Stéphane
     affiliation: "CIAD UR 7533, UTBM"
+    orcid: "https://orcid.org/0000-0002-1559-7861"
 license: MIT
 version: "1.0.0"
 doi: "10.5281/zenodo.23344151"
