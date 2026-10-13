@@ -1,0 +1,14 @@
+{
+  "title": "Minimum Sufficient Transparency (MST): code and data",
+  "description": "Code and data for the article \"Enough, but No More: Minimum Sufficient Transparency for Human Oversight of Multi-Agent Systems\" (submitted to Autonomous Agents and Multi-Agent Systems). Includes the Python implementation of Exact-MST, Dynamic Greedy-MST and Progressive-MST, the frozen benchmark results, analysis notebooks, summary tables, figures, and the SARL multi-agent execution.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {"name": "Kumar, Narendar", "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)", "orcid": "0009-0005-7765-7072"},
+    {"name": "Mualla, Yazan", "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)"},
+    {"name": "Hilaire, Vincent", "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)"},
+    {"name": "Galland, Stéphane", "affiliation": "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)"}
+  ],
+  "keywords": ["Minimum Sufficient Transparency", "multi-agent systems", "explainability", "trust calibration", "human oversight", "privacy", "SARL"],
+  "language": "eng"
+}
