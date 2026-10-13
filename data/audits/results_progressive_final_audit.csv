@@ -1,0 +1,7 @@
+check,failed_rows,passed
+authoritative_module_imported,0,True
+required_progressive_functions_exist,0,True
+direct_sequence_properties,0,True
+normalized_cognitive_cost,0,True
+stored_property_flags,0,True
+implementation_source_checks,3,False

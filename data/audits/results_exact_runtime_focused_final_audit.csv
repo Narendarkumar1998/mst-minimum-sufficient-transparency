@@ -1,0 +1,5 @@
+check,failed_rows,passed
+structural_integrity,0,True
+all_instance_runtime_values_finite_positive,0,True
+stored_instance_timing_identities,0,True
+bootstrap_groups_have_5000_replicates,0,True

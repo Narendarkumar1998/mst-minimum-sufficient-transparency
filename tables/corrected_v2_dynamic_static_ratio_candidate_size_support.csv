@@ -1,0 +1,6 @@
+n_items,matched_groups,comparable_rows_per_algorithm,minimum_comparable_rows_per_group,maximum_comparable_rows_per_group
+8,100,4596,36,48
+10,100,4788,36,48
+12,100,4800,48,48
+14,100,4800,48,48
+16,100,4800,48,48

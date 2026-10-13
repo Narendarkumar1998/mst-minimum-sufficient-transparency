@@ -1,0 +1,11 @@
+# The core module (mst/mst_core.py) uses only the Python standard library.
+# The packages below reproduce the analysis environment used for the paper.
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.14.1
+matplotlib==3.9.0
+scikit-learn==1.6.0
+psutil==5.9.8
+jupyterlab==4.1.8
+notebook==7.1.3
+ipykernel==6.29.4

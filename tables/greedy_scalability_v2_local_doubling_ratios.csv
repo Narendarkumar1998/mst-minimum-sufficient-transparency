@@ -1,0 +1,5 @@
+smaller_size,larger_size,doubling_contrast,smaller_median_runtime_milliseconds,larger_median_runtime_milliseconds,observed_runtime_ratio,ci_95_lower,ci_95_upper,bootstrap_replicates,resampling_design
+16,32,M=32 / M=16,0.43162502697662497,2.2693750215693496,5.257746608127637,4.7209307503271205,5.6567638477534095,5000,independent matched-group resampling within candidate size
+32,64,M=64 / M=32,2.2693750215693496,6.000624969601576,2.644175119831865,2.506532340867829,2.7624506643584885,5000,independent matched-group resampling within candidate size
+64,128,M=128 / M=64,6.000624969601576,19.89347502239975,3.315233850336862,3.2067479044202223,3.5249033805698695,5000,independent matched-group resampling within candidate size
+128,256,M=256 / M=128,19.89347502239975,63.38922498980533,3.1864329846057577,3.0338888336459933,3.3031995469968223,5000,independent matched-group resampling within candidate size

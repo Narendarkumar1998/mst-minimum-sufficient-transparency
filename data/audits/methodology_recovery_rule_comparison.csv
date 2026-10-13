@@ -1,0 +1,8 @@
+candidate_rule,eligible_rows,stored_positive_rows,predicted_positive_rows,mismatch_count
+direct_cost_equality,95136,30726,28394,2332
+direct_zero_gap,95136,30726,30726,0
+abs_diff_le_1e-12,95136,30726,30726,0
+abs_diff_le_1e-10,95136,30726,30726,0
+abs_diff_le_1e-09,95136,30726,30726,0
+abs_diff_le_1e-08,95136,30726,30726,0
+abs_diff_le_1e-06,95136,30726,30729,3

@@ -1,0 +1,6 @@
+n_items,matched_groups,regime_specific_instances,condition_rows,feasible_rows,regimes,thresholds,weight_profiles,feasibility_percent
+16,100,300,4800,4800,3,4,4,100.0
+32,100,300,4800,4800,3,4,4,100.0
+64,100,300,4800,4800,3,4,4,100.0
+128,100,300,4800,4800,3,4,4,100.0
+256,100,300,4800,4800,3,4,4,100.0

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the article below."
+title: "Minimum Sufficient Transparency: code and data"
+authors:
+  - family-names: Kumar
+    given-names: Narendar
+    affiliation: "CIAD UR 7533, Université de Technologie de Belfort-Montbéliard (UTBM)"
+    orcid: "https://orcid.org/0009-0005-7765-7072"
+  - family-names: Mualla
+    given-names: Yazan
+    affiliation: "CIAD UR 7533, UTBM"
+  - family-names: Hilaire
+    given-names: Vincent
+    affiliation: "CIAD UR 7533, UTBM"
+  - family-names: Galland
+    given-names: Stéphane
+    affiliation: "CIAD UR 7533, UTBM"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-13"
+preferred-citation:
+  type: article
+  title: "Enough, but No More: Minimum Sufficient Transparency for Human Oversight of Multi-Agent Systems"
+  authors:
+    - family-names: Kumar
+      given-names: Narendar
+    - family-names: Mualla
+      given-names: Yazan
+    - family-names: Hilaire
+      given-names: Vincent
+    - family-names: Galland
+      given-names: Stéphane
+  journal: "Autonomous Agents and Multi-Agent Systems"
+  status: submitted
+  year: 2026

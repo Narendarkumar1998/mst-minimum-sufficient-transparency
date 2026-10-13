@@ -1,0 +1,58 @@
+package org.mst.sarl.agents
+
+/** Emitted by a role agent once it is initialized. */
+event RoleReady {
+	public val role : String
+
+	new (role : String) {
+		this.role = role
+	}
+}
+
+/** Emitted by the coordinator to request an MST selection for one scenario and threshold. */
+event MSTRequest {
+	public val scenario : String
+	public val tau : double
+
+	new (scenario : String, tau : double) {
+		this.scenario = scenario
+		this.tau = tau
+	}
+}
+
+/** Emitted by a role agent with the MST selection for its role. */
+event MSTResponse {
+	public val role : String
+	public val scenario : String
+	public val tau : double
+	public val status : String
+	public val selectedItems : java.util.List<String>
+	public val utility : double
+	public val privacyExposure : double
+	public val interpretationCost : double
+	public val objective : double
+	public val sufficient : boolean
+	public val privacyAdmissible : boolean
+	public val minimal : boolean
+
+	new (role : String, scenario : String, tau : double, status : String,
+		selectedItems : java.util.List<String>, utility : double, privacyExposure : double,
+		interpretationCost : double, objective : double, sufficient : boolean,
+		privacyAdmissible : boolean, minimal : boolean) {
+		this.role = role
+		this.scenario = scenario
+		this.tau = tau
+		this.status = status
+		this.selectedItems = selectedItems
+		this.utility = utility
+		this.privacyExposure = privacyExposure
+		this.interpretationCost = interpretationCost
+		this.objective = objective
+		this.sufficient = sufficient
+		this.privacyAdmissible = privacyAdmissible
+		this.minimal = minimal
+	}
+}
+
+/** Emitted by the coordinator to stop all role agents. */
+event StopRoles

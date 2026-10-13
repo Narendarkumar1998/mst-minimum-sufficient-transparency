@@ -1,0 +1,17 @@
+metric,maximum_residual,failed_rows
+matched_groups,0.0,0
+regime_specific_instances,0.0,0
+condition_rows,0.0,0
+feasible_rows,0.0,0
+median_runtime_seconds,5.0306980803327406e-17,0
+q25_runtime_seconds,7.502679033599691e-17,0
+q75_runtime_seconds,7.502679033599691e-17,0
+p90_runtime_seconds,6.982261990806649e-17,0
+p95_runtime_seconds,3.9898639947466563e-17,0
+mean_selected_count,0.0,0
+median_runtime_milliseconds,7.460698725481052e-14,0
+q25_runtime_milliseconds,7.105427357601002e-14,0
+q75_runtime_milliseconds,9.414691248821327e-14,0
+p90_runtime_milliseconds,7.749356711883593e-14,0
+p95_runtime_milliseconds,6.039613253960852e-14,0
+feasibility_percent,0.0,0

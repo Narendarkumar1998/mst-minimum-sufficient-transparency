@@ -1,0 +1,4 @@
+identity,rows_checked,maximum_residual,failed_rows_at_1e_minus_12
+instance total exact = precomputation + cached exact,1500,8.881784197001252e-16,0
+cached exact mean per condition,1500,9.540979117872439e-17,0
+greedy mean per condition,1500,9.389190813724468e-17,0

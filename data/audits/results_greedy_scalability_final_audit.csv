@@ -1,0 +1,9 @@
+check,failed_rows,passed
+raw_integrity,0,True
+row_runtime_table_reconstructed,0,True
+matched_group_file_reconstructed,0,True
+matched_group_size_table_reconstructed,0,True
+compactness_table_reconstructed,0,True
+power_law_point_estimates,4,False
+power_law_intervals,0,True
+local_doubling_ratios,0,True

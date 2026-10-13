@@ -1,0 +1,4 @@
+file,rows,duplicate_complete_rows,columns_with_missing_values
+long_form,96000,0,5
+descriptive,24,0,0
+bootstrap,60000,0,0

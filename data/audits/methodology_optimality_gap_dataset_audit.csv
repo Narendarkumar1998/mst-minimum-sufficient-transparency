@@ -1,0 +1,13 @@
+relative_path,total_rows,defined_gap_rows,finite_gap_rows,mean_gap_percent,median_gap_percent,maximum_gap_percent,minimum_gap_percent,algorithm_values,benchmark_versions,has_failure_mechanism,has_matched_group_id,has_exact_recovery_flag
+05_Results\corrected_v2_algorithm_comparison_long.csv,96000,95136,95136,12.782220419079753,4.71137986043405,215.0462854337934,0.0,dynamic_greedy | lowest_cost_first | static_utility_cost_ratio | utility_first,benchmark_version=corrected_v2_deterministic_baselines|corrected_v2_existing_dynamic_greedy,False,True,True
+05_Results\coverage_exact_vs_greedy_main_benchmark_v1_pool_normalized.csv,24000,24000,24000,7.92187599099516,2.4520220073749917,99.29770694033728,0.0,,benchmark_version=coverage_pool_normalized_exact_greedy_v1,False,True,False
+05_Results\exact_vs_greedy_main_benchmark.csv,24000,23708,23708,4.874784605306419,0.7729618060682832,58.27360591395914,-5.70225870437207e-14,,,False,False,False
+05_Results\exact_vs_greedy_main_benchmark_analysis_ready.csv,24000,23708,23708,4.874784605306419,0.7729618060682832,58.27360591395914,-5.70225870437207e-14,,,False,False,False
+05_Results\exact_vs_greedy_main_benchmark_checkpoint.csv,24000,23708,23708,4.874784605306419,0.7729618060682832,58.27360591395914,-5.70225870437207e-14,,,False,False,False
+05_Results\exact_vs_greedy_main_benchmark_v2_marginal_preserving.csv,24000,23784,23784,6.1191113551296565,1.744201217956061,65.76981986997345,-6.062663207393976e-14,,generator_version=marginal_preserving_v2,False,True,False
+05_Results\exact_vs_greedy_main_benchmark_v2_marginal_preserving_analysis_ready.csv,24000,23784,23784,6.119111355129657,1.744201217956061,65.76981986997345,0.0,,generator_version=marginal_preserving_v2,False,True,False
+05_Results\exact_vs_greedy_main_benchmark_v2_marginal_preserving_checkpoint.csv,24000,23784,23784,6.1191113551296565,1.744201217956061,65.76981986997345,-6.062663207393976e-14,,generator_version=marginal_preserving_v2,False,True,False
+05_Results\corrected_v2_greedy_failure_mechanism_rows.csv,23784,23784,23784,6.119111355129657,1.744201217956061,65.76981986997345,0.0,,generator_version=marginal_preserving_v2,True,True,False
+05_Results\coverage_exact_vs_greedy_smoke_test.csv,48,48,48,10.628588162573456,8.454502307415446,35.32116506386029,0.0,,benchmark_version=coverage_pool_normalized_smoke_test_v1,False,False,False
+05_Results\coverage_extreme_optimality_gap_rows.csv,20,20,20,68.33949594449342,66.80441982772436,99.29770694033728,58.87024996719406,,,True,True,False
+05_Results\exact_vs_greedy_counterexample.csv,2,2,2,2.72727272727273,2.72727272727273,5.45454545454546,0.0,,,False,False,False

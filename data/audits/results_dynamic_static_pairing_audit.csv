@@ -1,0 +1,6 @@
+measure,value
+dynamic_static_rows,48000
+unique_pairing_conditions,24000
+conditions_with_both_algorithms,24000
+conditions_missing_one_algorithm,0
+unique_matched_groups,500

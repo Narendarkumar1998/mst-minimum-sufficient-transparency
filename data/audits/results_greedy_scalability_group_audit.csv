@@ -1,0 +1,10 @@
+metric,maximum_residual,failed_rows
+condition_rows,0.0,0
+regime_specific_instances,0.0,0
+median_runtime_seconds,9.996344030316351e-17,0
+mean_runtime_seconds,9.80118763926896e-17,0
+p90_runtime_seconds,9.974659986866641e-17,0
+p95_runtime_seconds,9.974659986866641e-17,0
+mean_selected_count,4.440892098500626e-16,0
+median_selected_count,0.0,0
+maximum_selected_count,0.0,0

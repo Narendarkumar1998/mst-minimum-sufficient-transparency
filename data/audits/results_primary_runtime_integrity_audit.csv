@@ -1,0 +1,8 @@
+check,observed,expected,pass
+primary_rows,24000,24000,True
+exact_status_OPTIMAL,24000,24000,True
+greedy_status_FEASIBLE,24000,24000,True
+finite_exact_runtime,24000,24000,True
+finite_greedy_runtime,24000,24000,True
+positive_exact_runtime,24000,24000,True
+positive_greedy_runtime,24000,24000,True

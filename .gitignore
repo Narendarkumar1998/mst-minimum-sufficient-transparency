@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+# SARL / Maven build output
+sarl/**/target/
+sarl/**/.classpath
+sarl/**/.project
+sarl/**/.settings/

@@ -1,0 +1,17 @@
+failure_mechanism,difference_measure,definition,rows,mean_difference,median_difference,p90_difference,minimum_difference,maximum_difference
+identical_subset,privacy_difference,greedy_privacy minus exact_privacy,9372,7.004047837277249e-19,0.0,8.326672684688674e-17,-2.7755575615628914e-16,2.220446049250313e-16
+identical_subset,cognitive_difference,greedy_normalized_cognitive_cost minus exact_normalized_cognitive_cost,9372,0.0,0.0,0.0,0.0,0.0
+identical_subset,cardinality_fraction_difference,greedy_selected_count / n_items minus exact_selected_count / n_items,9372,0.0,0.0,0.0,0.0,0.0
+identical_subset,absolute_objective_difference,greedy_disclosure_cost minus exact_disclosure_cost,9372,4.027697699237657e-19,0.0,0.0,-2.220446049250313e-16,2.220446049250313e-16
+same_count_different_items,privacy_difference,greedy_privacy minus exact_privacy,9273,0.02806165343567692,0.02548920916460401,0.08010970646385743,-0.16914446463602112,0.21207723020229696
+same_count_different_items,cognitive_difference,greedy_normalized_cognitive_cost minus exact_normalized_cognitive_cost,9273,0.02062415184092826,0.017813979459404827,0.06964762752300938,-0.16225956890485052,0.2694472956413845
+same_count_different_items,cardinality_fraction_difference,greedy_selected_count / n_items minus exact_selected_count / n_items,9273,0.0,0.0,0.0,0.0,0.0
+same_count_different_items,absolute_objective_difference,greedy_disclosure_cost minus exact_disclosure_cost,9273,0.014934513451137825,0.011430794033767067,0.032017292662105075,6.851821716113982e-07,0.10579194518101187
+greedy_more_items,privacy_difference,greedy_privacy minus exact_privacy,5125,0.03966609662359244,0.041060005731890614,0.09092998061796542,-0.21333856788250494,0.29725572095515307
+greedy_more_items,cognitive_difference,greedy_normalized_cognitive_cost minus exact_normalized_cognitive_cost,5125,0.05286658156045447,0.0521729520656794,0.10479917255538128,-0.13349073326163668,0.25126031627905066
+greedy_more_items,cardinality_fraction_difference,greedy_selected_count / n_items minus exact_selected_count / n_items,5125,0.08805342624854819,0.08333333333333333,0.125,0.0625,0.25
+greedy_more_items,absolute_objective_difference,greedy_disclosure_cost minus exact_disclosure_cost,5125,0.05471010609144586,0.0549799598465065,0.08796720575752025,1.8162261343934727e-05,0.15583676021503123
+greedy_fewer_items,privacy_difference,greedy_privacy minus exact_privacy,14,0.03827249158129076,0.040280731551888715,0.06712634412208571,-0.0421909719824799,0.09547447452861069
+greedy_fewer_items,cognitive_difference,greedy_normalized_cognitive_cost minus exact_normalized_cognitive_cost,14,0.0068811816687721255,0.024524000631318238,0.04841606754289798,-0.0771237713590816,0.0618207598632336
+greedy_fewer_items,cardinality_fraction_difference,greedy_selected_count / n_items minus exact_selected_count / n_items,14,-0.08928571428571429,-0.09166666666666667,-0.0625,-0.125,-0.0625
+greedy_fewer_items,absolute_objective_difference,greedy_disclosure_cost minus exact_disclosure_cost,14,0.010588903759943124,0.007113585075052331,0.025074285808098288,0.00018955791286401347,0.03361575063017347

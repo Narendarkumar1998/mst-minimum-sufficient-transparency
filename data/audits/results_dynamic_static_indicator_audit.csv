@@ -1,0 +1,7 @@
+stored_column,reconstructed_definition,rows_checked,missing_stored_rows,failed_rows,maximum_residual
+algorithm_optimal_cost_numeric,reconstructed_exact_recovery,47568,0,0,0.0
+large_gap_numeric,reconstructed_large_gap,47568,0,0,0.0
+algorithm_more_items_numeric,reconstructed_more_items,47568,0,0,0.0
+within_1_percent_numeric,reconstructed_within_1,47568,0,0,0.0
+within_5_percent_numeric,reconstructed_within_5,47568,0,0,0.0
+within_10_percent_numeric,reconstructed_within_10,47568,0,0,0.0

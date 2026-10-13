@@ -1,0 +1,21 @@
+first_size,second_size,contrast,metric,estimated_difference,bootstrap_standard_error,ci_95_lower,ci_95_upper,ci_excludes_zero,bootstrap_replicates,resampling_unit,resampling_strata,multiple_comparison_adjustment
+10,8,M=10 minus M=8,mean_optimality_gap_percent,0.7478326361775882,0.2067317764103218,0.3547251834976882,1.1578332879810365,True,5000,independent_instance,structural_regime,none
+10,8,M=10 minus M=8,greedy_optimal_cost_percent,-7.140879484847808,1.487365993722765,-10.09680333327774,-4.2917219553433155,True,5000,independent_instance,structural_regime,none
+10,8,M=10 minus M=8,mean_jaccard_similarity,-0.03904888658528849,0.007678245553103987,-0.054056376621992315,-0.024481423277994126,True,5000,independent_instance,structural_regime,none
+10,8,M=10 minus M=8,large_gap_percent,3.311024611676684,0.9575747452302719,1.4549206380984634,5.219775408910693,True,5000,independent_instance,structural_regime,none
+12,10,M=12 minus M=10,mean_optimality_gap_percent,0.7802687473139551,0.20221248090654298,0.3796912744213056,1.1646026720117852,True,5000,independent_instance,structural_regime,none
+12,10,M=12 minus M=10,greedy_optimal_cost_percent,-1.7765246449457024,1.318926148965208,-4.3294637892688295,0.8453882855657168,False,5000,independent_instance,structural_regime,none
+12,10,M=12 minus M=10,mean_jaccard_similarity,-0.014382602504939612,0.007341645547375254,-0.028638239543419576,0.0002511430489676559,False,5000,independent_instance,structural_regime,none
+12,10,M=12 minus M=10,large_gap_percent,3.568400167084377,0.946744009210722,1.70163217670011,5.4167756276150625,True,5000,independent_instance,structural_regime,none
+14,12,M=14 minus M=12,mean_optimality_gap_percent,0.4357131070968414,0.20702429365577815,0.036806155322834336,0.8522689429240182,True,5000,independent_instance,structural_regime,none
+14,12,M=14 minus M=12,greedy_optimal_cost_percent,-2.7916666666666643,1.2754750096946743,-5.313020833333333,-0.2916666666666714,True,5000,independent_instance,structural_regime,none
+14,12,M=14 minus M=12,mean_jaccard_similarity,-0.021547123015873026,0.007313546836229822,-0.03570293955176799,-0.00722491920695022,True,5000,independent_instance,structural_regime,none
+14,12,M=14 minus M=12,large_gap_percent,1.5208333333333321,0.9766724661508592,-0.39635416666666873,3.4375,False,5000,independent_instance,structural_regime,none
+16,14,M=16 minus M=14,mean_optimality_gap_percent,0.23331420905682254,0.22267708993097007,-0.20130454902242456,0.6696241289592566,False,5000,independent_instance,structural_regime,none
+16,14,M=16 minus M=14,greedy_optimal_cost_percent,-1.6875,1.3194571962541064,-4.313020833333333,0.8541666666666643,False,5000,independent_instance,structural_regime,none
+16,14,M=16 minus M=14,mean_jaccard_similarity,-0.012359623015873011,0.007445433895423772,-0.027176198743386365,0.002126798115079674,False,5000,independent_instance,structural_regime,none
+16,14,M=16 minus M=14,large_gap_percent,1.75,1.0520969846961765,-0.3125,3.833333333333332,False,5000,independent_instance,structural_regime,none
+16,8,M=16 minus M=8,mean_optimality_gap_percent,2.1971286996452073,0.20818941820869846,1.7932796863413225,2.621269684378585,True,5000,independent_instance,structural_regime,none
+16,8,M=16 minus M=8,greedy_optimal_cost_percent,-13.396570796460175,1.4407628584318735,-16.220843101811276,-10.601196102050904,True,5000,independent_instance,structural_regime,none
+16,8,M=16 minus M=8,mean_jaccard_similarity,-0.08733823512197414,0.007463321071418361,-0.10202470672480934,-0.0730030798505683,True,5000,independent_instance,structural_regime,none
+16,8,M=16 minus M=8,large_gap_percent,10.150258112094393,0.9891861705886841,8.217112335036184,12.10645421933284,True,5000,independent_instance,structural_regime,none

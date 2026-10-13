@@ -1,0 +1,2 @@
+generator_version,regime_strength,audit_instances,items_per_audit_instance,utility_distribution,privacy_distribution,cognitive_cost_distribution,association_method,marginal_preservation,maximum_sorted_privacy_difference,maximum_sorted_cognitive_difference,intended_interpretation
+marginal_preserving_v2,0.75,500,64,"Beta(2,2) scaled to [0.08,0.60]","Beta(2,2) scaled to [0.01,0.25]","Beta(2,2) scaled to [0.10,1.00]",noisy rank reassignment,exact within matched seed,0.0,0.0,Controlled computational benchmark; parameters are not empirical human estimates.

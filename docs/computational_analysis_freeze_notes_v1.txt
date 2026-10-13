@@ -1,0 +1,45 @@
+MST COMPUTATIONAL ANALYSIS FREEZE — VERSION 1
+Generated: 2026-07-24T19:24:23.781945+00:00
+
+STATUS
+The planned computational analysis is complete.
+
+UTILITY SEMANTICS
+1. Product-form utility and pool-normalized weighted maximum-coverage
+   utility are treated as distinct modeled decision-support utility
+   families.
+2. Pool-normalized thresholds represent the fraction of modeled
+   decision-support utility available in the current candidate pool.
+3. Cross-family comparisons use only the common fully feasible
+   threshold grid: tau = 0.70, 0.80, and 0.90.
+4. The 216 product-form infeasible rows at tau = 0.95 remain valid
+   benchmark results but are excluded from cross-family inference.
+
+INTERPRETATION LIMITS
+1. Utility is modeled decision-support utility, not measured human
+   sufficiency.
+2. Cognitive cost is modeled interpretation cost, not directly
+   observed human cognitive burden.
+3. Privacy is relative modeled privacy exposure, not a deployment
+   privacy guarantee.
+4. Weight profiles are benchmark design points, not measured human
+   preferences.
+5. Synthetic regime effects are claims about the benchmark design.
+6. No approximation ratio is claimed.
+7. Runtime findings are empirical on the current hardware and are not
+   asymptotic proofs.
+
+INFERENCE
+1. Matched-group resampling is used where benchmark conditions are
+   matched.
+2. Utility-family benchmarks are independently generated and are
+   resampled independently between families.
+3. Step-135 max-t intervals control the relevant scopes or
+   interactions separately within each metric.
+4. There is no global multiplicity correction across different
+   metrics.
+
+REPRODUCIBILITY
+Number of frozen source files: 14
+Evidence-ledger rows: 209
+Manifest file: final_computational_file_manifest_v1.csv
