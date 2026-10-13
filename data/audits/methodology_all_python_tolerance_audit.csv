@@ -1,0 +1,19 @@
+relative_path,line_number,line_text
+03_Python_Optimization\mst_core.py,429,"epsilon: float = 1e-12,"
+03_Python_Optimization\mst_core.py,558,<= 1e-12
+03_Python_Optimization\mst_core.py,646,"epsilon: float = 1e-12,"
+03_Python_Optimization\mst_core.py,753,<= 1e-12
+03_Python_Optimization\mst_core.py,929,def compute_optimality_gap(
+03_Python_Optimization\mst_core.py,934,Compute the relative optimality gap.
+03_Python_Optimization\mst_core.py,985,"""Relative optimality gap is """
+03_Python_Optimization\mst_core_development_backup.py,267,"epsilon: float = 1e-12,"
+03_Python_Optimization\mst_core_development_backup.py,354,abs(score - best_score) <= 1e-12
+03_Python_Optimization\mst_core_development_backup.py,408,"epsilon: float = 1e-12,"
+03_Python_Optimization\mst_core_development_backup.py,490,abs(score - best_score) <= 1e-12
+03_Python_Optimization\mst_core_development_backup.py,612,def compute_optimality_gap(
+03_Python_Optimization\mst_core_development_backup.py,617,Compute the relative optimality gap of an approximate MST solution.
+03_Python_Optimization\mst_core_development_backup.py,648,"""Relative optimality gap is undefined """
+03_Python_Optimization\mst_core_development_backup.py,891,"epsilon: float = 1e-12,"
+03_Python_Optimization\mst_core_development_backup.py,988,abs(score - best_score) <= 1e-12
+03_Python_Optimization\mst_core_development_backup.py,1046,"epsilon: float = 1e-12,"
+03_Python_Optimization\mst_core_development_backup.py,1131,abs(score - best_score) <= 1e-12

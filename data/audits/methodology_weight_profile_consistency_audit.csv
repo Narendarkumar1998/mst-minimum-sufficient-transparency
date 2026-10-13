@@ -1,0 +1,5 @@
+weight_profile,number_of_unique_weight_triples,row_count,consistent
+balanced,1,24000,True
+interpretation_priority,1,24000,True
+parsimony_priority,1,24000,True
+privacy_priority,1,24000,True

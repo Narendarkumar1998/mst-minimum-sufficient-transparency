@@ -1,0 +1,9 @@
+measure,value
+total_rows,24000
+duplicate_complete_rows,0
+unique_matched_group_id,500
+unique_regime,3
+unique_tau,4
+unique_weight_profile,4
+unique_exact_status,1
+unique_greedy_status,1

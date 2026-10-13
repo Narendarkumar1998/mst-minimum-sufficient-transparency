@@ -1,0 +1,4 @@
+quantity,replicates,ci_95_lower,ci_95_upper
+runtime_power_law_exponent,5000,1.7203326363946616,1.774530332357522
+runtime_factor_per_doubling,5000,3.2951237249634526,3.421266132323561
+selected_count_increase_per_doubling,5000,0.1851427083333333,0.22516874999999978

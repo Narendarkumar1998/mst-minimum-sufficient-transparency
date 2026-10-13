@@ -1,0 +1,7 @@
+check,maximum_residual,failed_rows
+point_estimates,7.105427357601002e-15,0
+bootstrap_standard_errors,5.773159728050814e-15,0
+percentile_ci_lower,4.440892098500626e-16,0
+percentile_ci_upper,4.440892098500626e-16,0
+ci_excludes_zero_flags,,0
+bootstrap_replicate_counts,,0

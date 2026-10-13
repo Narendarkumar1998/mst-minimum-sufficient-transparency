@@ -1,0 +1,15 @@
+check,observed,expected,passed
+total_experimental_rows,24000,24000,True
+regime_specific_instances,1500,1500,True
+matched_groups,500,500,True
+minimum_rows_per_instance,16,16,True
+maximum_rows_per_instance,16,16,True
+minimum_rows_per_matched_group,48,48,True
+maximum_rows_per_matched_group,48,48,True
+matched_groups_with_incorrect_regime_count,0,0,True
+matched_groups_with_multiple_seeds,0,0,True
+duplicate_condition_rows,0,0,True
+feasibility_disagreement_rows,0,0,True
+negative_optimality_gap_rows,0,0,True
+exact_threshold_failures,0,0,True
+greedy_threshold_failures,0,0,True

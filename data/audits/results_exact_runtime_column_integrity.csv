@@ -1,0 +1,15 @@
+file,column,rows,missing_rows,nonfinite_rows,nonpositive_rows,minimum,maximum
+instance_level,subset_precomputation_seconds,1500,0,0,0,0.0095522999763488,4.481847399962135
+instance_level,cached_exact_total_seconds,1500,0,0,0,0.0538257998414331,0.3571175000397479
+instance_level,cached_exact_mean_seconds_per_condition,1500,0,0,0,0.0033641124900895,0.0223198437524842
+instance_level,cached_exact_median_seconds_per_condition,1500,0,0,0,0.0040130499983206,0.0229213000275194
+instance_level,greedy_total_seconds,1500,0,0,0,0.0044467998668545,0.0436365999048567
+instance_level,greedy_mean_seconds_per_condition,1500,0,0,0,0.0002779249916784,0.0027272874940535
+instance_level,greedy_median_seconds_per_condition,1500,0,0,0,0.0002390499575994,0.0015075500123202
+instance_level,total_exact_seconds,1500,0,0,0,0.0656388998031609,4.804597600246779
+matched_group_level,subset_precomputation_seconds,500,0,0,0,0.0110079666677241,4.369695133296773
+matched_group_level,cached_exact_total_seconds,500,0,0,0,0.0587341332575298,0.3319461001859349
+matched_group_level,cached_exact_mean_seconds_per_condition,500,0,0,0,0.0036708833285956,0.0207466312616209
+matched_group_level,greedy_total_seconds,500,0,0,0,0.0046106664619092,0.0265555666216329
+matched_group_level,greedy_mean_seconds_per_condition,500,0,0,0,0.0002881666538693,0.001659722913852
+matched_group_level,total_exact_seconds,500,0,0,0,0.0705758665765937,4.690374466551777

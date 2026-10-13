@@ -1,0 +1,9 @@
+column,dtype,non_null_rows,unique_values,minimum,maximum,example_values
+algorithm_disclosure_cost,float64,96000,58925,0.0654740527969632,inf,0.2191547543293709 | 0.1981348932064742 | 0.2314928525976226 | 0.2278365171840161 | 0.3125164617409384
+exact_status,object,96000,2,,,OPTIMAL | OPTIMAL | OPTIMAL | OPTIMAL | OPTIMAL
+exact_selected_ids,object,95136,3434,,,z003|z006 | z003|z006 | z003|z006 | z003|z006 | z001|z003|z006
+exact_selected_count,int64,96000,9,0.0,9.0,2 | 2 | 2 | 2 | 3
+exact_disclosure_cost,float64,95136,23467,0.0654740527969632,0.9573240196656768,0.2191547543293709 | 0.1981348932064742 | 0.2314928525976226 | 0.2278365171840161 | 0.3125164617409384
+optimality_gap_percent,float64,95136,54342,0.0,215.0462854337934,0.0 | 0.0 | 0.0 | 0.0 | 0.0
+algorithm_optimal_cost_numeric,int64,96000,2,0.0,1.0,1 | 1 | 1 | 1 | 1
+large_gap_numeric,int64,96000,2,0.0,1.0,0 | 0 | 0 | 0 | 0

@@ -1,0 +1,5 @@
+property,passed
+nested_disclosure,True
+monotonic_utility,True
+monotonic_normalized_disclosure_cost,True
+all_properties_satisfied,True

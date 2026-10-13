@@ -1,0 +1,21 @@
+test,passed,details
+Empty set utility equals zero,True,
+Empty set privacy equals zero,True,
+Empty set cognitive cost equals zero,True,
+Exact-MST returns optimal status,True,
+Exact-MST selects expected subset,True,"('z1', 'z2')"
+Exact-MST satisfies threshold,True,
+Greedy-MST returns feasible status,True,
+Greedy-MST satisfies threshold,True,
+Greedy matches Exact on simple instance,True,
+Exact-MST detects infeasible instance,True,
+Greedy-MST detects infeasible instance,True,
+Exact-MST finds expected hard-instance optimum,True,
+Greedy differs from Exact on hard instance,True,
+Greedy hard-instance cost exceeds optimum,True,
+Optimality gap is positive,True,5.4545%
+Progressive disclosure is nested,True,
+Progressive utility is non-decreasing,True,
+Progressive disclosure cost is non-decreasing,True,
+Invalid item utility is rejected,True,
+Invalid sufficiency threshold is rejected,True,

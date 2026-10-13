@@ -1,0 +1,24 @@
+finding,estimate,ci_95_lower,ci_95_upper,unit
+Coverage minus product overall: mean_optimality_gap_percent,1.1970827823043804,0.6777770413550503,1.7163885232537104,percentage points
+Coverage minus product overall: exact_cost_recovery_percent,2.722222222222221,0.5964146042424963,4.848029840201946,percentage points
+Coverage minus product overall: large_gap_percent,5.916666666666664,3.940592294997482,7.8927410383358465,percentage points
+Coverage minus product overall: more_items_percent,3.855555555555558,1.5830014807955073,6.128109630315608,percentage points
+Coverage minus product mean gap: utility_burden_alignment,3.904701626891837,3.1682248788103387,4.641178374973335,percentage points
+Coverage minus product mean gap: utility_burden_conflict,-0.9606663477897416,-1.733442345301504,-0.187890350277979,percentage points
+Share of coverage large gaps: same_count_different_items,19.43044011445701,,,percent
+Share of coverage large gaps: greedy_more_items,80.51505654721352,,,percent
+M=8: mean_optimality_gap_percent,5.152401496766857,4.583594281115483,5.738063653865918,percentage points
+M=8: exact_cost_recovery_percent,53.0,49.5828125,56.33385416666666,percentage points
+M=8: more_items_percent,14.145833333333334,11.604166666666666,16.895833333333332,percentage points
+M=16: mean_optimality_gap_percent,10.427407186282572,9.624702527455849,11.25066229410011,percentage points
+M=16: exact_cost_recovery_percent,31.5,29.0828125,33.854166666666664,percentage points
+M=16: more_items_percent,40.10416666666666,36.5,43.79166666666666,percentage points
+tau=0.70: mean_optimality_gap_percent,8.796481059712429,,,percent
+tau=0.70: mean_absolute_disclosure_cost_gap,0.0179155020584364,,,modeled disclosure-cost units
+tau=0.70: more_items_percent,20.55,,,percent
+tau=0.95: mean_optimality_gap_percent,7.254457719323572,,,percent
+tau=0.95: mean_absolute_disclosure_cost_gap,0.0298817904833467,,,modeled disclosure-cost units
+tau=0.95: more_items_percent,37.1,,,percent
+Parsimony minus balanced: mean_optimality_gap_percent,-1.420158033838656,-1.7260164616114573,-1.110082501442452,percentage points
+Parsimony minus balanced: large_gap_percent,-8.533333333333335,-9.933333333333334,-7.183333333333334,percentage points
+Parsimony minus balanced: more_items_percent,-9.433333333333334,-10.733333333333334,-8.133333333333333,percentage points

@@ -1,0 +1,9 @@
+check,observed,expected,passed
+instance_rows,1500,1500,True
+matched_group_rows,500,500,True
+candidate_sizes,"[8, 10, 12, 14, 16]","[8, 10, 12, 14, 16]",True
+instance_complete_duplicates,0,0,True
+group_complete_duplicates,0,0,True
+size_summary_rows,5,5,True
+model_fit_rows,4,4,True
+bootstrap_rows,20000,20000,True

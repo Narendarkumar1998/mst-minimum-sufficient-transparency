@@ -1,0 +1,10 @@
+check,observed,expected,passed
+raw_rows,24000,24000,True
+candidate_sizes,"[16, 32, 64, 128, 256]","[16, 32, 64, 128, 256]",True
+all_status_FEASIBLE,24000,24000,True
+finite_positive_runtime,24000,24000,True
+no_complete_duplicate_rows,0,0,True
+no_missing_values,0,0,True
+benchmark_version,1,1,True
+generator_version,1,1,True
+regime_strength,1,1,True

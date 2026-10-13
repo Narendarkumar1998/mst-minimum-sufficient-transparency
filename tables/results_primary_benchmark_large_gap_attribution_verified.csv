@@ -1,0 +1,4 @@
+reconstructed_failure_mechanism,large_gap_rows,share_of_large_gap_rows_percent
+greedy_fewer_items,4,0.054503338329472684
+greedy_more_items,5909,80.51505654721352
+same_count_different_items,1426,19.43044011445701

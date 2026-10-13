@@ -1,0 +1,13 @@
+regime,tau,bootstrap_rows
+independent,0.7,5000
+independent,0.8,5000
+independent,0.9,5000
+independent,0.95,5000
+utility_burden_alignment,0.7,5000
+utility_burden_alignment,0.8,5000
+utility_burden_alignment,0.9,5000
+utility_burden_alignment,0.95,5000
+utility_burden_conflict,0.7,5000
+utility_burden_conflict,0.8,5000
+utility_burden_conflict,0.9,5000
+utility_burden_conflict,0.95,5000

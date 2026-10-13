@@ -1,0 +1,10 @@
+check,observed,expected,pass
+contrast_rows_equal_27,27,27,True
+bootstrap_rows_equal_15000,15000,15000,True
+unique_matched_groups_equal_500,500,500,True
+groups_per_size_equal_100,100,100,True
+duplicate_bootstrap_rows,0,0,True
+all_replicate_groups_have_5000_rows,5000,5000,True
+replicate_ids_span_0_to_4999,0--4999,0--4999,True
+stored_resampling_design,1,1,True
+multiple_comparison_adjustment_none,none,none,True

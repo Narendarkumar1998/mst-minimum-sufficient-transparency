@@ -1,0 +1,5 @@
+check,failed_rows,pass
+all_indicator_columns_reconstructed,0,True
+stored_descriptive_table_reconstructed,0,True
+all_bootstrap_groups_have_5000_rows,0,True
+all_pairing_and_status_checks,0,True

@@ -1,0 +1,5 @@
+runtime_component,model_type,rows,unique_replicates,minimum_replicate,maximum_replicate
+cached_exact_per_condition,exponential_log2_runtime_on_candidate_count,5000,5000,0,4999
+greedy_per_condition,power_law_log2_runtime_on_log2_candidate_count,5000,5000,0,4999
+subset_precomputation,exponential_log2_runtime_on_candidate_count,5000,5000,0,4999
+total_exact_per_instance,exponential_log2_runtime_on_candidate_count,5000,5000,0,4999

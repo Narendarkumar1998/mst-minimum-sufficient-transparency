@@ -1,0 +1,3 @@
+group,rows,minimum_gap_percent,maximum_gap_percent,minimum_absolute_difference,maximum_absolute_difference
+stored_recovery_1,30726,0.0,0.0,0.0,2.220446049250313e-16
+stored_recovery_0,64410,0.0001748218192348,215.0462854337934,6.851821716113982e-07,0.4215395939791925

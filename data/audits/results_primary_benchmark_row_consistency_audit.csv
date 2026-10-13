@@ -1,0 +1,11 @@
+check,failed_rows,maximum_numeric_residual
+exact_status_is_OPTIMAL,0,
+greedy_status_is_FEASIBLE,0,
+exact_utility_reaches_tau,0,
+greedy_utility_reaches_tau,0,
+stored_absolute_gap_matches_reconstruction,0,2.220446049250313e-16
+stored_percentage_gap_matches_reconstruction,0,1.4210854715202004e-13
+selected_count_difference_matches,0,
+same_selected_subset_matches,0,
+jaccard_similarity_matches,0,5.551115123125783e-17
+no_material_negative_optimality_gap,0,0.0
