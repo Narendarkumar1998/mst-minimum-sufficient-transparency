@@ -15,6 +15,12 @@ the original stored output `reference-output/sarl_mst_multiscenario_sweep.csv`
 every floating-point digit. The SARL agents follow the documented event flow
 and reuse the identifiers preserved from the original source.
 
+The reconstructed SARL project has also been compiled and run in the SARL IDE
+(SARL 0.15.1, JDK 21). The run ended with
+`MULTI-SCENARIO SWEEP COMPLETE | conditions=36 | verified=36/36 | nested=17/17`,
+and the status and selected items of all 36 conditions match the reference
+output. The console log is kept in `reference-output/sarl_ide_console_run.txt`.
+
 ## Architecture
 
 | Layer | File | Responsibility |
@@ -43,8 +49,16 @@ it is insufficient and selects nothing.
 
 ## Run
 
-In the SARL IDE: import as an existing Maven project, build it, then run
-`src/main/sarl/org/mst/sarl/agents/MSTBootAgent.sarl` as a SARL Application.
+In the SARL IDE:
+
+1. Check that JDK 21 is installed and ticked in Window > Preferences > Java > Installed JREs.
+2. Import with File > Import > General > Existing Projects into Workspace and select this `sarl` folder.
+   (Importing it as a Maven project can overwrite the build path.)
+3. Check Project > Properties > Java Build Path: the source folders must be `src/main/sarl`,
+   `src/main/java` and `src/main/generated-sources/sarl`, and the libraries must include
+   JRE System Library [JavaSE-21] and SARL Libraries.
+4. Run Project > Clean. If the SARL editor still reports `String cannot be resolved`, restart the IDE and clean again.
+5. Right-click `src/main/sarl/org/mst/sarl/agents/MSTBootAgent.sarl` and choose Run As > SARL Agent.
 The expected final line is:
 
 ```
