@@ -1,5 +1,7 @@
 # Minimum Sufficient Transparency (MST)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23344151.svg)](https://doi.org/10.5281/zenodo.23344151)
+
 Code and data for the article
 
 > N. Kumar, Y. Mualla, V. Hilaire, S. Galland.
@@ -81,7 +83,9 @@ procedure. See `docs/computational_analysis_freeze_notes_v1.txt`.
 
 ## Citation
 
-See `CITATION.cff`. Please cite the article once published.
+See `CITATION.cff`. Please cite the article once published, and this archived release as:
+
+> N. Kumar, Y. Mualla, V. Hilaire, S. Galland. *Minimum Sufficient Transparency (MST): code and data*, v1.0.0. Zenodo, 2026. https://doi.org/10.5281/zenodo.23344151
 
 ## License
 
