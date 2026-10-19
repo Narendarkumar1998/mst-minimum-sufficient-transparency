@@ -1,0 +1,114 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="MST flowchart" id="mst">
+    <mxGraphModel dx="1477" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="700" pageHeight="880" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="frame" value="" style="rounded=1;arcSize=2;dashed=1;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#FFFDF0;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="20" y="195" width="600" height="465" as="geometry" />
+        </mxCell>
+        <mxCell id="ftitle" value="&lt;b&gt;Assistant agent: MST capability&lt;/b&gt;" style="text;html=1;align=right;verticalAlign=top;fontFamily=Helvetica;fontSize=11;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="542" y="380" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="env" value="&lt;b&gt;Environment agents&lt;/b&gt;" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#E8E8FF;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="role" value="&lt;b&gt;Role agent&lt;/b&gt;" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#E8E8FF;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="260" y="20" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pool" value="Candidate pool &lt;i&gt;I&lt;/i&gt;&lt;sub&gt;t&lt;/sub&gt;&lt;br&gt;each item &lt;i&gt;z&lt;/i&gt;&lt;sub&gt;i&lt;/sub&gt; = (&lt;i&gt;u&lt;/i&gt;&lt;sub&gt;i&lt;/sub&gt;, &lt;i&gt;p&lt;/i&gt;&lt;sub&gt;i&lt;/sub&gt;, &lt;i&gt;c&lt;/i&gt;&lt;sub&gt;i&lt;/sub&gt;)" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="40" y="110" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="req" value="Request: context &lt;i&gt;κ&lt;/i&gt;&lt;sub&gt;t&lt;/sub&gt;,&lt;br&gt;threshold &lt;i&gt;τ&lt;/i&gt;, weights &lt;i&gt;λ&lt;/i&gt;" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="260" y="110" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="&lt;b&gt;1. Policy transformation&lt;/b&gt; Π&lt;sub&gt;P&lt;/sub&gt;&lt;br&gt;redact, aggregate, generalise" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#F2F2F2;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="95" y="230" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="&lt;b&gt;2. Hard admissibility&lt;/b&gt; χ&lt;sub&gt;P&lt;/sub&gt;&lt;br&gt;keep permitted items only → &lt;i&gt;D&lt;/i&gt;&lt;sub&gt;t&lt;/sub&gt;" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#F2F2F2;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="95" y="305" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="&lt;b&gt;3. Feasible?&lt;/b&gt;&lt;br&gt;&lt;i&gt;U&lt;/i&gt;(&lt;i&gt;D&lt;/i&gt;&lt;sub&gt;t&lt;/sub&gt;) ≥ &lt;i&gt;τ&lt;/i&gt;" style="rhombus;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#FFE9D6;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="160" y="380" width="150" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="inf" value="&lt;b&gt;Infeasible&lt;/b&gt;&lt;br&gt;no admissible subset&lt;br&gt;is sufficient" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#FDE4E4;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="420" y="387" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="esc" value="lower &lt;i&gt;τ&lt;/i&gt;, gather more&lt;br&gt;evidence, or escalate" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="420" y="475" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="&lt;b&gt;4. Select minimum sufficient subset&lt;/b&gt;&lt;br&gt;min&lt;sub&gt;&lt;i&gt;S&lt;/i&gt; ⊆ &lt;i&gt;D&lt;/i&gt;&lt;sub&gt;t&lt;/sub&gt;&lt;/sub&gt; &lt;i&gt;J&lt;/i&gt;(&lt;i&gt;S&lt;/i&gt;) = &lt;i&gt;λ&lt;/i&gt;&lt;sub&gt;P&lt;/sub&gt;&lt;i&gt;P&lt;/i&gt;(&lt;i&gt;S&lt;/i&gt;) + &lt;i&gt;λ&lt;/i&gt;&lt;sub&gt;C&lt;/sub&gt;&lt;i&gt;C&lt;/i&gt;(&lt;i&gt;S&lt;/i&gt;) + &lt;i&gt;λ&lt;/i&gt;&lt;sub&gt;K&lt;/sub&gt;&lt;i&gt;K&lt;/i&gt;(&lt;i&gt;S&lt;/i&gt;)&lt;br&gt;subject to &lt;i&gt;U&lt;/i&gt;(&lt;i&gt;S&lt;/i&gt;) ≥ &lt;i&gt;τ&lt;/i&gt;" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#F2F2F2;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="80" y="485" width="310" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="solv" value="Solver: Exact-MST, Dynamic Greedy-MST,&lt;br&gt;or Progressive-MST (nested disclosure)&lt;br&gt;ties broken by the comparison tuple Φ(&lt;i&gt;S&lt;/i&gt;)" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#FAFAFA;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="80" y="575" width="310" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="out" value="&lt;b&gt;Selected disclosure &lt;i&gt;S&lt;/i&gt;*&lt;/b&gt;&lt;br&gt;sufficient, admissible, deletion-minimal" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#DFF5DF;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="115" y="690" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="human" value="&lt;b&gt;Stakeholder&lt;/b&gt;&lt;br&gt;receives &lt;i&gt;S&lt;/i&gt;* via role agent" style="rounded=1;arcSize=8;fontFamily=Helvetica;fontSize=12;html=1;whiteSpace=wrap;fillColor=#E8E8FF;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="150" y="785" width="170" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="env" target="pool" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="role" target="req" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="pool" target="s1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="125" y="210" />
+              <mxPoint x="235" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="req" target="s1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="210" />
+              <mxPoint x="235" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="s1" target="s2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="s2" target="d1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="d1" target="s4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="d1" target="inf" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="inf" target="esc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="s4" target="solv" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="solv" target="out" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="1" source="out" target="human" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=blockThin;endFill=1;strokeWidth=1.5;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" parent="1" source="esc" target="role" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="498" />
+              <mxPoint x="610" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbLoYhAcLrr47kcyWZOW-1" value="new request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e13">
+          <mxGeometry x="0.2287" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
