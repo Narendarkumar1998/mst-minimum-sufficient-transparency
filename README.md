@@ -59,11 +59,11 @@ print(greedy_mst(items, 0.90, lambda_privacy=0, lambda_cognitive=1, lambda_cardi
 
 | Paper result | File |
 |---|---|
-| Primary benchmark, 24,000 exact and greedy comparisons (Tables 4 to 6, Figs. 1 to 3) | `data/raw/exact_vs_greedy_main_benchmark_v2_marginal_preserving.csv` |
-| Failure mechanisms and large-gap attribution (Table 5, Fig. 2) | `data/raw/corrected_v2_greedy_failure_mechanism_rows.csv`, `tables/corrected_v2_greedy_failure_mechanism_summary.csv` |
-| Threshold sensitivity and bootstrap contrasts (Table 6, Fig. 3) | `tables/corrected_v2_threshold_*`, `tables/corrected_v2_paired_threshold_*` |
+| Primary benchmark, 24,000 exact and greedy comparisons (Tables 4 to 6, Figs. 2 to 4) | `data/raw/exact_vs_greedy_main_benchmark_v2_marginal_preserving.csv` |
+| Failure mechanisms and large-gap attribution (Table 5, Fig. 3) | `data/raw/corrected_v2_greedy_failure_mechanism_rows.csv`, `tables/corrected_v2_greedy_failure_mechanism_summary.csv` |
+| Threshold sensitivity and bootstrap contrasts (Table 6, Fig. 4) | `tables/corrected_v2_threshold_*`, `tables/corrected_v2_paired_threshold_*` |
 | Dynamic versus static ranking, 96,000 rows | `data/raw/corrected_v2_algorithm_comparison_long.csv`, `tables/corrected_v2_dynamic_*` |
-| Scalability to 256 candidates (Table 7, Fig. 4) | `data/raw/greedy_scalability_v2.csv`, `data/raw/greedy_scalability_v2_matched_group_runtime.csv` |
+| Scalability to 256 candidates (Table 7, Fig. 5) | `data/raw/greedy_scalability_v2.csv`, `data/raw/greedy_scalability_v2_matched_group_runtime.csv` |
 | Progressive-MST validation | `data/raw/progressive_mst_validation_sequence.csv`, `data/raw/normalized_progressive_mst_sequence.csv` |
 | Synthetic generator validation | `data/raw/corrected_generator_validation_summary.csv`, `data/raw/synthetic_regime_validation.csv` |
 | SARL execution, 36 conditions (Table 8) | `data/sarl/sarl_mst_multiscenario_sweep.csv` |
