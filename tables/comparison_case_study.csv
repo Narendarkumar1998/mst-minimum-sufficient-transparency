@@ -1,0 +1,433 @@
+scenario,role,tau,method,label,outcome,items,utility,sufficient,prohibited
+HVAC_FAULT,OCCUPANT,0.7,MST,MST (exact),DISCLOSED,zone_temperature,0.7,True,0
+HVAC_FAULT,OCCUPANT,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,zone_temperature,0.7,True,0
+HVAC_FAULT,OCCUPANT,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,zone_temperature,0.7,True,0
+HVAC_FAULT,OCCUPANT,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,zone_temperature,0.7,True,0
+HVAC_FAULT,OCCUPANT,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,zone_temperature,0.7,True,0
+HVAC_FAULT,OCCUPANT,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,True,1
+HVAC_FAULT,OCCUPANT,0.7,B2_policy_filter,policy filter only,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,True,1
+HVAC_FAULT,OCCUPANT,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,zone_temperature,0.7,True,0
+HVAC_FAULT,OCCUPANT,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+HVAC_FAULT,OCCUPANT,0.8,MST,MST (exact),DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,zone_temperature,0.7,False,0
+HVAC_FAULT,OCCUPANT,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,True,1
+HVAC_FAULT,OCCUPANT,0.8,B2_policy_filter,policy filter only,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,True,1
+HVAC_FAULT,OCCUPANT,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+HVAC_FAULT,OCCUPANT,0.9,MST,MST (exact),DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,zone_temperature,0.7,False,0
+HVAC_FAULT,OCCUPANT,0.9,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,True,1
+HVAC_FAULT,OCCUPANT,0.9,B2_policy_filter,policy filter only,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,True,1
+HVAC_FAULT,OCCUPANT,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"zone_temperature, comfort_deviation",0.904,True,0
+HVAC_FAULT,OCCUPANT,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+HVAC_FAULT,OCCUPANT,0.95,MST,MST (exact),INFEASIBLE,,,,0
+HVAC_FAULT,OCCUPANT,0.95,A1_soft_admissibility,without hard admissibility,INFEASIBLE,,,,0
+HVAC_FAULT,OCCUPANT,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,zone_temperature,0.7,False,0
+HVAC_FAULT,OCCUPANT,0.95,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+HVAC_FAULT,OCCUPANT,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"zone_temperature, comfort_deviation",0.904,False,0
+HVAC_FAULT,OCCUPANT,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+HVAC_FAULT,OCCUPANT,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,False,1
+HVAC_FAULT,OCCUPANT,0.95,B2_policy_filter,policy filter only,DISCLOSED,"zone_temperature, comfort_deviation",0.904,False,0
+HVAC_FAULT,OCCUPANT,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,False,1
+HVAC_FAULT,OCCUPANT,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,False,1
+HVAC_FAULT,OCCUPANT,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"zone_temperature, comfort_deviation, maintenance_staff_identity",0.9424,False,1
+HVAC_FAULT,OCCUPANT,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,MST,MST (exact),DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,B2_policy_filter,policy filter only,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,MST,MST (exact),DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,B2_policy_filter,policy filter only,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,hvac_fault_code,0.82,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,MST,MST (exact),DISCLOSED,"hvac_fault_code, airflow_anomaly",0.9244,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"hvac_fault_code, airflow_anomaly",0.9244,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,hvac_fault_code,0.82,False,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"hvac_fault_code, airflow_anomaly",0.9244,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"hvac_fault_code, airflow_anomaly",0.9244,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"hvac_fault_code, airflow_anomaly",0.9244,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,B2_policy_filter,policy filter only,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"hvac_fault_code, airflow_anomaly",0.9244,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"hvac_fault_code, airflow_anomaly",0.9244,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,MST,MST (exact),DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,A1_soft_admissibility,without hard admissibility,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,hvac_fault_code,0.82,False,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,B2_policy_filter,policy filter only,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"hvac_fault_code, airflow_anomaly, zone_occupancy_count",0.9584,True,0
+HVAC_FAULT,FACILITY_MANAGER,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+HVAC_FAULT,SECURITY,0.7,MST,MST (exact),DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.7,B2_policy_filter,policy filter only,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,safety_interlock_status,0.76,True,0
+HVAC_FAULT,SECURITY,0.8,MST,MST (exact),DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,safety_interlock_status,0.76,False,0
+HVAC_FAULT,SECURITY,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.8,B2_policy_filter,policy filter only,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,True,0
+HVAC_FAULT,SECURITY,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,safety_interlock_status,0.76,False,0
+HVAC_FAULT,SECURITY,0.9,MST,MST (exact),INFEASIBLE,,,,0
+HVAC_FAULT,SECURITY,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,safety_interlock_status,0.76,False,0
+HVAC_FAULT,SECURITY,0.9,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+HVAC_FAULT,SECURITY,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,False,0
+HVAC_FAULT,SECURITY,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+HVAC_FAULT,SECURITY,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.9,B2_policy_filter,policy filter only,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,False,0
+HVAC_FAULT,SECURITY,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,True,1
+HVAC_FAULT,SECURITY,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,safety_interlock_status,0.76,False,0
+HVAC_FAULT,SECURITY,0.95,MST,MST (exact),INFEASIBLE,,,,0
+HVAC_FAULT,SECURITY,0.95,A1_soft_admissibility,without hard admissibility,INFEASIBLE,,,,0
+HVAC_FAULT,SECURITY,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,safety_interlock_status,0.76,False,0
+HVAC_FAULT,SECURITY,0.95,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+HVAC_FAULT,SECURITY,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,False,0
+HVAC_FAULT,SECURITY,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+HVAC_FAULT,SECURITY,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,False,1
+HVAC_FAULT,SECURITY,0.95,B2_policy_filter,policy filter only,DISCLOSED,"safety_interlock_status, affected_access_zone",0.892,False,0
+HVAC_FAULT,SECURITY,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,False,1
+HVAC_FAULT,SECURITY,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,False,1
+HVAC_FAULT,SECURITY,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"safety_interlock_status, affected_access_zone, occupant_identity_trace",0.9374,False,1
+HVAC_FAULT,SECURITY,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,safety_interlock_status,0.76,False,0
+COMFORT_DEVIATION,OCCUPANT,0.7,MST,MST (exact),DISCLOSED,zone_temperature,0.72,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,zone_temperature,0.72,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,zone_temperature,0.72,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,zone_temperature,0.72,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,zone_temperature,0.72,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,zone_temperature,0.72,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.7,B2_policy_filter,policy filter only,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,zone_temperature,0.72,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,zone_temperature,0.72,True,0
+COMFORT_DEVIATION,OCCUPANT,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+COMFORT_DEVIATION,OCCUPANT,0.8,MST,MST (exact),DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,zone_temperature,0.72,False,0
+COMFORT_DEVIATION,OCCUPANT,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.8,B2_policy_filter,policy filter only,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,True,0
+COMFORT_DEVIATION,OCCUPANT,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+COMFORT_DEVIATION,OCCUPANT,0.9,MST,MST (exact),INFEASIBLE,,,,0
+COMFORT_DEVIATION,OCCUPANT,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,zone_temperature,0.72,False,0
+COMFORT_DEVIATION,OCCUPANT,0.9,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+COMFORT_DEVIATION,OCCUPANT,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,False,0
+COMFORT_DEVIATION,OCCUPANT,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+COMFORT_DEVIATION,OCCUPANT,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.9,B2_policy_filter,policy filter only,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,False,0
+COMFORT_DEVIATION,OCCUPANT,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,True,1
+COMFORT_DEVIATION,OCCUPANT,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+COMFORT_DEVIATION,OCCUPANT,0.95,MST,MST (exact),INFEASIBLE,,,,0
+COMFORT_DEVIATION,OCCUPANT,0.95,A1_soft_admissibility,without hard admissibility,INFEASIBLE,,,,0
+COMFORT_DEVIATION,OCCUPANT,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,zone_temperature,0.72,False,0
+COMFORT_DEVIATION,OCCUPANT,0.95,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+COMFORT_DEVIATION,OCCUPANT,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,False,0
+COMFORT_DEVIATION,OCCUPANT,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+COMFORT_DEVIATION,OCCUPANT,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,False,1
+COMFORT_DEVIATION,OCCUPANT,0.95,B2_policy_filter,policy filter only,DISCLOSED,"zone_temperature, comfort_target_difference",0.8992,False,0
+COMFORT_DEVIATION,OCCUPANT,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,False,1
+COMFORT_DEVIATION,OCCUPANT,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,False,1
+COMFORT_DEVIATION,OCCUPANT,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"zone_temperature, comfort_target_difference, neighbour_zone_occupancy",0.9415,False,1
+COMFORT_DEVIATION,OCCUPANT,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,MST,MST (exact),DISCLOSED,temperature_trend,0.76,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,temperature_trend,0.76,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,temperature_trend,0.76,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,temperature_trend,0.76,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,temperature_trend,0.76,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,temperature_trend,0.76,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,B2_policy_filter,policy filter only,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,temperature_trend,0.76,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,temperature_trend,0.76,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,MST,MST (exact),DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,temperature_trend,0.76,False,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,B2_policy_filter,policy filter only,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,MST,MST (exact),DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,temperature_trend,0.76,False,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,B2_policy_filter,policy filter only,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"temperature_trend, hvac_operating_mode",0.9184,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,MST,MST (exact),DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,A1_soft_admissibility,without hard admissibility,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,temperature_trend,0.76,False,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,B2_policy_filter,policy filter only,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"temperature_trend, hvac_operating_mode, aggregated_occupancy_level",0.9576,True,0
+COMFORT_DEVIATION,FACILITY_MANAGER,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+COMFORT_DEVIATION,SECURITY,0.7,MST,MST (exact),DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.7,B2_policy_filter,policy filter only,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,safety_threshold_status,0.78,True,0
+COMFORT_DEVIATION,SECURITY,0.8,MST,MST (exact),DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,safety_threshold_status,0.78,False,0
+COMFORT_DEVIATION,SECURITY,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.8,B2_policy_filter,policy filter only,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,True,0
+COMFORT_DEVIATION,SECURITY,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,safety_threshold_status,0.78,False,0
+COMFORT_DEVIATION,SECURITY,0.9,MST,MST (exact),INFEASIBLE,,,,0
+COMFORT_DEVIATION,SECURITY,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,safety_threshold_status,0.78,False,0
+COMFORT_DEVIATION,SECURITY,0.9,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+COMFORT_DEVIATION,SECURITY,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,False,0
+COMFORT_DEVIATION,SECURITY,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+COMFORT_DEVIATION,SECURITY,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.9,B2_policy_filter,policy filter only,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,False,0
+COMFORT_DEVIATION,SECURITY,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,True,1
+COMFORT_DEVIATION,SECURITY,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,safety_threshold_status,0.78,False,0
+COMFORT_DEVIATION,SECURITY,0.95,MST,MST (exact),INFEASIBLE,,,,0
+COMFORT_DEVIATION,SECURITY,0.95,A1_soft_admissibility,without hard admissibility,INFEASIBLE,,,,0
+COMFORT_DEVIATION,SECURITY,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,safety_threshold_status,0.78,False,0
+COMFORT_DEVIATION,SECURITY,0.95,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+COMFORT_DEVIATION,SECURITY,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,False,0
+COMFORT_DEVIATION,SECURITY,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+COMFORT_DEVIATION,SECURITY,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,False,1
+COMFORT_DEVIATION,SECURITY,0.95,B2_policy_filter,policy filter only,DISCLOSED,"safety_threshold_status, affected_zone",0.8768,False,0
+COMFORT_DEVIATION,SECURITY,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,False,1
+COMFORT_DEVIATION,SECURITY,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,False,1
+COMFORT_DEVIATION,SECURITY,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"safety_threshold_status, affected_zone, occupant_identity",0.9199,False,1
+COMFORT_DEVIATION,SECURITY,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,safety_threshold_status,0.78,False,0
+SECURITY_ALARM,OCCUPANT,0.7,MST,MST (exact),DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.7,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,alarm_status,0.74,True,0
+SECURITY_ALARM,OCCUPANT,0.8,MST,MST (exact),DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.74,False,0
+SECURITY_ALARM,OCCUPANT,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.8,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,"alarm_status, affected_access_zone",0.8908,True,0
+SECURITY_ALARM,OCCUPANT,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,alarm_status,0.74,False,0
+SECURITY_ALARM,OCCUPANT,0.9,MST,MST (exact),INFEASIBLE,,,,0
+SECURITY_ALARM,OCCUPANT,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.74,False,0
+SECURITY_ALARM,OCCUPANT,0.9,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+SECURITY_ALARM,OCCUPANT,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"alarm_status, affected_access_zone",0.8908,False,0
+SECURITY_ALARM,OCCUPANT,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+SECURITY_ALARM,OCCUPANT,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.9,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_access_zone",0.8908,False,0
+SECURITY_ALARM,OCCUPANT,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,True,1
+SECURITY_ALARM,OCCUPANT,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,alarm_status,0.74,False,0
+SECURITY_ALARM,OCCUPANT,0.95,MST,MST (exact),INFEASIBLE,,,,0
+SECURITY_ALARM,OCCUPANT,0.95,A1_soft_admissibility,without hard admissibility,INFEASIBLE,,,,0
+SECURITY_ALARM,OCCUPANT,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.74,False,0
+SECURITY_ALARM,OCCUPANT,0.95,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+SECURITY_ALARM,OCCUPANT,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"alarm_status, affected_access_zone",0.8908,False,0
+SECURITY_ALARM,OCCUPANT,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+SECURITY_ALARM,OCCUPANT,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,False,1
+SECURITY_ALARM,OCCUPANT,0.95,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_access_zone",0.8908,False,0
+SECURITY_ALARM,OCCUPANT,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,False,1
+SECURITY_ALARM,OCCUPANT,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,False,1
+SECURITY_ALARM,OCCUPANT,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"alarm_status, affected_access_zone, camera_identity_trace",0.941,False,1
+SECURITY_ALARM,OCCUPANT,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,alarm_status,0.74,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,MST,MST (exact),DISCLOSED,alarm_status,0.72,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,alarm_status,0.72,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.72,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,alarm_status,0.72,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,alarm_status,0.72,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,alarm_status,0.72,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,alarm_status,0.72,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,alarm_status,0.72,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,MST,MST (exact),DISCLOSED,"alarm_status, affected_building_zone",0.888,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,"alarm_status, affected_building_zone",0.888,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.72,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"alarm_status, affected_building_zone",0.888,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"alarm_status, affected_building_zone",0.888,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"alarm_status, affected_building_zone",0.888,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"alarm_status, affected_building_zone",0.888,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,"alarm_status, affected_building_zone",0.888,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,MST,MST (exact),DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.72,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,True,0
+SECURITY_ALARM,FACILITY_MANAGER,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,MST,MST (exact),INFEASIBLE,,,,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,A1_soft_admissibility,without hard admissibility,INFEASIBLE,,,,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.72,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,A3_min_cardinality,without disclosure-cost objective,INFEASIBLE,,,,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),INFEASIBLE,,,,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"alarm_status, affected_building_zone, device_health_summary",0.9462,False,0
+SECURITY_ALARM,FACILITY_MANAGER,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+SECURITY_ALARM,SECURITY,0.7,MST,MST (exact),DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.7,A1_soft_admissibility,without hard admissibility,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.7,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.7,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.7,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.7,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.7,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.7,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.7,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.7,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.7,B5_greedy_cover,greedy submodular cover,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.7,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+SECURITY_ALARM,SECURITY,0.8,MST,MST (exact),DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.8,A1_soft_admissibility,without hard admissibility,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.8,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.8,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.8,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.8,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.8,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.8,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.8,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.8,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.8,B5_greedy_cover,greedy submodular cover,DISCLOSED,alarm_status,0.88,True,0
+SECURITY_ALARM,SECURITY,0.8,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+SECURITY_ALARM,SECURITY,0.9,MST,MST (exact),DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.9,A1_soft_admissibility,without hard admissibility,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.9,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.88,False,0
+SECURITY_ALARM,SECURITY,0.9,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.9,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.9,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.9,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.9,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.9,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.9,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.9,B5_greedy_cover,greedy submodular cover,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.9,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0
+SECURITY_ALARM,SECURITY,0.95,MST,MST (exact),DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.95,A1_soft_admissibility,without hard admissibility,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.95,A2_utility_reward,without sufficiency threshold,DISCLOSED,alarm_status,0.88,False,0
+SECURITY_ALARM,SECURITY,0.95,A3_min_cardinality,without disclosure-cost objective,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.95,A4_no_infeasibility,without infeasibility reporting,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.95,A5_greedy,without exact search (Dynamic Greedy-MST),DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.95,B1_full_disclosure,full disclosure,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.95,B2_policy_filter,policy filter only,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.95,B3_parsimony_top3,parsimonious top-3,DISCLOSED,"alarm_status, affected_access_zone, camera_event_summary",0.979,True,0
+SECURITY_ALARM,SECURITY,0.95,B4_sufficient_reason,minimal sufficient subset,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.95,B5_greedy_cover,greedy submodular cover,DISCLOSED,"alarm_status, affected_access_zone",0.9544,True,0
+SECURITY_ALARM,SECURITY,0.95,B6_budgeted_coverage,budgeted coverage,DISCLOSED,,0.0,False,0

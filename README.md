@@ -20,13 +20,15 @@ is sufficient, it reports `INFEASIBLE` instead of crossing the disclosure policy
 | Folder | Content |
 |---|---|
 | `mst/` | Authoritative Python implementation (`mst_core.py`): Exact-MST, Dynamic Greedy-MST, Progressive-MST, set metrics, and optimality gaps. Standard library only. |
+| `comparison/` | Comparison of MST with ablations and adapted baselines on the benchmark pools, plus a smart-building case study (see `comparison/README.md`). |
 | `notebooks/` | Jupyter notebooks that generate the benchmarks, analyses, and figures (see `notebooks/README.md` for the run order and setup). |
 | `sarl/` | SARL and Java multi-agent implementation: role agents request disclosures from an Exact-MST service (see `sarl/README.md`, including the reconstruction notice). |
 | `data/raw/` | Frozen result datasets behind the paper (see `data/README.md`). |
+| `data/comparison/` | One row per method and condition for the comparison with ablations and baselines. |
 | `data/sarl/` | The 36-condition SARL execution output and its reconstruction audits. |
 | `data/audits/` | Integrity and consistency audits accepted before reporting results. |
 | `tables/` | Summary tables, bootstrap intervals, and contrasts reported in the paper. |
-| `figures/` | Figures 1 to 4 of the paper (PDF and PNG). |
+| `figures/` | Paper figures (PDF and PNG), including the MST flowchart and the comparison figures. |
 | `docs/` | Analysis freeze notes and the software and hardware environment. |
 
 ## Quick start
@@ -67,6 +69,7 @@ print(greedy_mst(items, 0.90, lambda_privacy=0, lambda_cognitive=1, lambda_cardi
 | Progressive-MST validation | `data/raw/progressive_mst_validation_sequence.csv`, `data/raw/normalized_progressive_mst_sequence.csv` |
 | Synthetic generator validation | `data/raw/corrected_generator_validation_summary.csv`, `data/raw/synthetic_regime_validation.csv` |
 | SARL execution, 36 conditions (Table 8) | `data/sarl/sarl_mst_multiscenario_sweep.csv` |
+| Comparison with ablations and adapted baselines | `data/comparison/comparison_rows.csv.gz`, `tables/comparison_*.csv`, `figures/fig_comparison_*.pdf` |
 
 All synthetic candidate pools were generated with random seed `2026`.
 Runtimes were measured on Windows 11, CPython 3.12.2, Intel 4 cores / 8
