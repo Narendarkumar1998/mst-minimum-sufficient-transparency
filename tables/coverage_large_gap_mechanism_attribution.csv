@@ -1,0 +1,17 @@
+scope,failure_mechanism,large_gap_rows,share_of_large_gap_rows_percent
+overall,identical_subset,0,0.0
+overall,same_count_different_items,1426,19.43044011445701
+overall,greedy_more_items,5909,80.51505654721352
+overall,greedy_fewer_items,4,0.054503338329472684
+independent,identical_subset,0,0.0
+independent,same_count_different_items,457,19.057547956630525
+independent,greedy_more_items,1941,80.94245204336947
+independent,greedy_fewer_items,0,0.0
+utility_burden_alignment,identical_subset,0,0.0
+utility_burden_alignment,same_count_different_items,361,18.880753138075313
+utility_burden_alignment,greedy_more_items,1550,81.06694560669456
+utility_burden_alignment,greedy_fewer_items,1,0.05230125523012552
+utility_burden_conflict,identical_subset,0,0.0
+utility_burden_conflict,same_count_different_items,608,20.072631231429515
+utility_burden_conflict,greedy_more_items,2418,79.8283261802575
+utility_burden_conflict,greedy_fewer_items,3,0.09904258831297458

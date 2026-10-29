@@ -1,0 +1,2 @@
+benchmark_rows,matched_groups,candidate_sizes,weight_profiles,minimum_rows_per_matched_group,maximum_rows_per_matched_group,minimum_rows_per_group_profile,maximum_rows_per_group_profile,negative_gap_rows,bootstrap_replicates,candidate_size_design,weight_profile_design,confidence_intervals
+24000,500,5,4,48,48,12,12,0,5000,independent generated groups within each size,paired within matched generated groups,unadjusted_percentile_95

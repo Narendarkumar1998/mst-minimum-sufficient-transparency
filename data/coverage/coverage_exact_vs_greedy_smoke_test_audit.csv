@@ -1,0 +1,2 @@
+rows,expected_rows,regimes,thresholds,weight_profiles,exact_optimal_rows,greedy_feasible_rows,duplicate_conditions,negative_gap_rows,exact_threshold_failures,greedy_threshold_failures,status_disagreements,maximum_feature_weight_difference,maximum_coverage_matrix_difference,maximum_sorted_privacy_difference,maximum_sorted_cognitive_difference,minimum_optimality_gap_percent,maximum_optimality_gap_percent,mean_optimality_gap_percent,exact_subset_space_size
+48,48,3,4,4,48,48,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,35.32116506386029,10.628588162573456,4096

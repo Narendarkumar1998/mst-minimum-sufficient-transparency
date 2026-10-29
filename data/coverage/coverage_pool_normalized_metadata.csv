@@ -1,0 +1,2 @@
+utility_version,candidate_sizes,replicates_per_size,total_matched_groups,thresholds,n_features,coverage_density,regime_strength,normalization_denominator,threshold_interpretation,full_set_utility,submodularity_preserved,monotonicity_preserved,property_tests_per_group,property_tolerance
+coverage_submodular_pool_normalized_v2,"[8, 10, 12, 14, 16]",100,500,"[0.7, 0.8, 0.9, 0.95]",12,0.35,0.75,weighted maximum feature coverage available in the candidate pool,fraction of available modeled decision-support utility,1.0,True,True,25,1e-12

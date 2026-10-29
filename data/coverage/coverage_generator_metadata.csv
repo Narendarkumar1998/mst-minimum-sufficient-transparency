@@ -1,0 +1,2 @@
+generator_version,validation_seed,validation_instances,validation_n_items,n_features,coverage_density,regime_strength,utility_function,burden_distribution_source,privacy_marginals_preserved,cognitive_marginals_preserved,regime_association_proxy
+coverage_submodular_marginal_preserving_v1,2150,500,64,12,0.35,0.75,weighted maximum feature coverage,corrected marginal-preserving-v2 independent generator,True,True,singleton coverage utility

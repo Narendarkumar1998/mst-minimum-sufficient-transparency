@@ -1,0 +1,2 @@
+matched_groups,random_property_tests,maximum_monotonicity_violation,maximum_diminishing_returns_violation,maximum_range_violation,maximum_full_set_deviation_from_one,monotonicity_failures_above_tolerance,diminishing_returns_failures_above_tolerance,range_failures_above_tolerance
+500,12500,0.0,3.3306690738754696e-16,0.0,0.0,0,0,0

@@ -1,0 +1,2 @@
+benchmark_rows,matched_groups,regimes,candidate_sizes,minimum_conditions_per_group_regime,maximum_conditions_per_group_regime,negative_gap_rows,exact_nonoptimal_rows,greedy_infeasible_rows,bootstrap_replicates,contrasts,confidence_intervals
+24000,500,3,5,16,16,0,0,0,5000,3,unadjusted_percentile_95

@@ -1,0 +1,2 @@
+benchmark_rows,matched_groups,thresholds,minimum_rows_per_group_threshold,maximum_rows_per_group_threshold,global_p95_gap_threshold,global_p99_gap_threshold,negative_absolute_gap_rows,maximum_reconstruction_error,bootstrap_replicates,confidence_intervals
+24000,500,4,12,12,31.19481473885883,44.202883124986876,0,1.4210854715202004e-13,5000,unadjusted_percentile_95
