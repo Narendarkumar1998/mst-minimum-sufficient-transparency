@@ -42,12 +42,19 @@ class SolverResult:
 
 
 def solve_mst_scip(u, p, c, admissible, tau, weights, time_limit=60.0, gap_limit=0.0,
-                   threads=1, seed=0, start=None) -> SolverResult:
-    """start: optional iterable of item indices used as an initial feasible solution."""
+                   threads=1, seed=0, start=None, privacy="exp",
+                   cost_scale=None, card_scale=None) -> SolverResult:
+    """start: optional iterable of item indices used as an initial feasible solution.
+    privacy: "exp" writes P = 1 - exp(-y) (mixed-integer nonlinear program);
+             "chain" linearizes the product exactly, q_k = q_{k-1} (1 - p_k x_k), with
+             McCormick envelopes, which are exact for a binary times a bounded variable,
+             so the whole model is a mixed-integer linear program.
+    cost_scale, card_scale: reference scales for C and K; by default the admissible
+             pool (C(D_t) and |D_t|), as in the paper."""
     lp, lc, lk = weights
     n_all = len(u)
-    total_cost = sum(c)
     adm = [i for i in range(n_all) if admissible[i]]
+    total_cost = sum(c[i] for i in adm)      # normalization by the admissible pool D_t
     t0 = time.perf_counter()
 
     # Quick infeasibility test on the admissible pool.
@@ -76,27 +83,55 @@ def solve_mst_scip(u, p, c, admissible, tau, weights, time_limit=60.0, gap_limit
         w = {i: (W if u[i] >= 1.0 else min(-math.log1p(-u[i]), W)) for i in adm}
         m.addCons(quicksum(w[i] * x[i] for i in adm) >= W)
 
-    # Privacy term P = 1 - exp(-y), with items of p_i = 1 handled separately.
     t = m.addVar(lb=0.0, ub=1.0, name="P")
-    soft = [i for i in adm if p[i] < 1.0]
-    y = m.addVar(lb=0.0, name="y")
-    m.addCons(y == quicksum(-math.log1p(-p[i]) * x[i] for i in soft))
-    m.addCons(t >= 1 - exp(-y))
-    for i in adm:
-        if p[i] >= 1.0:
-            m.addCons(t >= x[i])
+    if privacy == "chain":
+        # q_0 = 1, q_k = q_{k-1} - p_k z_k with z_k = q_{k-1} x_k; L_k <= q_k <= 1.
+        q_prev, L_prev = 1.0, 1.0
+        chain = []
+        for i in adm:
+            L_k = L_prev * (1.0 - p[i])
+            q = m.addVar(lb=L_k, ub=1.0, name=f"q{i}")
+            z = m.addVar(lb=0.0, ub=1.0, name=f"z{i}")
+            m.addCons(z <= x[i])                               # z <= U x  (U = 1)
+            m.addCons(z >= L_prev * x[i])                      # z >= L x
+            m.addCons(z <= q_prev - L_prev * (1 - x[i]))       # z <= q - L (1 - x)
+            m.addCons(z >= q_prev - (1 - x[i]))                # z >= q - U (1 - x)
+            m.addCons(q == q_prev - p[i] * z)
+            chain.append((i, q, z))
+            q_prev, L_prev = q, L_k
+        m.addCons(t == 1 - q_prev) if adm else m.addCons(t == 0)
+    else:
+        # Privacy term P = 1 - exp(-y), with items of p_i = 1 handled separately.
+        soft = [i for i in adm if p[i] < 1.0]
+        y = m.addVar(lb=0.0, name="y")
+        m.addCons(y == quicksum(-math.log1p(-p[i]) * x[i] for i in soft))
+        m.addCons(t >= 1 - exp(-y))
+        for i in adm:
+            if p[i] >= 1.0:
+                m.addCons(t >= x[i])
 
-    cost_term = quicksum((c[i] / total_cost) * x[i] for i in adm) if total_cost > 0 else 0
-    card_term = quicksum(x[i] for i in adm) * (1.0 / n_all)
+    cscale = total_cost if cost_scale is None else cost_scale
+    kscale = len(adm) if card_scale is None else card_scale
+    cost_term = quicksum((c[i] / cscale) * x[i] for i in adm) if cscale > 0 else 0
+    card_term = quicksum(x[i] for i in adm) * (1.0 / kscale)
     m.setObjective(lp * t + lc * cost_term + lk * card_term, "minimize")
     if start is not None:
         st = set(start)
         sol0 = m.createSol()
         for i in adm:
             m.setSolVal(sol0, x[i], 1.0 if i in st else 0.0)
-        yv = sum(-math.log1p(-p[i]) for i in st if p[i] < 1.0)
-        m.setSolVal(sol0, y, yv)
-        m.setSolVal(sol0, t, 1.0 if any(p[i] >= 1.0 for i in st) else 1.0 - math.exp(-yv))
+        if privacy == "chain":
+            qv = 1.0
+            for i, q, z in chain:
+                zv = qv if i in st else 0.0
+                qv = qv - p[i] * zv
+                m.setSolVal(sol0, z, zv)
+                m.setSolVal(sol0, q, qv)
+            m.setSolVal(sol0, t, 1.0 - qv)
+        else:
+            yv = sum(-math.log1p(-p[i]) for i in st if p[i] < 1.0)
+            m.setSolVal(sol0, y, yv)
+            m.setSolVal(sol0, t, 1.0 if any(p[i] >= 1.0 for i in st) else 1.0 - math.exp(-yv))
         m.addSol(sol0, free=True)
     m.optimize()
 
@@ -108,26 +143,31 @@ def solve_mst_scip(u, p, c, admissible, tau, weights, time_limit=60.0, gap_limit
         return SolverResult(st, (), math.nan, m.getDualbound(), math.nan, runtime, nodes)
     sol = m.getBestSol()
     sel = tuple(i for i in adm if m.getSolVal(sol, x[i]) > 0.5)
-    obj = exact_objective(sel, u, p, c, weights)
+    obj = exact_objective(sel, u, p, c, weights, admissible, cost_scale, card_scale)
     bound = m.getDualbound()
     gap = 0.0 if status == "optimal" else max(0.0, (obj - bound) / bound) if bound > 0 else math.nan
     return SolverResult("OPTIMAL" if status == "optimal" else "TIME_LIMIT", sel, obj, bound, gap, runtime, nodes)
 
 
-def exact_objective(sel, u, p, c, weights):
-    """J recomputed from the selected indices with the paper's product forms."""
+def exact_objective(sel, u, p, c, weights, admissible=None, cost_scale=None, card_scale=None):
+    """J recomputed from the selected indices with the paper's product forms;
+    C and K are normalized by the admissible pool (all items when admissible is None)."""
     lp, lc, lk = weights
     prod_p = 1.0
     for i in sel:
         prod_p *= (1.0 - p[i])
+    adm = [True] * len(u) if admissible is None else list(admissible)
     total = 0
-    for v in c:
-        total += v
+    for v, a in zip(c, adm):
+        if a:
+            total += v
     cs = 0
     for i in sel:
         cs += c[i]
+    total = total if cost_scale is None else cost_scale
     cn = cs / total if total != 0 else 0.0
-    return lp * (1.0 - prod_p) + lc * cn + lk * (len(sel) / len(u))
+    kscale = sum(adm) if card_scale is None else card_scale
+    return lp * (1.0 - prod_p) + lc * cn + lk * (len(sel) / kscale)
 
 
 def utility(sel, u):

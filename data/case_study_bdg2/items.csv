@@ -1,0 +1,199 @@
+target,item_class,item,r2,p,c
+Bobcat_education_Miki,own_meter,chilled water,0.09413225477949413,0.05,0.2
+Bobcat_education_Miki,own_meter,hot water,0.020783109600399887,0.05,0.2
+Bobcat_education_Miki,own_profile,night base load,0.16320942582522513,0.08,0.5
+Bobcat_education_Miki,weather,airTemperature,0.0003959946218711169,0.01,0.15
+Bobcat_education_Miki,weather,dewTemperature,0.0015030775486218762,0.01,0.15
+Bobcat_education_Miki,weather,cloudCoverage,1.629366927330494e-05,0.01,0.15
+Bobcat_education_Miki,weather,windSpeed,0.00023148073385585588,0.01,0.15
+Bobcat_education_Miki,weather,precipDepth1HR,0.0004386535877723347,0.01,0.15
+Bobcat_education_Miki,calendar,weekend,0.0003676279571967007,0.01,0.05
+Bobcat_education_Miki,campus,campus median electricity,0.14821665359261477,0.02,0.15
+Bobcat_education_Miki,peer_elec,electricity Tammy,0.262375204445626,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Dylan,0.12744748441257334,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Angie,0.10658157723427633,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Alissa,0.1030008407957674,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Whitney,0.0877331540378678,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Toni,0.07671245414671332,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Billy,0.06894572054689434,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Alma,0.06326990304823081,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Rosalva,0.05729296669497389,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Jayne,0.053010990613581256,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Hollis,0.049256070678148696,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Adam,0.04026174390381687,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Monte,0.02742719910596605,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Coleman,0.026013869100206106,0.06,0.3
+Bobcat_education_Miki,peer_elec,electricity Nikita,0.020424048506471427,0.06,0.3
+Bobcat_education_Miki,peer_cw,chilled water Dylan,0.14354794313347793,0.04,0.3
+Bobcat_education_Miki,peer_cw,chilled water Monte,0.13253800701995921,0.04,0.3
+Bobcat_education_Miki,peer_cw,chilled water Marisha,0.07355610758283528,0.04,0.3
+Bobcat_education_Miki,peer_cw,chilled water Rosalva,0.028498303723937322,0.04,0.3
+Bobcat_education_Miki,peer_cw,chilled water Camilla,0.011459841210380326,0.04,0.3
+Bobcat_education_Miki,residence,electricity Nickolas (residence),0.04411749326367332,0.25,0.3
+Bobcat_education_Miki,residence,electricity Darin (residence),0.04163060458033872,0.25,0.3
+Bobcat_education_Miki,residence,electricity Melaine (residence),0.01488310294813536,0.25,0.3
+Bobcat_education_Alissa,own_meter,chilled water,6.345087548318341e-05,0.05,0.2
+Bobcat_education_Alissa,own_meter,hot water,0.014807738704517154,0.05,0.2
+Bobcat_education_Alissa,own_profile,night base load,0.06404330082809767,0.08,0.5
+Bobcat_education_Alissa,weather,airTemperature,0.008545763454379731,0.01,0.15
+Bobcat_education_Alissa,weather,dewTemperature,0.010284129662055042,0.01,0.15
+Bobcat_education_Alissa,weather,cloudCoverage,2.3864538575272947e-06,0.01,0.15
+Bobcat_education_Alissa,weather,windSpeed,0.0037035948694999544,0.01,0.15
+Bobcat_education_Alissa,weather,precipDepth1HR,5.6578602332073026e-05,0.01,0.15
+Bobcat_education_Alissa,calendar,weekend,0.0018034325502079623,0.01,0.05
+Bobcat_education_Alissa,campus,campus median electricity,0.4316800710011792,0.02,0.15
+Bobcat_education_Alissa,peer_elec,electricity Angie,0.35712386086836884,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Tammy,0.28998494173643397,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Billy,0.27626963070886434,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Hollis,0.24681252174121784,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Coleman,0.2154340298943117,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Toni,0.19929985488974897,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Dylan,0.1884237540079471,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Jayne,0.18090617700221143,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Rosalva,0.15099158772978555,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Whitney,0.1308047293351303,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Alma,0.11561892954147023,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Nikita,0.11336040328637291,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Miki,0.1030008407957674,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Monte,0.10190323078453364,0.06,0.3
+Bobcat_education_Alissa,peer_elec,electricity Angela,0.09149362165268679,0.06,0.3
+Bobcat_education_Alissa,peer_cw,chilled water Marisha,0.11824064850721809,0.04,0.3
+Bobcat_education_Alissa,peer_cw,chilled water Billy,0.1144016726510304,0.04,0.3
+Bobcat_education_Alissa,peer_cw,chilled water Camilla,0.07819406879519553,0.04,0.3
+Bobcat_education_Alissa,peer_cw,chilled water Rosalva,0.06817599575741733,0.04,0.3
+Bobcat_education_Alissa,peer_cw,chilled water Miki,0.029466881551900116,0.04,0.3
+Bobcat_education_Alissa,residence,electricity Nickolas (residence),0.14191195294179243,0.25,0.3
+Bobcat_education_Alissa,residence,electricity Darin (residence),0.12039842519899133,0.25,0.3
+Bobcat_education_Alissa,residence,electricity Melaine (residence),0.142907014056374,0.25,0.3
+Bobcat_education_Angela,own_meter,chilled water,7.969140793872886e-05,0.05,0.2
+Bobcat_education_Angela,own_meter,hot water,0.027388693952403106,0.05,0.2
+Bobcat_education_Angela,own_profile,night base load,0.5067109523339398,0.08,0.5
+Bobcat_education_Angela,weather,airTemperature,2.18140985791874e-05,0.01,0.15
+Bobcat_education_Angela,weather,dewTemperature,0.0009576970447883605,0.01,0.15
+Bobcat_education_Angela,weather,cloudCoverage,0.0004687206146498823,0.01,0.15
+Bobcat_education_Angela,weather,windSpeed,0.0040419676189807595,0.01,0.15
+Bobcat_education_Angela,weather,precipDepth1HR,8.875285258394037e-05,0.01,0.15
+Bobcat_education_Angela,calendar,weekend,0.0004056342536684516,0.01,0.05
+Bobcat_education_Angela,campus,campus median electricity,0.32159207924851296,0.02,0.15
+Bobcat_education_Angela,peer_elec,electricity Dylan,0.17348761752908518,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Rosalva,0.1721711612034413,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Toni,0.14651668812732543,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Jayne,0.1399400921481994,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Emile,0.1345851215600782,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Hollis,0.12425851181447864,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Camilla,0.123802277803259,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Monte,0.11736919491350523,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Alissa,0.09149362165268679,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Angie,0.09061589229837132,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Tammy,0.09047272189342767,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Coleman,0.0856857492921873,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Adam,0.08304195243056979,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Rodrick,0.0799539939082716,0.06,0.3
+Bobcat_education_Angela,peer_elec,electricity Alma,0.07773805456966378,0.06,0.3
+Bobcat_education_Angela,peer_cw,chilled water Dylan,0.06521045056861255,0.04,0.3
+Bobcat_education_Angela,peer_cw,chilled water Monte,0.05249670495815995,0.04,0.3
+Bobcat_education_Angela,peer_cw,chilled water Jayne,0.03710489070563475,0.04,0.3
+Bobcat_education_Angela,peer_cw,chilled water Marisha,0.01577073255151498,0.04,0.3
+Bobcat_education_Angela,peer_cw,chilled water Camilla,0.005907933869284594,0.04,0.3
+Bobcat_education_Angela,residence,electricity Nickolas (residence),0.10597938626255815,0.25,0.3
+Bobcat_education_Angela,residence,electricity Darin (residence),0.09956366596857223,0.25,0.3
+Bobcat_education_Angela,residence,electricity Melaine (residence),0.16595904111812534,0.25,0.3
+Bobcat_education_Marisha,own_meter,chilled water,0.022179749738342816,0.05,0.2
+Bobcat_education_Marisha,own_meter,hot water,0.0021176866459358527,0.05,0.2
+Bobcat_education_Marisha,own_profile,night base load,0.728709831587454,0.08,0.5
+Bobcat_education_Marisha,weather,airTemperature,0.006474875903531414,0.01,0.15
+Bobcat_education_Marisha,weather,dewTemperature,0.0030557950848322827,0.01,0.15
+Bobcat_education_Marisha,weather,cloudCoverage,3.523458682643488e-06,0.01,0.15
+Bobcat_education_Marisha,weather,windSpeed,0.0003848572351412653,0.01,0.15
+Bobcat_education_Marisha,weather,precipDepth1HR,1.7901046296416425e-05,0.01,0.15
+Bobcat_education_Marisha,calendar,weekend,0.0006866429052577045,0.01,0.05
+Bobcat_education_Marisha,campus,campus median electricity,0.03049145742318492,0.02,0.15
+Bobcat_education_Marisha,peer_elec,electricity Tammy,0.1546891044551887,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Angie,0.1418194188229585,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Rodrick,0.06478800667922203,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Emile,0.04873145662415902,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Billy,0.02292143937775815,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Jayne,0.01820573411821439,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Karin,0.0180865476763888,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Whitney,0.014983157522910592,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Angela,0.013541253853762347,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Coleman,0.012099809650847382,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Nikita,0.010558425837994259,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Kassandra,0.01033678102268235,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Rosalva,0.009078090704968959,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Dylan,0.00885358190015197,0.06,0.3
+Bobcat_education_Marisha,peer_elec,electricity Hollis,0.00823027182905563,0.06,0.3
+Bobcat_education_Marisha,peer_cw,chilled water Billy,0.08783001700096181,0.04,0.3
+Bobcat_education_Marisha,peer_cw,chilled water Monte,0.012732606574361524,0.04,0.3
+Bobcat_education_Marisha,peer_cw,chilled water Rosalva,0.009738762913683432,0.04,0.3
+Bobcat_education_Marisha,peer_cw,chilled water Camilla,0.004121824778804863,0.04,0.3
+Bobcat_education_Marisha,peer_cw,chilled water Dylan,0.0018106268336035459,0.04,0.3
+Bobcat_education_Marisha,residence,electricity Nickolas (residence),0.003733676639340919,0.25,0.3
+Bobcat_education_Marisha,residence,electricity Darin (residence),0.006604597338156118,0.25,0.3
+Bobcat_education_Marisha,residence,electricity Melaine (residence),0.02497257124011981,0.25,0.3
+Bobcat_science_Tammy,own_meter,chilled water,0.010747413259715032,0.05,0.2
+Bobcat_science_Tammy,own_meter,hot water,0.021171002388709236,0.05,0.2
+Bobcat_science_Tammy,own_profile,night base load,0.3037839655226895,0.08,0.5
+Bobcat_science_Tammy,weather,airTemperature,0.002168620471484102,0.01,0.15
+Bobcat_science_Tammy,weather,dewTemperature,0.009654828526725856,0.01,0.15
+Bobcat_science_Tammy,weather,cloudCoverage,0.005481022970787244,0.01,0.15
+Bobcat_science_Tammy,weather,windSpeed,0.00033324429903313556,0.01,0.15
+Bobcat_science_Tammy,weather,precipDepth1HR,0.0019808432871977815,0.01,0.15
+Bobcat_science_Tammy,calendar,weekend,0.0007715517445620783,0.01,0.05
+Bobcat_science_Tammy,campus,campus median electricity,0.37326371808808617,0.02,0.15
+Bobcat_science_Tammy,peer_elec,electricity Rodrick,0.3723445356492373,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Jayne,0.3060521462144245,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Alissa,0.28998494173643397,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Miki,0.2623752044456261,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Monte,0.25593457443679957,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Toni,0.23136051600128546,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Whitney,0.23085312568771002,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Billy,0.18334379982653026,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Hollis,0.18240605291062698,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Karin,0.16627191507712577,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Marisha,0.1546891044551887,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Coleman,0.14625610911702616,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Dylan,0.12884157931206566,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Rosalva,0.09666919558352532,0.06,0.3
+Bobcat_science_Tammy,peer_elec,electricity Angela,0.09047272189342764,0.06,0.3
+Bobcat_science_Tammy,peer_cw,chilled water Miki,0.09463792827576302,0.04,0.3
+Bobcat_science_Tammy,peer_cw,chilled water Marisha,0.0680987301390178,0.04,0.3
+Bobcat_science_Tammy,peer_cw,chilled water Billy,0.039765587230235225,0.04,0.3
+Bobcat_science_Tammy,peer_cw,chilled water Alissa,0.026669536938540263,0.04,0.3
+Bobcat_science_Tammy,peer_cw,chilled water Dylan,0.019951186393195507,0.04,0.3
+Bobcat_science_Tammy,residence,electricity Nickolas (residence),0.13200589487211967,0.25,0.3
+Bobcat_science_Tammy,residence,electricity Darin (residence),0.1976161861044223,0.25,0.3
+Bobcat_science_Tammy,residence,electricity Melaine (residence),0.08966822390985921,0.25,0.3
+Bobcat_education_Dylan,own_meter,chilled water,0.044265136591135026,0.05,0.2
+Bobcat_education_Dylan,own_meter,hot water,0.004990963853510297,0.05,0.2
+Bobcat_education_Dylan,own_profile,night base load,0.386466585428267,0.08,0.5
+Bobcat_education_Dylan,weather,airTemperature,0.0016717182314558785,0.01,0.15
+Bobcat_education_Dylan,weather,dewTemperature,0.0049003906297036895,0.01,0.15
+Bobcat_education_Dylan,weather,cloudCoverage,0.0003219939499946118,0.01,0.15
+Bobcat_education_Dylan,weather,windSpeed,0.008930089245890132,0.01,0.15
+Bobcat_education_Dylan,weather,precipDepth1HR,0.0019274620818495129,0.01,0.15
+Bobcat_education_Dylan,calendar,weekend,0.001863063768381095,0.01,0.05
+Bobcat_education_Dylan,campus,campus median electricity,0.4580852457200699,0.02,0.15
+Bobcat_education_Dylan,peer_elec,electricity Rosalva,0.379147639167602,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Toni,0.2917735686170035,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Emile,0.28518945429640763,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Angie,0.2822608009560231,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Hollis,0.22958395397410633,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Rodrick,0.21127666451179256,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Jayne,0.1980052714190772,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Alissa,0.18842375400794703,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Billy,0.18058118981247528,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Angela,0.17348761752908518,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Camilla,0.1331042078120337,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Tammy,0.12884157931206566,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Miki,0.12744748441257328,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Melody,0.12600770776165543,0.06,0.3
+Bobcat_education_Dylan,peer_elec,electricity Coleman,0.12285448092223926,0.06,0.3
+Bobcat_education_Dylan,peer_cw,chilled water Tammy,0.05496088685464556,0.04,0.3
+Bobcat_education_Dylan,peer_cw,chilled water Billy,0.04866998703339502,0.04,0.3
+Bobcat_education_Dylan,peer_cw,chilled water Marisha,0.04337808373213725,0.04,0.3
+Bobcat_education_Dylan,peer_cw,chilled water Jayne,0.01047990786020563,0.04,0.3
+Bobcat_education_Dylan,peer_cw,chilled water Jovita,0.009333074180559245,0.04,0.3
+Bobcat_education_Dylan,residence,electricity Nickolas (residence),0.06183485567202041,0.25,0.3
+Bobcat_education_Dylan,residence,electricity Darin (residence),0.05445866907948195,0.25,0.3
+Bobcat_education_Dylan,residence,electricity Melaine (residence),0.07124317508374882,0.25,0.3

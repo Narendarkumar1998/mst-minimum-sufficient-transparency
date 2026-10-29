@@ -2,7 +2,7 @@
 Run MST, its ablations and the adapted baselines on the primary-benchmark pools
 (with hard-admissibility flags) and write one row per method and condition.
 
-Output: data/comparison/comparison_rows.csv.gz  (24,000 conditions x 12 methods)
+Output: data/comparison/comparison_rows.csv.gz  (24,000 conditions x 14 methods)
 
 Usage: python comparison/run_comparison.py [--workers 2]
 """
@@ -38,6 +38,7 @@ def run_instance(args):
         for tau in bp.TAU_LEVELS:
             feasible = bool(inst.U[inst.adm_mask] >= tau)
             mst_sel = m.mst_exact(inst, tau, w, J)
+            diag = m.infeasibility_diagnostic(inst, tau) if not feasible else {}
             for name, (fn, group, _label) in m.METHODS.items():
                 sel = fn(inst, tau, w, J)
                 row = {
@@ -63,6 +64,8 @@ def run_instance(args):
                                prohibited_disclosed=int(inst.n_prohibited[sel]))
                     valid = feasible and sufficient and admissible
                 row["valid"] = valid
+                if name == "MST" and diag:
+                    row.update({f"diag_{k}": v for k, v in diag.items()})
                 # comparison with MST on feasible conditions
                 if feasible and valid and sel != m.INFEASIBLE:
                     jm = float(J[mst_sel])

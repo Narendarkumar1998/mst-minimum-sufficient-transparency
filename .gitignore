@@ -8,3 +8,4 @@ sarl/**/target/
 sarl/**/.classpath
 sarl/**/.project
 sarl/**/.settings/
+*.partial.csv

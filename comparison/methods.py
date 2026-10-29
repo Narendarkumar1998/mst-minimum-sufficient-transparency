@@ -2,8 +2,8 @@
 MST, its ablations, and adapted baselines on one candidate pool.
 
 All quantities follow the paper (Section 3): U and P use the product-union
-form, interpretation cost is normalized by the complete candidate pool I_t
-(including prohibited items), and K = |S| / |I_t|. Every subset of the pool is
+form, interpretation cost is normalized by the admissible pool D_t, and
+K = |S| / |D_t|, so prohibited items do not change the objective. Every subset of the pool is
 enumerated once per instance with a bit mask; products and sums are accumulated
 in item order so that the values match the reference implementation
 (mst/mst_core.py) to the last bit.
@@ -57,11 +57,12 @@ class Instance:
         self.U = 1.0 - prod_u
         self.P = 1.0 - prod_p
         total_cost = 0
-        for v in self.c:
-            total_cost += v
+        for v, a in zip(self.c, self.adm):   # admissible pool D_t only
+            if a:
+                total_cost += v
         self.Cn = csum / total_cost if total_cost != 0.0 else np.zeros(len(B))
         self.card = B.sum(axis=1)
-        self.K = self.card / n
+        self.K = self.card / max(int(self.adm.sum()), 1)
         self.n_prohibited = (B & ~self.adm).sum(axis=1)
         self.all_adm = self.n_prohibited == 0
         self.adm_mask = int(sum(1 << i for i in range(n) if self.adm[i]))
@@ -218,6 +219,61 @@ def baseline_greedy_cover(inst, tau, w, J=None):
     return sel
 
 
+def baseline_policy_greedy_delete(inst, tau, w, J=None):
+    """Strong practical baseline: policy filter, then the standard submodular-cover
+    greedy (marginal utility truncated at tau per marginal objective), then reverse
+    deletion of items while the disclosure stays sufficient. Reports infeasibility
+    when the admissible pool cannot reach tau."""
+    J = inst.J(w) if J is None else J
+    if inst.U[inst.adm_mask] < tau:
+        return INFEASIBLE
+    sel = 0
+    while inst.U[sel] < tau:
+        best, best_score = None, -np.inf
+        for i in range(inst.n):
+            if not inst.adm[i] or sel >> i & 1:
+                continue
+            nxt = sel | (1 << i)
+            du = min(inst.U[nxt], tau) - inst.U[sel]
+            if du <= 0.0:
+                continue
+            score = du / (J[nxt] - J[sel] + GREEDY_EPSILON)
+            if score > best_score:
+                best, best_score = i, score
+        sel |= 1 << best
+    while True:                      # reverse deletion, largest decrease of J first
+        best, best_J = None, np.inf
+        for i in range(inst.n):
+            if sel >> i & 1:
+                nxt = sel & ~(1 << i)
+                if inst.U[nxt] >= tau and J[nxt] < best_J:
+                    best, best_J = i, J[nxt]
+        if best is None:
+            return sel
+        sel &= ~(1 << best)
+
+
+def infeasibility_diagnostic(inst, tau):
+    """What an MST infeasibility report returns besides the flag: the largest
+    reachable utility U(D_t), the shortfall tau - U(D_t), and the smallest set of
+    prohibited items whose release would restore feasibility (items of highest
+    utility first, which minimizes the number released; empty when even the complete
+    pool cannot reach tau)."""
+    u_max = float(inst.U[inst.adm_mask])
+    out = {"max_admissible_utility": u_max, "shortfall": max(0.0, tau - u_max),
+           "release_needed": np.nan, "release_possible": bool(inst.U[inst.full_mask] >= tau)}
+    if out["release_possible"]:
+        sel = inst.adm_mask
+        k = 0
+        for i in sorted((i for i in range(inst.n) if not inst.adm[i]), key=lambda i: (-inst.u[i], i)):
+            if inst.U[sel] >= tau:
+                break
+            sel |= 1 << i
+            k += 1
+        out["release_needed"] = k
+    return out
+
+
 def baseline_budgeted_coverage(inst, tau, w, J=None):
     """Largest utility within a fixed interpretation-cost budget."""
     cand = inst.Cn <= COVERAGE_BUDGET
@@ -239,6 +295,8 @@ METHODS = {
     "B1_full_disclosure": (baseline_full_disclosure, "baseline", "full disclosure"),
     "B5_greedy_cover": (baseline_greedy_cover, "baseline", "greedy submodular cover"),
     "B6_budgeted_coverage": (baseline_budgeted_coverage, "baseline", "budgeted coverage"),
+    "B7_policy_greedy_delete": (baseline_policy_greedy_delete, "baseline",
+                                "policy filter + truncated greedy + reverse deletion"),
 }
 
 
