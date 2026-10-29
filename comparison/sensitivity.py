@@ -1,8 +1,9 @@
 """
-Sensitivity of the three baselines that have a free parameter.
+Sensitivity of the four methods that have a free parameter.
 
   soft-penalty weight per prohibited item (ablation A1): 0.1, 1, 10
-  parsimony length k (baseline B3):                     2, 3, 4
+  privacy budget of goal obfuscation (C2):               0.25, 0.35, 0.50
+  parsimony length k of parsimonious HAExA (C4):        2, 3, 4
   coverage budget (baseline B6):                        0.15, 0.25, 0.35
 
 Writes tables/comparison_parameter_sensitivity.csv
@@ -24,7 +25,8 @@ import benchmark_pools as bp  # noqa: E402
 import methods as m  # noqa: E402
 
 SETTINGS = [("A1_soft_admissibility", "SOFT_PENALTY_PER_PROHIBITED_ITEM", v) for v in (0.1, 1.0, 10.0)] + \
-           [("B3_parsimony_top3", "PARSIMONY_K", v) for v in (2, 3, 4)] + \
+           [("C2_goal_obfuscation", "PRIVACY_BUDGET", v) for v in (0.25, 0.35, 0.50)] + \
+           [("C4_parsimonious_haexa", "PARSIMONY_K", v) for v in (2, 3, 4)] + \
            [("B6_budgeted_coverage", "COVERAGE_BUDGET", v) for v in (0.15, 0.25, 0.35)]
 
 

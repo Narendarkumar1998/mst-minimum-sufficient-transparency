@@ -1,9 +1,9 @@
-# Comparison with ablations and adapted baselines
+# Comparison with the closest approaches, ablations and adapted baselines
 
-This folder compares MST with (i) ablations, each removing one component of the
-model, and (ii) adapted baselines, one for each family of related work in the
-paper's positioning table. Every method runs on the same candidate pools as the
-paper's primary benchmark: 1,500 pools, 4 thresholds and 4 weight profiles,
+This folder compares MST with (i) the four closest approaches in the paper's
+positioning table, (ii) ablations, each removing one component of the model, and
+(iii) adapted baselines for the remaining families of related work. Every method
+runs on the same candidate pools as the paper's primary benchmark: 1,500 pools, 4 thresholds and 4 weight profiles,
 giving 24,000 conditions.
 
 ## Candidate pools
@@ -20,20 +20,29 @@ the threshold, so the correct outcome there is to report infeasibility.
 
 ## Methods
 
-| Key | Method | What it represents |
+**The four closest approaches** in the paper's positioning table, each reduced to its
+selection rule and applied to the same candidate items:
+
+| Key | Approach | Selection rule applied here |
 |---|---|---|
-| MST | Exact-MST | the full model |
-| A1 | hard admissibility replaced by a penalty of 1 per prohibited item | soft privacy penalties |
-| A2 | sufficiency threshold replaced by a utility reward, J(S) minus U(S) | utility and cost trade-offs |
-| A3 | objective replaced by the number of items | minimal sufficient subsets inside the policy |
-| A4 | when infeasible, disclose every admissible item | systems that always answer |
-| A5 | Dynamic Greedy-MST | heuristic search |
-| B1 | full disclosure | maximal transparency |
-| B2 | every admissible item | role-aware policy filtering |
-| B3 | three items of highest utility | parsimonious explanation |
-| B4 | smallest sufficient subset, ignoring the policy and cost | sufficient reasons and abductive explanations |
-| B5 | greedy cover by utility per interpretation cost | submodular set cover |
-| B6 | highest utility within a normalized cost budget of 0.25 | budgeted coverage |
+| C1 | Model reconciliation (Chakraborti et al. 2017) | smallest sufficient subset (minimally complete explanation), no policy, no privacy term |
+| C2 | Goal obfuscation and legibility (Kulkarni et al. 2020) | least interpretation cost reaching the threshold with privacy exposure within a budget of 0.35; failure reported otherwise; no item-level policy |
+| C3 | Role-aware HAExA (Kumar et al. 2026) | every item the role is permitted to see |
+| C4 | Parsimonious HAExA (Mualla et al. 2022) | the three items of highest utility |
+
+**Ablations**, each removing one component of MST:
+
+| Key | Component removed |
+|---|---|
+| A1 | hard admissibility, replaced by a penalty of 1 per prohibited item |
+| A2 | sufficiency threshold, replaced by a utility reward, J(S) minus U(S) |
+| A3 | disclosure-cost objective, replaced by the number of items |
+| A4 | infeasibility reporting: every admissible item is disclosed instead |
+| A5 | exact search, replaced by Dynamic Greedy-MST |
+
+**Further baselines** for the remaining families: full disclosure (B1), greedy
+submodular cover by utility per interpretation cost (B5), and highest utility within
+a normalized cost budget of 0.25 (B6).
 
 ## Requirements measured
 
@@ -54,20 +63,22 @@ python comparison/validate_against_paper.py   # about 4 min
 python comparison/run_comparison.py           # about 4 min with 2 workers
 python comparison/make_figures.py
 python comparison/case_study.py               # smart-building pools of the SARL run
-python comparison/sensitivity.py              # free parameters of A1, B3 and B6, about 6 min
+python comparison/sensitivity.py              # free parameters of A1, C2, C4 and B6, about 8 min
 ```
 
 ## Outputs
 
 | File | Content |
 |---|---|
-| `data/comparison/comparison_rows.csv.gz` | 288,000 rows, one per method and condition |
+| `data/comparison/comparison_rows.csv.gz` | 312,000 rows, one per method and condition |
 | `tables/comparison_requirements_summary.csv` | R1 to R4, items, objective excess, repair cost per method |
 | `tables/comparison_by_threshold.csv` | the same measures by threshold |
 | `tables/comparison_case_study.csv` | disclosures of every method on the nine SARL pools |
 | `tables/comparison_parameter_sensitivity.csv` | baseline results under other parameter values |
-| `figures/fig_comparison_requirements.pdf` | requirement satisfaction per method |
-| `figures/fig_comparison_cost_threshold.pdf` | repair cost and requirement satisfaction by threshold |
+| `figures/fig_comparison_closest.pdf` | MST and the four closest approaches on R1 to R4 |
+| `figures/fig_comparison_ablations.pdf` | MST and the five ablations on R1 to R4 |
+| `figures/fig_comparison_requirements.pdf` | all thirteen methods on R1 to R4 |
+| `figures/fig_comparison_cost_threshold.pdf` | repair cost of every method, and MST and the closest approaches by threshold |
 
 The baselines are adaptations of each family's main idea to disclosure
 selection, not reimplementations of the cited systems, which solve related but

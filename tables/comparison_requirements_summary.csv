@@ -1,13 +1,14 @@
 method,group,label,R1_sufficient_when_possible_pct,R2_no_prohibited_item_pct,R3_infeasibility_reported_pct,R1_R2_R3_all_met_pct,R4_not_dominated_when_valid_pct,R1_to_R4_all_met_pct,median_items_valid,median_objective_excess_valid_pct,dominated_by_mst_valid_pct,identical_to_mst_valid_pct,median_repair_excess_pct,q1_repair_excess_pct,q3_repair_excess_pct
 MST,MST,MST (exact),100.0,100.0,100.0,100.0,100.0,100.0,4.0,0.0,0.0,100.0,0.0,0.0,0.0
+C1_model_reconciliation,closest,model reconciliation,100.0,27.5,0.0,27.5,56.697,15.5917,3.0,6.0306,43.303,32.03030303030303,1.8398,0.0,9.2247
+C2_goal_obfuscation,closest,goal obfuscation and legibility,66.6301,59.5,95.8569,29.0833,100.0,29.0833,3.0,0.0,0.0,54.28802588996764,0.7568,0.0,9.2803
+C3_role_aware_haexa,closest,role-aware HAExA,100.0,100.0,0.0,91.15,2.6879,2.45,9.0,135.6299,97.3121,2.687877125617115,135.6299,69.8524,240.0375
+C4_parsimonious_haexa,closest,parsimonious HAExA,54.8546,35.4,0.0,17.75,27.6291,4.9042,3.0,34.9163,72.3709,14.788732394366196,2.4874,0.0,12.1626
 A1_soft_admissibility,ablation,without hard admissibility,100.0,92.05,10.1695,92.05,100.0,92.05,4.0,0.0,0.0,100.0,0.0,0.0,0.0
 A2_utility_reward,ablation,without sufficiency threshold,45.0722,100.0,0.0,41.0833,39.6856,16.3042,3.0,13.8555,60.3144,26.054766734279923,2.8282,0.0,16.1021
 A3_min_cardinality,ablation,without disclosure-cost objective,100.0,100.0,100.0,100.0,56.3083,60.175,3.0,4.4197,43.6917,31.587127445602487,4.4197,0.0,12.3905
 A4_no_infeasibility,ablation,without infeasibility reporting,100.0,100.0,0.0,91.15,100.0,91.15,4.0,0.0,0.0,100.0,0.0,0.0,0.0
 A5_greedy,ablation,without exact search (Dynamic Greedy-MST),100.0,100.0,100.0,100.0,67.4575,70.3375,4.0,0.6036,32.5425,46.55787164015359,0.6036,0.0,6.6745
 B1_full_disclosure,baseline,full disclosure,100.0,0.0,0.0,0.0,,0.0,,,,,135.6299,69.8524,240.0375
-B2_policy_filter,baseline,policy filter only,100.0,100.0,0.0,91.15,2.6879,2.45,9.0,135.6299,97.3121,2.687877125617115,135.6299,69.8524,240.0375
-B3_parsimony_top3,baseline,parsimonious top-3,54.8546,35.4,0.0,17.75,27.6291,4.9042,3.0,34.9163,72.3709,14.788732394366196,2.4874,0.0,12.1626
-B4_sufficient_reason,baseline,minimal sufficient subset,100.0,27.5,0.0,27.5,56.697,15.5917,3.0,6.0306,43.303,32.03030303030303,1.8398,0.0,9.2247
 B5_greedy_cover,baseline,greedy submodular cover,100.0,21.1333,0.0,21.1333,74.3297,15.7083,3.0,5.46,25.6703,34.286277602523654,3.0535,0.0,15.9855
 B6_budgeted_coverage,baseline,budgeted coverage,59.5721,25.6,0.0,10.9,31.6514,3.45,4.0,38.3451,68.3486,14.3348623853211,5.7593,0.0,27.8799

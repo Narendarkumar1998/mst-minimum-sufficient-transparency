@@ -47,6 +47,12 @@ ORANGE, AQUA, VIOLET, RED = "#eb6834", "#1baf7a", "#6250d6", "#e34948"
 ORDER = list(m.METHODS)
 LABEL = {k: v[2] for k, v in m.METHODS.items()}
 LABEL["MST"] = "MST (full model)"
+LABEL.update({
+    "C1_model_reconciliation": "Model reconciliation (Chakraborti et al. 2017)",
+    "C2_goal_obfuscation": "Goal obfuscation and legibility (Kulkarni et al. 2020)",
+    "C3_role_aware_haexa": "Role-aware HAExA (Kumar et al. 2026)",
+    "C4_parsimonious_haexa": "Parsimonious HAExA (Mualla et al. 2022)",
+})
 
 
 def summary(d: pd.DataFrame) -> pd.DataFrame:
@@ -89,6 +95,8 @@ def by_threshold(d: pd.DataFrame) -> pd.DataFrame:
         out.append({
             "method": meth, "tau": tau,
             "valid_pct": 100 * g.valid.mean(),
+            "all_met_pct": 100 * (g.valid & ~(g.weakly_dominated_by_mst.fillna(False).astype(bool)
+                                              & ~g.same_as_mst.fillna(True).astype(bool))).mean(),
             "prohibited_disclosed_pct": 100 * ((g.status == "DISCLOSED") & ~g.admissible.astype(bool)).mean(),
             "sufficient_when_possible_pct": 100 * gf.sufficient.mean(),
             "infeasible_conditions_pct": 100 * (~g.instance_feasible).mean(),
@@ -96,13 +104,22 @@ def by_threshold(d: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
-def fig_requirements(s: pd.DataFrame):
+PREFIX = {"MST": "", "closest": "", "ablation": "Ablation: ", "baseline": "Baseline: "}
+YELLOW, MAGENTA = "#eda100", "#e87ba4"
+
+
+def ylab(k):
+    return PREFIX[m.METHODS[k][1]] + LABEL[k]
+
+
+def fig_requirements(s: pd.DataFrame, keys, filename, breaks=(), size=(6.2, 4.1), note=True):
+    s = s.loc[keys]
     cols = ["R1_sufficient_when_possible_pct", "R2_no_prohibited_item_pct",
             "R3_infeasibility_reported_pct", "R4_not_dominated_when_valid_pct", "R1_to_R4_all_met_pct"]
-    heads = ["R1\nsufficient\nwhen possible", "R2\nno prohibited\nitem",
-             "R3\ninfeasibility\nreported", "R4\nnot dominated\nby MST", "R1 to R4\nall met"]
+    heads = ["R1\nsufficient", "R2\nno prohibited\nitem",
+             "R3\ninfeasibility\nreported", "R4\nnot\ndominated", "R1 to R4\nall met"]
     M = s[cols].to_numpy()
-    fig, ax = plt.subplots(figsize=(6.2, 4.1))
+    fig, ax = plt.subplots(figsize=size)
     cmap = matplotlib.colors.LinearSegmentedColormap.from_list(
         "seq", ["#f4f3f0", "#a9c8ef", "#2a78d6", "#0d3a73"])
     ax.imshow(M, cmap=cmap, vmin=0, vmax=100, aspect="auto")
@@ -115,45 +132,38 @@ def fig_requirements(s: pd.DataFrame):
             ax.text(j, i, f"{v:.1f}", ha="center", va="center", fontsize=7.5,
                     color="white" if v > 60 else "#0b0b0b",
                     fontweight="bold" if s.index[i] == "MST" else "normal")
-    ax.set_xticks(range(len(cols)), heads)
+    ax.set_xticks(range(len(cols)), heads, fontsize=7)
     ax.xaxis.tick_top()
     ax.tick_params(length=0)
-    ylabels = [LABEL[k] for k in s.index]
-    ax.set_yticks(range(len(ylabels)), ylabels)
-    for t, k in zip(ax.get_yticklabels(), s.index):
+    ax.set_yticks(range(len(keys)), [ylab(k) for k in keys])
+    for t, k in zip(ax.get_yticklabels(), keys):
         if k == "MST":
             t.set_fontweight("bold")
-    for y in (0.5, 5.5):
+    for y in (0.5,) + tuple(breaks):
         ax.axhline(y, color="white", lw=3)
     ax.axvline(3.5, color="white", lw=3)
     for sp in ax.spines.values():
         sp.set_visible(False)
-    ax.set_yticks(range(len(ylabels)), [("Ablation: " if m.METHODS[k][1] == "ablation" else
-                                         "Baseline: " if m.METHODS[k][1] == "baseline" else "") + LABEL[k]
-                                        for k in s.index])
-    for t, k in zip(ax.get_yticklabels(), s.index):
-        if k == "MST":
-            t.set_fontweight("bold")
     ax.set_xlim(-0.5, len(cols) - 0.5)
-    fig.text(0.99, 0.01, "Percent of conditions; 24,000 conditions, 2,124 without a sufficient admissible disclosure.",
-             ha="right", fontsize=6.5, color=TEXT2)
+    if note:
+        fig.text(0.99, 0.0, "Percent of conditions; 24,000 conditions, 2,124 without a sufficient admissible disclosure.",
+                 ha="right", fontsize=6.5, color=TEXT2)
     fig.tight_layout()
-    fig.savefig(FIGS / "fig_comparison_requirements.pdf", bbox_inches="tight")
+    fig.savefig(FIGS / filename, bbox_inches="tight")
     plt.close(fig)
 
 
 def fig_cost_threshold(s: pd.DataFrame, t: pd.DataFrame):
-    fig, (a, b) = plt.subplots(1, 2, figsize=(7.4, 3.1), gridspec_kw={"width_ratios": [1.15, 1]})
-    # (a) repair cost: extra objective needed to make each method's output valid
+    fig, (a, b) = plt.subplots(1, 2, figsize=(7.4, 3.3), gridspec_kw={"width_ratios": [1.15, 1]})
     order = s.sort_values("median_repair_excess_pct").index.tolist()
     y = np.arange(len(order))
     med = s.loc[order, "median_repair_excess_pct"].to_numpy()
     q1 = s.loc[order, "q1_repair_excess_pct"].to_numpy()
     q3 = s.loc[order, "q3_repair_excess_pct"].to_numpy()
-    colors = [BLUE if k == "MST" else GREY for k in order]
+    colors = [BLUE if k == "MST" else ("#6f9fdc" if m.METHODS[k][1] == "closest" else GREY) for k in order]
     a.barh(y, med, color=colors, height=0.62)
     a.errorbar(med, y, xerr=[med - q1, q3 - med], fmt="none", ecolor="#3a3936", elinewidth=0.7, capsize=1.8)
-    a.set_yticks(y, [("Ablation: " if m.METHODS[k][1] == "ablation" else "Baseline: " if m.METHODS[k][1] == "baseline" else "") + LABEL[k] for k in order])
+    a.set_yticks(y, [ylab(k) for k in order])
     a.invert_yaxis()
     a.set_xscale("symlog", linthresh=1)
     a.set_xlim(0, 900)
@@ -164,19 +174,23 @@ def fig_cost_threshold(s: pd.DataFrame, t: pd.DataFrame):
         a.text(max(hi, v) * 1.25 + 0.2, yi, f"{v:.1f}", va="center", fontsize=6.8, color=TEXT2)
     a.grid(axis="x", color="#e6e5e1", lw=0.5)
     a.set_axisbelow(True)
-    # (b) share of conditions meeting R1 to R3, by threshold
-    show = [("MST", BLUE, "o"), ("A1_soft_admissibility", ORANGE, "s"),
-            ("B4_sufficient_reason", AQUA, "^"), ("B3_parsimony_top3", VIOLET, "D")]
+    show = [("MST", BLUE, "o"), ("C1_model_reconciliation", ORANGE, "s"),
+            ("C2_goal_obfuscation", AQUA, "^"), ("C3_role_aware_haexa", YELLOW, "v"),
+            ("C4_parsimonious_haexa", MAGENTA, "D")]
     for meth, col, mk in show:
         g = t[t.method == meth].sort_values("tau")
-        b.plot(g.tau, g.valid_pct, color=col, lw=2, marker=mk, ms=4.5, label=LABEL[meth])
+        short = {"MST": "MST", "C1_model_reconciliation": "Model reconciliation",
+                 "C2_goal_obfuscation": "Goal obfuscation and legibility",
+                 "C3_role_aware_haexa": "Role-aware HAExA",
+                 "C4_parsimonious_haexa": "Parsimonious HAExA"}[meth]
+        b.plot(g.tau, g.all_met_pct, color=col, lw=2, marker=mk, ms=4.5, label=short)
     b.set_xticks([0.70, 0.80, 0.90, 0.95])
     b.set_ylim(0, 105)
     b.set_xlabel(r"Sufficiency threshold $\tau$")
-    b.set_ylabel("Conditions with R1 to R3 met (%)")
-    b.set_title("(b) Requirement satisfaction by threshold", loc="left")
+    b.set_ylabel("Conditions with R1 to R4 met (%)")
+    b.set_title("(b) MST and the closest approaches by threshold", loc="left")
     b.grid(axis="y", color="#e6e5e1", lw=0.5)
-    b.legend(frameon=False, loc="center left", bbox_to_anchor=(0.0, 0.62))
+    b.legend(frameon=False, loc="center right", bbox_to_anchor=(1.0, 0.68), fontsize=7)
     fig.tight_layout(w_pad=2.0)
     fig.savefig(FIGS / "fig_comparison_cost_threshold.pdf", bbox_inches="tight")
     plt.close(fig)
@@ -191,7 +205,12 @@ def main():
     TABLES.mkdir(exist_ok=True)
     s.round(4).to_csv(TABLES / "comparison_requirements_summary.csv")
     t.round(4).to_csv(TABLES / "comparison_by_threshold.csv", index=False)
-    fig_requirements(s)
+    keys = list(m.METHODS)
+    closest = ["MST"] + [k for k in keys if m.METHODS[k][1] == "closest"]
+    ablations = ["MST"] + [k for k in keys if m.METHODS[k][1] == "ablation"]
+    fig_requirements(s, closest, "fig_comparison_closest.pdf", size=(5.4, 2.3))
+    fig_requirements(s, ablations, "fig_comparison_ablations.pdf", size=(5.4, 2.6))
+    fig_requirements(s, keys, "fig_comparison_requirements.pdf", breaks=(4.5, 9.5), size=(6.4, 4.6))
     fig_cost_threshold(s, t)
     print(s.round(2).to_string())
 

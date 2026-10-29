@@ -25,6 +25,7 @@ SOFT_PENALTY_PER_PROHIBITED_ITEM = 1.0   # larger than the whole range of J in [
 UTILITY_REWARD_WEIGHT = 1.0              # weight of U(S) when sufficiency is a reward
 PARSIMONY_K = 3                          # fixed explanation length of the parsimony baseline
 COVERAGE_BUDGET = 0.25                   # normalized interpretation-cost budget
+PRIVACY_BUDGET = 0.35                    # leakage bound of the goal-obfuscation adaptation
 GREEDY_EPSILON = 1e-12
 
 
@@ -153,27 +154,53 @@ def ablation_greedy(inst, tau, w, J=None):
 
 
 # ---------------------------------------------------------------------------
-# Adapted baselines (one per family in the positioning table)
+# The closest approaches in the positioning table, adapted to disclosure selection
 # ---------------------------------------------------------------------------
 
-def baseline_full_disclosure(inst, tau, w, J=None):
-    return inst.full_mask
+def closest_model_reconciliation(inst, tau, w, J=None):
+    """Model reconciliation (Chakraborti et al. 2017): the minimally complete
+    explanation is the smallest set of model updates after which the human
+    accepts the agent's decision. Here: the smallest sufficient subset of the
+    complete pool, with no disclosure policy and no privacy term. Ties are broken
+    by higher utility. Disclosing the complete pool is always a valid explanation
+    in model reconciliation, so it is returned when nothing smaller suffices."""
+    cand = inst.U >= tau
+    sel = inst.lexmin(cand, (inst.card, -inst.U))
+    return inst.full_mask if sel == INFEASIBLE else sel
 
 
-def baseline_policy_filter(inst, tau, w, J=None):
+def closest_goal_obfuscation(inst, tau, w, J=None):
+    """Goal obfuscation and legibility (Kulkarni et al.): be legible to the
+    cooperative observer while keeping what an adversarial observer can learn
+    under a bound, at least cost, and report failure when no plan satisfies both.
+    Here: reach tau for the recipient while keeping the relative privacy exposure
+    P(S) within a budget, minimizing interpretation cost, then size. Leakage is
+    bounded in total, so there is no item-level disclosure policy."""
+    cand = (inst.U >= tau) & (inst.P <= PRIVACY_BUDGET)
+    return inst.lexmin(cand, (inst.Cn, inst.card, inst.P))
+
+
+def closest_role_aware_haexa(inst, tau, w, J=None):
+    """Role-aware HAExA extension (Kumar et al. 2026): role-based filtering and
+    privacy guardrails map raw explanations to role-compliant ones, without
+    selecting a subset. Here: every item the role is permitted to see."""
     return inst.adm_mask
 
 
-def baseline_parsimony_topk(inst, tau, w, J=None):
+def closest_parsimonious_haexa(inst, tau, w, J=None):
+    """Parsimonious HAExA (Mualla et al. 2022): a short explanation built from the
+    most relevant items, with no disclosure policy. Here: the k items of highest
+    utility."""
     order = sorted(range(inst.n), key=lambda i: (-inst.u[i], i))[:PARSIMONY_K]
     return int(sum(1 << i for i in order))
 
 
-def baseline_sufficient_reason(inst, tau, w, J=None):
-    """Smallest sufficient subset, without admissibility or disclosure cost."""
-    cand = inst.U >= tau
-    sel = inst.lexmin(cand, (inst.card, -inst.U))
-    return inst.full_mask if sel == INFEASIBLE else sel
+# ---------------------------------------------------------------------------
+# Further adapted baselines (other families in the positioning table)
+# ---------------------------------------------------------------------------
+
+def baseline_full_disclosure(inst, tau, w, J=None):
+    return inst.full_mask
 
 
 def baseline_greedy_cover(inst, tau, w, J=None):
@@ -200,15 +227,16 @@ def baseline_budgeted_coverage(inst, tau, w, J=None):
 METHODS = {
     # name: (function, group, short label)
     "MST": (mst_exact, "MST", "MST (exact)"),
+    "C1_model_reconciliation": (closest_model_reconciliation, "closest", "model reconciliation"),
+    "C2_goal_obfuscation": (closest_goal_obfuscation, "closest", "goal obfuscation and legibility"),
+    "C3_role_aware_haexa": (closest_role_aware_haexa, "closest", "role-aware HAExA"),
+    "C4_parsimonious_haexa": (closest_parsimonious_haexa, "closest", "parsimonious HAExA"),
     "A1_soft_admissibility": (ablation_soft_admissibility, "ablation", "without hard admissibility"),
     "A2_utility_reward": (ablation_utility_reward, "ablation", "without sufficiency threshold"),
     "A3_min_cardinality": (ablation_min_cardinality, "ablation", "without disclosure-cost objective"),
     "A4_no_infeasibility": (ablation_no_infeasibility, "ablation", "without infeasibility reporting"),
     "A5_greedy": (ablation_greedy, "ablation", "without exact search (Dynamic Greedy-MST)"),
     "B1_full_disclosure": (baseline_full_disclosure, "baseline", "full disclosure"),
-    "B2_policy_filter": (baseline_policy_filter, "baseline", "policy filter only"),
-    "B3_parsimony_top3": (baseline_parsimony_topk, "baseline", "parsimonious top-3"),
-    "B4_sufficient_reason": (baseline_sufficient_reason, "baseline", "minimal sufficient subset"),
     "B5_greedy_cover": (baseline_greedy_cover, "baseline", "greedy submodular cover"),
     "B6_budgeted_coverage": (baseline_budgeted_coverage, "baseline", "budgeted coverage"),
 }
