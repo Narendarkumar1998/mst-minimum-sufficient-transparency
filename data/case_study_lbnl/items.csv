@@ -1,0 +1,126 @@
+target,point,item,kind,r2,p,c
+HVAC north,hvac_S,HVAC south,energy,0.128091477164085,0.03341459619342044,0.2
+HVAC north,mels_N,plug loads north,energy,0.048152043651584764,0.04290395463721951,0.2
+HVAC north,mels_S,plug loads south,energy,0.011179061253627776,0.18960027046955427,0.2
+HVAC north,lig_S,lighting south,energy,0.05384992974798983,0.06637714015974819,0.2
+HVAC north,rtu_001_fltrd_sa_flow_tn,rooftop unit 1 supply airflow,hvac,0.030371691502472323,0.0015822394197701662,0.3
+HVAC north,rtu_002_fltrd_sa_flow_tn,rooftop unit 2 supply airflow,hvac,0.04750250387071305,0.001312462109986395,0.3
+HVAC north,rtu_003_fltrd_sa_flow_tn,rooftop unit 3 supply airflow,hvac,0.08361641715662399,0.004291784816512858,0.3
+HVAC north,rtu_004_fltrd_sa_flow_tn,rooftop unit 4 supply airflow,hvac,0.10668096847033297,0.008141383184362559,0.3
+HVAC north,rtu_001_sa_temp,rooftop unit 1 supply air temperature,hvac,0.0585890730483197,0.0003706100177741478,0.3
+HVAC north,rtu_002_sa_temp,rooftop unit 2 supply air temperature,hvac,0.15466826663131578,0.0024075575786330836,0.3
+HVAC north,rtu_003_sa_temp,rooftop unit 3 supply air temperature,hvac,0.05333219508369553,0.003127141313477512,0.3
+HVAC north,rtu_004_sa_temp,rooftop unit 4 supply air temperature,hvac,0.019870113451839144,0.005968146717201386,0.3
+HVAC north,rtu_001_oadmpr_pct,rooftop unit 1 outdoor-air damper,hvac,0.05725181839090955,0.002508453362166053,0.3
+HVAC north,rtu_002_oadmpr_pct,rooftop unit 2 outdoor-air damper,hvac,0.018209609889553682,0.003891592735131971,0.3
+HVAC north,rtu_003_oadmpr_pct,rooftop unit 3 outdoor-air damper,hvac,0.017587792247180586,0.0042027100166686085,0.3
+HVAC north,rtu_004_oadmpr_pct,rooftop unit 4 outdoor-air damper,hvac,0.03985645768627946,0.002258908352254723,0.3
+HVAC north,hp_hws_temp,heat-pump hot-water temperature,hvac,0.03939889899210597,0.00044809786616405644,0.3
+HVAC north,indoor_temp_mean,indoor temperature,comfort,0.03718722510820413,0.01178502381530382,0.15
+HVAC north,cooling_setpoint_mean,zone cooling setpoints,comfort,0.004220690674840819,4.188364920981145e-05,0.15
+HVAC north,air_temp_set_1,outdoor temperature,weather,0.05021770847255091,0.01770835485385631,0.1
+HVAC north,relative_humidity_set_1,outdoor humidity,weather,0.011782046663871587,0.0016757632114709122,0.1
+HVAC north,solar_radiation_set_1,solar radiation,weather,0.00788628406812855,0.06243156521062364,0.1
+HVAC north,occ_third_south,"occupant count, third floor",occupancy,0.034458128845802335,0.95,0.15
+HVAC north,occ_fourth_south,"occupant count, fourth floor",occupancy,0.07835886398139609,0.95,0.15
+HVAC north,weekend,weekend or holiday,calendar,0.004270487876649975,0.05820506205944712,0.05
+HVAC south,hvac_N,HVAC north,energy,0.128091477164085,0.02539209549142404,0.2
+HVAC south,mels_N,plug loads north,energy,9.87640286394902e-05,0.04290395463721951,0.2
+HVAC south,mels_S,plug loads south,energy,0.001380743295874468,0.18960027046955427,0.2
+HVAC south,lig_S,lighting south,energy,2.403800119154936e-06,0.06637714015974819,0.2
+HVAC south,rtu_001_fltrd_sa_flow_tn,rooftop unit 1 supply airflow,hvac,0.6058402872717074,0.0015822394197701662,0.3
+HVAC south,rtu_002_fltrd_sa_flow_tn,rooftop unit 2 supply airflow,hvac,0.5960268949934318,0.001312462109986395,0.3
+HVAC south,rtu_003_fltrd_sa_flow_tn,rooftop unit 3 supply airflow,hvac,0.5007283431584099,0.004291784816512858,0.3
+HVAC south,rtu_004_fltrd_sa_flow_tn,rooftop unit 4 supply airflow,hvac,0.001364086841363802,0.008141383184362559,0.3
+HVAC south,rtu_001_sa_temp,rooftop unit 1 supply air temperature,hvac,0.07886155198065604,0.0003706100177741478,0.3
+HVAC south,rtu_002_sa_temp,rooftop unit 2 supply air temperature,hvac,0.007206659821923348,0.0024075575786330836,0.3
+HVAC south,rtu_003_sa_temp,rooftop unit 3 supply air temperature,hvac,0.010815283578504108,0.003127141313477512,0.3
+HVAC south,rtu_004_sa_temp,rooftop unit 4 supply air temperature,hvac,0.00016617191855152752,0.005968146717201386,0.3
+HVAC south,rtu_001_oadmpr_pct,rooftop unit 1 outdoor-air damper,hvac,0.08597707571373149,0.002508453362166053,0.3
+HVAC south,rtu_002_oadmpr_pct,rooftop unit 2 outdoor-air damper,hvac,0.03228828188547142,0.003891592735131971,0.3
+HVAC south,rtu_003_oadmpr_pct,rooftop unit 3 outdoor-air damper,hvac,0.013919152695144023,0.0042027100166686085,0.3
+HVAC south,rtu_004_oadmpr_pct,rooftop unit 4 outdoor-air damper,hvac,0.015572825974206478,0.002258908352254723,0.3
+HVAC south,hp_hws_temp,heat-pump hot-water temperature,hvac,0.012624481008954474,0.00044809786616405644,0.3
+HVAC south,indoor_temp_mean,indoor temperature,comfort,0.07325121497361167,0.01178502381530382,0.15
+HVAC south,cooling_setpoint_mean,zone cooling setpoints,comfort,0.006074309756777978,4.188364920981145e-05,0.15
+HVAC south,air_temp_set_1,outdoor temperature,weather,0.19897595113193692,0.01770835485385631,0.1
+HVAC south,relative_humidity_set_1,outdoor humidity,weather,0.14179214841422494,0.0016757632114709122,0.1
+HVAC south,solar_radiation_set_1,solar radiation,weather,0.16574771398276014,0.06243156521062364,0.1
+HVAC south,occ_third_south,"occupant count, third floor",occupancy,0.01060991113994322,0.95,0.15
+HVAC south,occ_fourth_south,"occupant count, fourth floor",occupancy,0.01935427018706956,0.95,0.15
+HVAC south,weekend,weekend or holiday,calendar,6.620046141755198e-07,0.05820506205944712,0.05
+plug loads north,hvac_N,HVAC north,energy,0.048152043651584764,0.02539209549142404,0.2
+plug loads north,hvac_S,HVAC south,energy,9.876402863949016e-05,0.03341459619342044,0.2
+plug loads north,mels_S,plug loads south,energy,0.454858029171579,0.18960027046955427,0.2
+plug loads north,lig_S,lighting south,energy,0.4056847474358792,0.06637714015974819,0.2
+plug loads north,rtu_001_fltrd_sa_flow_tn,rooftop unit 1 supply airflow,hvac,0.024383477008857374,0.0015822394197701662,0.3
+plug loads north,rtu_002_fltrd_sa_flow_tn,rooftop unit 2 supply airflow,hvac,0.010003558676781486,0.001312462109986395,0.3
+plug loads north,rtu_003_fltrd_sa_flow_tn,rooftop unit 3 supply airflow,hvac,0.024535534025173396,0.004291784816512858,0.3
+plug loads north,rtu_004_fltrd_sa_flow_tn,rooftop unit 4 supply airflow,hvac,0.008466499611965468,0.008141383184362559,0.3
+plug loads north,rtu_001_sa_temp,rooftop unit 1 supply air temperature,hvac,0.0002561083849485235,0.0003706100177741478,0.3
+plug loads north,rtu_002_sa_temp,rooftop unit 2 supply air temperature,hvac,0.002525618144615492,0.0024075575786330836,0.3
+plug loads north,rtu_003_sa_temp,rooftop unit 3 supply air temperature,hvac,0.0015070753070207765,0.003127141313477512,0.3
+plug loads north,rtu_004_sa_temp,rooftop unit 4 supply air temperature,hvac,0.004002052819254109,0.005968146717201386,0.3
+plug loads north,rtu_001_oadmpr_pct,rooftop unit 1 outdoor-air damper,hvac,0.0012623847469714607,0.002508453362166053,0.3
+plug loads north,rtu_002_oadmpr_pct,rooftop unit 2 outdoor-air damper,hvac,0.01067903557218752,0.003891592735131971,0.3
+plug loads north,rtu_003_oadmpr_pct,rooftop unit 3 outdoor-air damper,hvac,0.0025768603265454233,0.0042027100166686085,0.3
+plug loads north,rtu_004_oadmpr_pct,rooftop unit 4 outdoor-air damper,hvac,0.00482414593199424,0.002258908352254723,0.3
+plug loads north,hp_hws_temp,heat-pump hot-water temperature,hvac,0.0005014903822241645,0.00044809786616405644,0.3
+plug loads north,indoor_temp_mean,indoor temperature,comfort,7.721732569614456e-05,0.01178502381530382,0.15
+plug loads north,cooling_setpoint_mean,zone cooling setpoints,comfort,0.023982016034918816,4.188364920981145e-05,0.15
+plug loads north,air_temp_set_1,outdoor temperature,weather,0.00010067684239105417,0.01770835485385631,0.1
+plug loads north,relative_humidity_set_1,outdoor humidity,weather,0.00021733420546218743,0.0016757632114709122,0.1
+plug loads north,solar_radiation_set_1,solar radiation,weather,0.009735076851214094,0.06243156521062364,0.1
+plug loads north,occ_third_south,"occupant count, third floor",occupancy,0.0265027600649673,0.95,0.15
+plug loads north,occ_fourth_south,"occupant count, fourth floor",occupancy,0.07082531455873274,0.95,0.15
+plug loads north,weekend,weekend or holiday,calendar,0.038281230975797685,0.05820506205944712,0.05
+plug loads south,hvac_N,HVAC north,energy,0.011179061253627779,0.02539209549142404,0.2
+plug loads south,hvac_S,HVAC south,energy,0.001380743295874468,0.03341459619342044,0.2
+plug loads south,mels_N,plug loads north,energy,0.45485802917157886,0.04290395463721951,0.2
+plug loads south,lig_S,lighting south,energy,0.4609543126620372,0.06637714015974819,0.2
+plug loads south,rtu_001_fltrd_sa_flow_tn,rooftop unit 1 supply airflow,hvac,0.031764435175748805,0.0015822394197701662,0.3
+plug loads south,rtu_002_fltrd_sa_flow_tn,rooftop unit 2 supply airflow,hvac,0.016132373169848682,0.001312462109986395,0.3
+plug loads south,rtu_003_fltrd_sa_flow_tn,rooftop unit 3 supply airflow,hvac,0.004131269691613935,0.004291784816512858,0.3
+plug loads south,rtu_004_fltrd_sa_flow_tn,rooftop unit 4 supply airflow,hvac,0.026054654556851607,0.008141383184362559,0.3
+plug loads south,rtu_001_sa_temp,rooftop unit 1 supply air temperature,hvac,0.06491707679455397,0.0003706100177741478,0.3
+plug loads south,rtu_002_sa_temp,rooftop unit 2 supply air temperature,hvac,0.10079129666917522,0.0024075575786330836,0.3
+plug loads south,rtu_003_sa_temp,rooftop unit 3 supply air temperature,hvac,0.08379912314773383,0.003127141313477512,0.3
+plug loads south,rtu_004_sa_temp,rooftop unit 4 supply air temperature,hvac,0.033245689113256253,0.005968146717201386,0.3
+plug loads south,rtu_001_oadmpr_pct,rooftop unit 1 outdoor-air damper,hvac,0.0026341585990372228,0.002508453362166053,0.3
+plug loads south,rtu_002_oadmpr_pct,rooftop unit 2 outdoor-air damper,hvac,0.001581831215950974,0.003891592735131971,0.3
+plug loads south,rtu_003_oadmpr_pct,rooftop unit 3 outdoor-air damper,hvac,0.004051900191325341,0.0042027100166686085,0.3
+plug loads south,rtu_004_oadmpr_pct,rooftop unit 4 outdoor-air damper,hvac,0.0011636981321874209,0.002258908352254723,0.3
+plug loads south,hp_hws_temp,heat-pump hot-water temperature,hvac,0.007976241463354685,0.00044809786616405644,0.3
+plug loads south,indoor_temp_mean,indoor temperature,comfort,0.0013587130358999088,0.01178502381530382,0.15
+plug loads south,cooling_setpoint_mean,zone cooling setpoints,comfort,0.018957042752700867,4.188364920981145e-05,0.15
+plug loads south,air_temp_set_1,outdoor temperature,weather,0.0019709881666173288,0.01770835485385631,0.1
+plug loads south,relative_humidity_set_1,outdoor humidity,weather,0.00508558570508235,0.0016757632114709122,0.1
+plug loads south,solar_radiation_set_1,solar radiation,weather,0.00783539287614819,0.06243156521062364,0.1
+plug loads south,occ_third_south,"occupant count, third floor",occupancy,0.12369163533978127,0.95,0.15
+plug loads south,occ_fourth_south,"occupant count, fourth floor",occupancy,0.1215475272553212,0.95,0.15
+plug loads south,weekend,weekend or holiday,calendar,0.027712148992201802,0.05820506205944712,0.05
+lighting south,hvac_N,HVAC north,energy,0.053849929747989814,0.02539209549142404,0.2
+lighting south,hvac_S,HVAC south,energy,2.403800119154936e-06,0.03341459619342044,0.2
+lighting south,mels_N,plug loads north,energy,0.40568474743587907,0.04290395463721951,0.2
+lighting south,mels_S,plug loads south,energy,0.46095431266203707,0.18960027046955427,0.2
+lighting south,rtu_001_fltrd_sa_flow_tn,rooftop unit 1 supply airflow,hvac,0.0807928178757719,0.0015822394197701662,0.3
+lighting south,rtu_002_fltrd_sa_flow_tn,rooftop unit 2 supply airflow,hvac,0.060468742180999346,0.001312462109986395,0.3
+lighting south,rtu_003_fltrd_sa_flow_tn,rooftop unit 3 supply airflow,hvac,0.03573366394217953,0.004291784816512858,0.3
+lighting south,rtu_004_fltrd_sa_flow_tn,rooftop unit 4 supply airflow,hvac,0.003291346155126217,0.008141383184362559,0.3
+lighting south,rtu_001_sa_temp,rooftop unit 1 supply air temperature,hvac,0.008457562208397405,0.0003706100177741478,0.3
+lighting south,rtu_002_sa_temp,rooftop unit 2 supply air temperature,hvac,0.044645072651719735,0.0024075575786330836,0.3
+lighting south,rtu_003_sa_temp,rooftop unit 3 supply air temperature,hvac,0.037377523261647214,0.003127141313477512,0.3
+lighting south,rtu_004_sa_temp,rooftop unit 4 supply air temperature,hvac,0.004796998245443472,0.005968146717201386,0.3
+lighting south,rtu_001_oadmpr_pct,rooftop unit 1 outdoor-air damper,hvac,6.0980666663743424e-05,0.002508453362166053,0.3
+lighting south,rtu_002_oadmpr_pct,rooftop unit 2 outdoor-air damper,hvac,0.0002654924342822964,0.003891592735131971,0.3
+lighting south,rtu_003_oadmpr_pct,rooftop unit 3 outdoor-air damper,hvac,0.00418482830184311,0.0042027100166686085,0.3
+lighting south,rtu_004_oadmpr_pct,rooftop unit 4 outdoor-air damper,hvac,0.00037408697122194465,0.002258908352254723,0.3
+lighting south,hp_hws_temp,heat-pump hot-water temperature,hvac,0.01973553783750079,0.00044809786616405644,0.3
+lighting south,indoor_temp_mean,indoor temperature,comfort,0.032309562855548056,0.01178502381530382,0.15
+lighting south,cooling_setpoint_mean,zone cooling setpoints,comfort,0.1339238889366628,4.188364920981145e-05,0.15
+lighting south,air_temp_set_1,outdoor temperature,weather,0.010366788053959972,0.01770835485385631,0.1
+lighting south,relative_humidity_set_1,outdoor humidity,weather,0.015797916402796486,0.0016757632114709122,0.1
+lighting south,solar_radiation_set_1,solar radiation,weather,0.031024050349678988,0.06243156521062364,0.1
+lighting south,occ_third_south,"occupant count, third floor",occupancy,0.11209780236897998,0.95,0.15
+lighting south,occ_fourth_south,"occupant count, fourth floor",occupancy,0.09237792518977488,0.95,0.15
+lighting south,weekend,weekend or holiday,calendar,0.012620103020889832,0.05820506205944712,0.05
