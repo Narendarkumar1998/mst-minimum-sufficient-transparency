@@ -23,8 +23,8 @@ sys.path.insert(0, str(ROOT / "optimization"))
 import coverage_model as cm  # noqa: E402
 import coverage_pools as cp  # noqa: E402
 
-STORED = ROOT / "data" / "coverage" / "coverage_exact_vs_greedy_main_benchmark_v1_pool_normalized.csv.gz"
-OUT = ROOT / "data" / "optimization" / "scip_vs_exact_coverage.csv.gz"
+STORED = ROOT / "data" / "benchmark_v3" / "coverage_benchmark.csv.gz"
+OUT = ROOT / "data" / "benchmark_v3" / "scip_vs_exact_coverage.csv.gz"
 W = {"balanced": (1 / 3, 1 / 3, 1 / 3), "privacy_priority": (0.60, 0.20, 0.20),
      "interpretation_priority": (0.20, 0.60, 0.20), "parsimony_priority": (0.20, 0.20, 0.60)}
 NS = None
@@ -42,11 +42,11 @@ def run(group):
         sel = "|".join(ids[i] for i in res.selected)
         out.append({"instance_id": r["instance_id"], "n_items": int(n), "regime": regime,
                     "weight_profile": r["weight_profile"], "tau": r["tau"],
-                    "exact_selected_items": r["exact_selected_items"], "exact_objective": r["exact_disclosure_cost"],
-                    "greedy_objective": r["greedy_disclosure_cost"], "scip_status": res.status,
+                    "exact_selected_items": r["exact_selected"], "exact_objective": r["exact_objective"],
+                    "greedy_objective": r["greedy_objective"], "scip_status": res.status,
                     "scip_selected_items": sel, "scip_objective": res.objective, "scip_runtime_s": res.runtime,
-                    "same_subset": sel == r["exact_selected_items"],
-                    "objective_difference": res.objective - r["exact_disclosure_cost"]})
+                    "same_subset": "|".join(sorted(sel.split("|"))) == r["exact_selected"],
+                    "objective_difference": res.objective - r["exact_objective"]})
     return out
 
 

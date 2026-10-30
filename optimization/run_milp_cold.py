@@ -21,7 +21,7 @@ import benchmark_pools as bp  # noqa: E402
 import scip_model as sm  # noqa: E402
 
 SIZES = [16, 32, 64, 128, 256, 512]
-OUT = ROOT / "data" / "optimization" / "milp_cold.csv"
+OUT = ROOT / "data" / "benchmark_v3" / "milp_cold.csv"
 
 
 def run(job):

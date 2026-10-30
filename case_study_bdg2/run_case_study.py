@@ -58,6 +58,9 @@ ROLES = {
     "occupant": dict(classes={"own_meter", "weather", "calendar", "campus"}, tau=0.10,
                      w=(0.2, 0.6, 0.2), cmult=1.5),
 }
+# reference scales: a typical disclosure of 10 items of typical cost 0.25
+CASE_REF_ITEMS = 10.0
+CASE_REF_COST = 10.0 * 0.25
 TAU_GRID = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]     # thresholds swept for every role
 
 
@@ -181,13 +184,14 @@ def main():
                       continue
                   best, best_J, res = None, np.inf, {}
                   for name, f in h.METHODS.items():
-                      pl = h.Pool(u, p, c, adm, R["tau"], R["w"])
+                      pl = h.Pool(u, p, c, adm, R["tau"], R["w"], cost_scale=CASE_REF_COST, card_scale=CASE_REF_ITEMS)
                       t0 = time.perf_counter()
                       x = f(pl)
                       res[name] = (pl.J(x) if x is not None else np.nan, time.perf_counter() - t0)
                       if x is not None and pl.J(x) < best_J:
                           best, best_J = pl.to_indices(x), pl.J(x)
-                  s = sm.solve_mst_scip(list(u), list(p), list(c), adm, R["tau"], R["w"], start=best)
+                  s = sm.solve_mst_scip(list(u), list(p), list(c), adm, R["tau"], R["w"], start=best,
+                                         cost_scale=CASE_REF_COST, card_scale=CASE_REF_ITEMS)
                   row.update(status=s.status, objective=s.objective, runtime_s=s.runtime,
                              n_selected=len(s.selected),
                              selected="; ".join(f"{keys[i][1]}" for i in s.selected),

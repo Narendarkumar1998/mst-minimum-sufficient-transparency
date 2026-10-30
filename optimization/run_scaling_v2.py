@@ -11,11 +11,8 @@ Per condition:
   * SCIP alone (no starting solution) on replicates 0-4;
   * the exact mixed-integer linear model (product chain with McCormick
     envelopes), also started from the best constructive solution, on replicates 0-1;
-  * a reference-scale check of the normalization: C and K scaled by fixed
-    references (10 items, 10 times the mean item cost of the generator) instead of
-    the admissible pool, solved with the hybrid method.
 
-Writes data/optimization/scaling_v2.csv
+Writes data/benchmark_v3/scaling.csv
 Usage: python optimization/run_scaling_v2.py [--workers 2] [--replicates 20]
 """
 
@@ -43,7 +40,7 @@ COLD_REPLICATES = 5
 MILP_REPLICATES = 2
 REF_ITEMS = 10.0
 REF_COST = 10.0 * 0.55          # 10 items of mean cost; Beta(2,2) scaled to [0.10, 1.00]
-OUT = ROOT / "data" / "optimization" / "scaling_v2.csv"
+OUT = ROOT / "data" / "benchmark_v3" / "scaling.csv"
 
 
 def run(job):
@@ -81,19 +78,6 @@ def run(job):
                                        privacy="chain")
                 row.update(milp_status=s3.status, milp_objective=s3.objective, milp_bound=s3.dual_bound,
                            milp_gap=s3.gap, milp_runtime_s=s3.runtime)
-            # reference-scale normalization
-            pool = h.Pool(u, p, c, adm, tau, w, cost_scale=REF_COST, card_scale=REF_ITEMS)
-            xs = [f(h.Pool(u, p, c, adm, tau, w, cost_scale=REF_COST, card_scale=REF_ITEMS))
-                  for f in h.METHODS.values()]
-            xs = [x for x in xs if x is not None]
-            st = None
-            if xs:
-                xb = min(xs, key=pool.J)
-                st = tuple(int(i) for i in np.flatnonzero(xb))
-            s4 = sm.solve_mst_scip(ul, pl, cl, adm, tau, w, time_limit=TIME_LIMIT, start=st,
-                                   cost_scale=REF_COST, card_scale=REF_ITEMS)
-            row.update(ref_status=s4.status, ref_count=len(s4.selected),
-                       ref_selected="|".join(map(str, s4.selected)), ref_runtime_s=s4.runtime)
             rows.append(row)
     return rows
 

@@ -10,9 +10,9 @@ Methods (optimization/heuristics.py):
   tabu              tabu search from the constructive solution
 
 Budget: max(1, 0.02 m) seconds per method and condition (1 s up to 50 items, 10.2 s at 512).
-Gaps are computed later against the proven optimum of data/optimization/scaling_v2.csv.
+Gaps are computed later against the proven optimum of data/optimization/scaling.csv.
 
-Writes data/optimization/metaheuristics_v2.csv
+Writes data/optimization/metaheuristics.csv
 Usage: python optimization/run_metaheuristics.py [--workers 2] [--replicates 5]
 """
 
@@ -34,7 +34,7 @@ import benchmark_pools as bp  # noqa: E402
 import heuristics as h  # noqa: E402
 
 SIZES = [16, 32, 64, 128, 256, 512]
-OUT = ROOT / "data" / "optimization" / "metaheuristics_v2.csv"
+OUT = ROOT / "data" / "benchmark_v3" / "metaheuristics.csv"
 
 
 def budget(m):

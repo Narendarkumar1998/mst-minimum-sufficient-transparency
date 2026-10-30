@@ -2,8 +2,8 @@
 Heuristics and metaheuristics for MST, written for pools of hundreds of items.
 
 All methods work on the admissible pool D_t only and use the paper's quantities:
-U(S) = 1 - prod(1 - u_i), P(S) = 1 - prod(1 - p_i), C(S) = sum c_i / C(D_t),
-K(S) = |S| / |D_t|, J = lambda_P P + lambda_C C + lambda_K K.
+U(S) = 1 - prod(1 - u_i), P(S) = 1 - prod(1 - p_i), C(S) = sum c_i / C_ref,
+K(S) = |S| / K_ref (reference scales, optimization/scales.py), J = lambda_P P + lambda_C C + lambda_K K.
 
 Sufficiency is checked through the exact linear form sum_i w_i x_i >= W with
 w_i = -ln(1 - u_i) and W = -ln(1 - tau) (Eq. 23 of the paper), up to a relative
@@ -29,12 +29,14 @@ import time
 
 import numpy as np
 
+from scales import REF_COST, REF_ITEMS
+
 EPS = 1e-12
 TOL = 1e-12
 
 
 class Pool:
-    def __init__(self, u, p, c, admissible, tau, weights, cost_scale=None, card_scale=None):
+    def __init__(self, u, p, c, admissible, tau, weights, cost_scale=REF_COST, card_scale=REF_ITEMS):
         adm = np.flatnonzero(np.asarray(admissible, bool))
         self.adm = adm
         u = np.asarray(u, float)[adm]

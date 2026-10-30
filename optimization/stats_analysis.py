@@ -32,7 +32,7 @@ import pandas as pd  # noqa: E402
 from scipy import stats  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data" / "optimization"
+DATA = ROOT / "data" / "benchmark_v3"
 TAB = ROOT / "tables"
 FIG = ROOT / "figures"
 OPT_TOL = 1e-7          # gap in percent below which a solution counts as optimal
@@ -167,11 +167,11 @@ def analyse(name, G):
 
 def main():
     cons = ["greedy", "greedy_rd", "greedy_truncated", "greedy_truncated_rd", "issc", "issc_rd"]
-    b = pd.read_csv(DATA / "heuristics_vs_exact_benchmark.csv.gz")
+    b = pd.read_csv(DATA / "product_benchmark.csv.gz")
     b = b[b.exact_status == "OPTIMAL"]
     analyse("benchmark", gaps(b, "exact_objective", cons))
-    sc = pd.read_csv(DATA / "scaling_v2.csv")
-    mh = pd.read_csv(DATA / "metaheuristics_v2.csv")
+    sc = pd.read_csv(DATA / "scaling.csv")
+    mh = pd.read_csv(DATA / "metaheuristics.csv")
     keys = ["n_items", "regime", "replicate", "weight_profile", "tau"]
     m = sc.merge(mh, on=keys, how="inner")
     m = m[m.hybrid_status == "OPTIMAL"]

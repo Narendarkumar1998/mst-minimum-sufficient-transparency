@@ -21,6 +21,7 @@ from __future__ import annotations
 import math
 import time
 
+from scales import REF_COST, REF_ITEMS
 from pyscipopt import Model, exp, quicksum
 
 from scip_model import SolverResult
@@ -60,9 +61,8 @@ def solve_coverage_mst_scip(A, w, p, c, admissible, tau, weights, time_limit=60.
     for i in adm:
         if p[i] >= 1.0:
             m.addCons(t >= x[i])
-    total = sum(c[i] for i in adm)          # normalization by the admissible pool D_t
-    m.setObjective(lp * t + lc * quicksum((c[i] / total) * x[i] for i in adm)
-                   + lk * quicksum(x[i] for i in adm) * (1.0 / len(adm)), "minimize")
+    m.setObjective(lp * t + lc * quicksum((c[i] / REF_COST) * x[i] for i in adm)
+                   + lk * quicksum(x[i] for i in adm) * (1.0 / REF_ITEMS), "minimize")
     m.optimize()
     rt = time.perf_counter() - t0
     if m.getNSols() == 0:
@@ -85,15 +85,10 @@ def coverage_utility(sel, A, w):
 
 def objective(sel, p, c, weights, admissible=None):
     lp, lc, lk = weights
-    adm = [True] * len(p) if admissible is None else list(admissible)
     prod = 1.0
     for i in sel:
         prod *= (1.0 - p[i])
-    total = 0
-    for v, a in zip(c, adm):
-        if a:
-            total += v
     cs = 0
     for i in sel:
         cs += c[i]
-    return lp * (1.0 - prod) + lc * (cs / total) + lk * (len(sel) / sum(adm))
+    return lp * (1.0 - prod) + lc * (cs / REF_COST) + lk * (len(sel) / REF_ITEMS)

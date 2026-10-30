@@ -21,8 +21,8 @@ sys.path.insert(0, str(ROOT / "comparison"))
 import benchmark_pools as bp  # noqa: E402
 import scip_model as sm  # noqa: E402
 
-STORED = ROOT / "data" / "raw" / "exact_vs_greedy_main_benchmark_v2_marginal_preserving.csv"
-OUT = ROOT / "data" / "optimization" / "scip_vs_exact_benchmark.csv.gz"
+STORED = ROOT / "data" / "benchmark_v3" / "product_benchmark.csv.gz"
+OUT = ROOT / "data" / "benchmark_v3" / "scip_vs_exact_product.csv.gz"
 
 
 def run(group):
@@ -37,13 +37,13 @@ def run(group):
         out.append({
             "instance_id": r["instance_id"], "n_items": int(n), "regime": regime,
             "weight_profile": r["weight_profile"], "tau": r["tau"],
-            "exact_selected_items": r["exact_selected_items"], "exact_objective": r["exact_disclosure_cost"],
-            "exact_runtime_s": r["exact_cached_solve_runtime_seconds"],
-            "greedy_objective": r["greedy_disclosure_cost"],
+            "exact_status": r["exact_status"], "exact_selected_items": r.get("exact_selected"),
+            "exact_objective": r.get("exact_objective"),
             "scip_status": res.status, "scip_selected_items": sel, "scip_objective": res.objective,
             "scip_dual_bound": res.dual_bound, "scip_runtime_s": res.runtime, "scip_nodes": res.nodes,
-            "same_subset": sel == r["exact_selected_items"],
-            "objective_difference": res.objective - r["exact_disclosure_cost"],
+            "same_subset": (res.status == "INFEASIBLE") if r["exact_status"] == "INFEASIBLE"
+                           else sel == r["exact_selected"],
+            "objective_difference": res.objective - r["exact_objective"] if r["exact_status"] == "OPTIMAL" else 0.0,
         })
     return out
 
@@ -64,7 +64,7 @@ def main():
     print(f"SCIP optimal: {(df.scip_status == 'OPTIMAL').mean():.4%}")
     print(f"same subset as enumeration: {df.same_subset.mean():.4%}")
     print(f"max |objective difference|: {df.objective_difference.abs().max():.3e}")
-    print(df.groupby("n_items")[["exact_runtime_s", "scip_runtime_s"]].median())
+    print(df.groupby("n_items")[["scip_runtime_s"]].median())
 
 
 if __name__ == "__main__":

@@ -75,7 +75,7 @@ def convergence():
                 rows.append(dict(n_items=n, method=name, evaluations=ev, best_objective=J,
                                  gap_percent=100 * (J - opt) / opt))
     d = pd.DataFrame(rows)
-    d.to_csv(ROOT / "data" / "optimization" / "convergence_traces.csv", index=False)
+    d.to_csv(ROOT / "data" / "benchmark_v3" / "convergence_traces.csv", index=False)
     plt.rcParams.update({"font.family": "sans-serif", "font.sans-serif": ["Liberation Sans", "DejaVu Sans"],
                          "font.size": 8, "pdf.fonttype": 42})
     fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.4), sharey=True)
@@ -116,7 +116,7 @@ def sensitivity():
                                  population=pop, mutation=f"{mut}/m", crossover=xo, objective=J,
                                  gap_percent=100 * (J - opt) / opt, evaluations=pool.n_eval))
     d = pd.DataFrame(rows)
-    d.to_csv(ROOT / "data" / "optimization" / "ga_sensitivity.csv", index=False)
+    d.to_csv(ROOT / "data" / "benchmark_v3" / "ga_sensitivity.csv", index=False)
     return d
 
 

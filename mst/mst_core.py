@@ -128,6 +128,19 @@ def mst_cognitive_cost(
     )
 
 
+# Reference scales of the revised model (paper, Eqs. 11-12): when set, interpretation
+# cost and cardinality are divided by fixed references C_ref and K_ref instead of the
+# totals of the pool passed as all_items. The benchmarks of the revised article use
+# C_ref = 5.5 and K_ref = 10 (optimization/scales.py).
+REFERENCE_SCALES = None          # None, or (C_ref, K_ref)
+
+
+def set_reference_scales(cost_reference=None, cardinality_reference=None):
+    """Use fixed reference scales (both values) or the pool totals (no arguments)."""
+    global REFERENCE_SCALES
+    REFERENCE_SCALES = None if cost_reference is None else (float(cost_reference), float(cardinality_reference))
+
+
 def mst_normalized_cognitive_cost(
     selected_items: Iterable[InformationItem],
     all_items: Iterable[InformationItem],
@@ -148,6 +161,8 @@ def mst_normalized_cognitive_cost(
 
     total_cost = (
         mst_cognitive_cost(admissible)
+        if REFERENCE_SCALES is None
+        else REFERENCE_SCALES[0]
     )
 
     if total_cost == 0.0:
@@ -218,7 +233,7 @@ def mst_disclosure_cost(
 
     cardinality_component = (
         len(selected)
-        / total_items
+        / (total_items if REFERENCE_SCALES is None else REFERENCE_SCALES[1])
     )
 
     return (

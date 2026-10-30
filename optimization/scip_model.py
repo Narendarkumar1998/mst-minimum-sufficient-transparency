@@ -27,6 +27,7 @@ import math
 import time
 from dataclasses import dataclass
 
+from scales import REF_COST, REF_ITEMS
 from pyscipopt import Model, exp, quicksum
 
 
@@ -43,14 +44,14 @@ class SolverResult:
 
 def solve_mst_scip(u, p, c, admissible, tau, weights, time_limit=60.0, gap_limit=0.0,
                    threads=1, seed=0, start=None, privacy="exp",
-                   cost_scale=None, card_scale=None) -> SolverResult:
+                   cost_scale=REF_COST, card_scale=REF_ITEMS) -> SolverResult:
     """start: optional iterable of item indices used as an initial feasible solution.
     privacy: "exp" writes P = 1 - exp(-y) (mixed-integer nonlinear program);
              "chain" linearizes the product exactly, q_k = q_{k-1} (1 - p_k x_k), with
              McCormick envelopes, which are exact for a binary times a bounded variable,
              so the whole model is a mixed-integer linear program.
-    cost_scale, card_scale: reference scales for C and K; by default the admissible
-             pool (C(D_t) and |D_t|), as in the paper."""
+    cost_scale, card_scale: reference scales C_ref and K_ref of C and K (optimization/scales.py);
+             None normalizes by the admissible pool instead."""
     lp, lc, lk = weights
     n_all = len(u)
     adm = [i for i in range(n_all) if admissible[i]]
@@ -149,7 +150,7 @@ def solve_mst_scip(u, p, c, admissible, tau, weights, time_limit=60.0, gap_limit
     return SolverResult("OPTIMAL" if status == "optimal" else "TIME_LIMIT", sel, obj, bound, gap, runtime, nodes)
 
 
-def exact_objective(sel, u, p, c, weights, admissible=None, cost_scale=None, card_scale=None):
+def exact_objective(sel, u, p, c, weights, admissible=None, cost_scale=REF_COST, card_scale=REF_ITEMS):
     """J recomputed from the selected indices with the paper's product forms;
     C and K are normalized by the admissible pool (all items when admissible is None)."""
     lp, lc, lk = weights

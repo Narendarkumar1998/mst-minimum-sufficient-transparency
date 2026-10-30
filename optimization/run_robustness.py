@@ -38,7 +38,7 @@ import methods as m  # noqa: E402
 DELTAS = [0.10, 0.20]
 DRAWS = 20
 REPLICATES = 10
-OUT = ROOT / "data" / "optimization" / "robustness.csv"
+OUT = ROOT / "data" / "benchmark_v3" / "robustness.csv"
 
 
 def greedy_trunc_rd(inst, tau, w, J):

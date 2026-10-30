@@ -10,7 +10,7 @@ Metaheuristics for MST with pymoo, as suggested by M. Dridi.
   which returns a set of non-dominated disclosures without fixing the weights.
 
 All quantities use the paper's product forms, with interpretation cost
-normalized by the admissible pool and cardinality by its size.
+and cardinality divided by the reference scales of optimization/scales.py.
 """
 
 from __future__ import annotations
@@ -19,6 +19,7 @@ import math
 import time
 
 import numpy as np
+from scales import REF_COST, REF_ITEMS
 from pymoo.algorithms.moo.nsga2 import NSGA2
 from pymoo.algorithms.soo.nonconvex.ga import GA
 from pymoo.core.problem import Problem
@@ -34,9 +35,8 @@ class _MSTProblem(Problem):
         self.lu = np.log1p(-np.minimum(np.asarray(u, float)[self.adm], 1 - 1e-15))
         self.lp = np.log1p(-np.minimum(np.asarray(p, float)[self.adm], 1 - 1e-15))
         c = np.asarray(c, float)
-        ca = c[self.adm].sum()                      # normalization by the admissible pool D_t
-        self.cn = c[self.adm] / ca if ca > 0 else np.zeros(len(self.adm))
-        self.n_all = max(len(self.adm), 1)
+        self.cn = c[self.adm] / REF_COST            # reference scales (optimization/scales.py)
+        self.n_all = REF_ITEMS
         self.tau = tau
         self.w = weights
         self.multi = multi

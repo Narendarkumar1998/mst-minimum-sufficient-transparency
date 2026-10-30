@@ -2,8 +2,9 @@
 MST, its ablations, and adapted baselines on one candidate pool.
 
 All quantities follow the paper (Section 3): U and P use the product-union
-form, interpretation cost is normalized by the admissible pool D_t, and
-K = |S| / |D_t|, so prohibited items do not change the objective. Every subset of the pool is
+form; interpretation cost and cardinality are divided by fixed reference scales,
+C = sum c_i / C_ref and K = |S| / K_ref (optimization/scales.py), so neither the
+prohibited items nor the pool size change the meaning of the weights. Every subset of the pool is
 enumerated once per instance with a bit mask; products and sums are accumulated
 in item order so that the values match the reference implementation
 (mst/mst_core.py) to the last bit.
@@ -18,6 +19,11 @@ from __future__ import annotations
 from functools import lru_cache
 
 import numpy as np
+
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[1] / "optimization"))
+from scales import REF_COST, REF_ITEMS  # noqa: E402
 
 INFEASIBLE = -1
 
@@ -56,13 +62,9 @@ class Instance:
             csum = np.where(col, csum + self.c[i], csum)
         self.U = 1.0 - prod_u
         self.P = 1.0 - prod_p
-        total_cost = 0
-        for v, a in zip(self.c, self.adm):   # admissible pool D_t only
-            if a:
-                total_cost += v
-        self.Cn = csum / total_cost if total_cost != 0.0 else np.zeros(len(B))
+        self.Cn = csum / REF_COST
         self.card = B.sum(axis=1)
-        self.K = self.card / max(int(self.adm.sum()), 1)
+        self.K = self.card / REF_ITEMS
         self.n_prohibited = (B & ~self.adm).sum(axis=1)
         self.all_adm = self.n_prohibited == 0
         self.adm_mask = int(sum(1 << i for i in range(n) if self.adm[i]))
