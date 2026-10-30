@@ -254,11 +254,11 @@ def fig_pareto():
         panel(a, "ab"[i], "Privacy against cost" if yc == "C" else "Privacy against size")
         lo = f.P.min()
         a.set_xlim(lo - 0.03, min(1.0, f.P.max() + 0.15))
-        a.set_ylim(f[yc].min() * 0.85, f[yc].max() * 1.6)
+        a.set_ylim(f[yc].min() * 0.88, f[yc].max() * 1.25)
     h, l = ax[0].get_legend_handles_labels()
-    fig.legend(h, l, loc="lower center", ncol=4, bbox_to_anchor=(0.5, -0.1), fontsize=6.5, markerscale=1.2)
     fig.tight_layout(w_pad=1.5)
     fig.subplots_adjust(bottom=0.3)
+    fig.legend(h, l, loc="lower center", ncol=4, bbox_to_anchor=(0.5, 0.0), fontsize=6.5, markerscale=1.2)
     save(fig, "fig_pareto_example")
 
 

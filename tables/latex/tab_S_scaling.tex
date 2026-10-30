@@ -1,18 +1,19 @@
-\begin{table}[!htbp]
+\begin{table*}[!htbp]
 \centering
 \caption{Scaling experiment (20 replicates, 960 conditions per pool size). Exact methods: conditions with proven optimality within 60~s and median runtime in seconds (hybrid: also maximum). Greedy: share of conditions solved optimally, mean gap in percent, mean gap after reverse deletion, and median runtime in milliseconds.}
 \label{tab:S-scaling}
 \scriptsize
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}r ccc cc cc cc cccc@{}}
 \toprule
 $m$ & \multicolumn{3}{c}{Hybrid} & \multicolumn{2}{c}{SCIP, cold} & \multicolumn{2}{c}{MILP, warm} & \multicolumn{2}{c}{MILP, cold} & \multicolumn{4}{c}{Greedy} \\ & opt. & med. & max & opt. & med. & opt. & med. & opt. & med. & opt.\,\% & gap & +del. & ms \\
 \midrule
-16 & 960/960 & 0.07 & 0.3 & 240/240 & 0.07 & 96/96 & 0.04 & -- & -- & 33.2 & 6.9 & 3.3 & 0.28 \\
-32 & 960/960 & 0.11 & 0.7 & 240/240 & 0.11 & 96/96 & 0.12 & -- & -- & 24.8 & 9.2 & 5.1 & 0.31 \\
-64 & 960/960 & 0.21 & 1.4 & 240/240 & 0.21 & 96/96 & 1.08 & -- & -- & 25.6 & 10.9 & 6.0 & 0.32 \\
-128 & 960/960 & 0.46 & 7.5 & 240/240 & 0.60 & 93/96 & 2.39 & -- & -- & 22.8 & 11.4 & 6.7 & 0.34 \\
-256 & 960/960 & 1.25 & 16.8 & 240/240 & 1.52 & 91/96 & 7.07 & -- & -- & 17.8 & 11.5 & 6.9 & 0.35 \\
-512 & 956/960 & 4.62 & 60.3 & 235/240 & 7.04 & 87/96 & 8.55 & -- & -- & 20.3 & 12.2 & 7.1 & 0.41 \\
+16 & 960/960 & 0.07 & 0.3 & 240/240 & 0.07 & 96/96 & 0.04 & 48/48 & 0.09 & 33.2 & 6.9 & 3.3 & 0.28 \\
+32 & 960/960 & 0.11 & 0.7 & 240/240 & 0.11 & 96/96 & 0.12 & 48/48 & 0.39 & 24.8 & 9.2 & 5.1 & 0.31 \\
+64 & 960/960 & 0.21 & 1.4 & 240/240 & 0.21 & 96/96 & 1.08 & 48/48 & 2.00 & 25.6 & 10.9 & 6.0 & 0.32 \\
+128 & 960/960 & 0.46 & 7.5 & 240/240 & 0.60 & 93/96 & 2.39 & 45/48 & 5.63 & 22.8 & 11.4 & 6.7 & 0.34 \\
+256 & 960/960 & 1.25 & 16.8 & 240/240 & 1.52 & 91/96 & 7.07 & 45/48 & 12.91 & 17.8 & 11.5 & 6.9 & 0.35 \\
+512 & 956/960 & 4.62 & 60.3 & 235/240 & 7.04 & 87/96 & 8.55 & 45/48 & 8.92 & 20.3 & 12.2 & 7.1 & 0.41 \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabular}}
+\end{table*}

@@ -26,14 +26,16 @@ LAB = {"greedy": "Greedy (paper)", "greedy_rd": "Greedy + deletion", "greedy_tru
 REG = {"independent": "Independent", "utility_burden_alignment": "Alignment", "utility_burden_conflict": "Conflict"}
 
 
-def write(name, caption, label, colspec, header, rows, note=None, size="\\footnotesize"):
-    lines = ["\\begin{table}[!htbp]", "\\centering", f"\\caption{{{caption}}}", f"\\label{{{label}}}", size,
-             f"\\begin{{tabular}}{{{colspec}}}", "\\toprule", header + " \\\\", "\\midrule"]
-    lines += [r + " \\\\" if not r.startswith("\\") else r for r in rows]
-    lines += ["\\bottomrule", "\\end{tabular}"]
+def write(name, caption, label, colspec, header, rows, note=None, size="\\footnotesize", wide=False):
+    env = "table*" if wide else "table"
+    lines = [f"\\begin{{{env}}}[!htbp]", "\\centering", f"\\caption{{{caption}}}", f"\\label{{{label}}}", size,
+             *(["\\resizebox{\\textwidth}{!}{%"] if wide else []), f"\\begin{{tabular}}{{{colspec}}}", "\\toprule", header + " \\\\", "\\midrule"]
+    lines += [r if (r.rstrip().endswith("\\\\") or r.startswith(("\\addlinespace", "\\midrule"))) else r + " \\\\"
+              for r in rows]
+    lines += ["\\bottomrule", "\\end{tabular}" + ("}" if wide else "")]
     if note:
         lines += [f"\\par\\smallskip\\parbox{{0.95\\textwidth}}{{\\scriptsize {note}}}"]
-    lines += ["\\end{table}", ""]
+    lines += [f"\\end{{{env}}}", ""]
     (OUT / f"{name}.tex").write_text("\n".join(lines))
     print("wrote", name)
 
@@ -75,7 +77,7 @@ def scaling():
           "tab:S-scaling", "@{}r ccc cc cc cc cccc@{}",
           "$m$ & \\multicolumn{3}{c}{Hybrid} & \\multicolumn{2}{c}{SCIP, cold} & \\multicolumn{2}{c}{MILP, warm} & "
           "\\multicolumn{2}{c}{MILP, cold} & \\multicolumn{4}{c}{Greedy} \\\\ & opt. & med. & max & opt. & med. & opt. & med. & "
-          "opt. & med. & opt.\\,\\% & gap & +del. & ms", rows, size="\\scriptsize")
+          "opt. & med. & opt.\\,\\% & gap & +del. & ms", rows, size="\\scriptsize", wide=True)
 
 
 def stats(name, caption, label):
@@ -91,7 +93,7 @@ def stats(name, caption, label):
     write(f"tab_S_stats_{name}", caption + f" Friedman $\\chi^2 = {x.friedman_chi2:,.0f}$, $p < 10^{{-15}}$; "
           f"Nemenyi critical difference {x.nemenyi_cd:.3f} on {int(x.n_blocks):,} conditions.", label,
           "@{}l cccc c@{}", "Method & Optimal, \\% [95\\% CI] & Median gap [IQR] & Mean gap [95\\% CI] & Max gap & Mean rank",
-          rows)
+          rows, wide=True)
 
 
 def ga_sensitivity():
@@ -205,7 +207,7 @@ def robustness():
           "optimum; insufficient: true utility below the threshold; infeasible: no selection returned on the estimates; "
           "excess: objective under the true values relative to the true optimum, in percent (mean and 95th percentile).",
           "tab:S-robustness", "@{}l c cccc c@{}",
-          "Method & Noise & Changed, \\% & Insufficient, \\% & Infeasible, \\% & Mean excess & P95 excess", rows)
+          "Method & Noise & Changed, \\% & Insufficient, \\% & Infeasible, \\% & Mean excess & P95 excess", rows, wide=True)
 
 
 def comparison_all():
@@ -225,19 +227,33 @@ def comparison_all():
                     f"{f(rp.median(), 1)} [{f(rp.quantile(0.25), 1)}, {f(rp.quantile(0.75), 1)}]")
     write("tab_S_comparison_all",
           "All compared methods on the 24{,}000 comparison conditions: requirements R1 to R3 and all three together "
-          "(percent of conditions, denominators as in Fig.~5 of the article); among outputs that meet R1 to R3 in feasible "
+          "(percent of conditions, denominators as in Fig.~6 of the article); among outputs that meet R1 to R3 in feasible "
           "conditions, the share equal to the MST optimum and the maximum objective excess in percent; and the median "
           "[interquartile range] excess in percent after repair, in which prohibited items are removed and admissible "
           "items are added by the Dynamic Greedy-MST rule until the output is sufficient.",
           "tab:S-comparison-all", "@{}l l cccc cc c@{}",
-          "Method & Group & R1 & R2 & R3 & All & = MST & Max excess & Repair excess", rows, size="\\scriptsize")
+          "Method & Group & R1 & R2 & R3 & All & = MST & Max excess & Repair excess", rows, size="\\scriptsize", wide=True)
 
 
 def comparison_sensitivity():
     t = pd.read_csv(TAB / "comparison_parameter_sensitivity.csv")
-    print(t.columns.tolist())
-    print(t.head(20).to_string())
-
+    lab = {"C2_goal_obfuscation": ("Goal obfuscation and legibility", "privacy budget"),
+           "C4_parsimonious_haexa": ("Parsimonious HAExA", "number of items $k$"),
+           "A1_soft_admissibility": ("Without hard admissibility", "penalty per prohibited item"),
+           "B6_budgeted_coverage": ("Budgeted coverage", "cost budget")}
+    rows = []
+    for k, (l, par) in lab.items():
+        g = t[t.method == k].sort_values("value")
+        for r in g.itertuples():
+            v = f"{r.value:g}"
+            rows.append(f"{l} & {par} = {v} & {f(r.R1_sufficient_when_possible_pct)} & "
+                        f"{f(r.R2_no_prohibited_item_pct)} & {f(r.R1_R2_R3_all_met_pct)}")
+        rows.append("\\addlinespace")
+    rows = rows[:-1]
+    write("tab_S5_sensitivity",
+          "Methods with a free parameter under alternative values, in percent of conditions. The values used in the "
+          "article are a privacy budget of 0.35, $k = 3$, a penalty of 1, and a cost budget of 0.25.",
+          "tab:S5-sensitivity", "@{}llrrr@{}", "Method & Parameter & R1 & R2 & R1 to R3", rows)
 
 
 ALL = {"scaling": scaling,

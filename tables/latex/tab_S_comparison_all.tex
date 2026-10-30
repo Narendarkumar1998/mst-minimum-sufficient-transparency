@@ -1,8 +1,9 @@
-\begin{table}[!htbp]
+\begin{table*}[!htbp]
 \centering
-\caption{All compared methods on the 24{,}000 comparison conditions: requirements R1 to R3 and all three together (percent of conditions, denominators as in Fig.~5 of the article); among outputs that meet R1 to R3 in feasible conditions, the share equal to the MST optimum and the maximum objective excess in percent; and the median [interquartile range] excess in percent after repair, in which prohibited items are removed and admissible items are added by the Dynamic Greedy-MST rule until the output is sufficient.}
+\caption{All compared methods on the 24{,}000 comparison conditions: requirements R1 to R3 and all three together (percent of conditions, denominators as in Fig.~6 of the article); among outputs that meet R1 to R3 in feasible conditions, the share equal to the MST optimum and the maximum objective excess in percent; and the median [interquartile range] excess in percent after repair, in which prohibited items are removed and admissible items are added by the Dynamic Greedy-MST rule until the output is sufficient.}
 \label{tab:S-comparison-all}
 \scriptsize
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}l l cccc cc c@{}}
 \toprule
 Method & Group & R1 & R2 & R3 & All & = MST & Max excess & Repair excess \\
@@ -22,5 +23,5 @@ Greedy submodular cover & baseline & 100.0 & 21.1 & 0.0 & 21.1 & 36.1 & 148.7 & 
 Budgeted coverage & baseline & 48.0 & 29.5 & 0.0 & 11.1 & 18.3 & 306.8 & 3.4 [0.0, 19.0] \\
 Policy filter + truncated greedy + reverse deletion & baseline & 100.0 & 100.0 & 100.0 & 100.0 & 65.2 & 79.3 & 0.0 [0.0, 3.3] \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabular}}
+\end{table*}

@@ -1,0 +1,16 @@
+\begin{table}[!htbp]
+\centering
+\caption{Benchmark pools with a share $\rho$ of items prohibited at random (sizes 8 to 16, 25 replicates, 6{,}000 conditions per level): share of infeasible conditions; among them, the share for which releasing prohibited items would restore feasibility, the median (maximum) number of items to release, and the median utility shortfall; among feasible ones, the share solved optimally by the paper greedy and by the truncated greedy with reverse deletion.}
+\label{tab:S-admissibility}
+\footnotesize
+\begin{tabular}{@{}rr c ccc cc@{}}
+\toprule
+$\rho$ & $N$ & Infeasible, \% & Releasable, \% & Release & Shortfall & Greedy opt. & Trunc.+del. opt. \\
+\midrule
+0\,\% & 6,000 & 0.8 & 0.0 & -- (--) & 0.012 & 39.0 & 57.0 \\
+25\,\% & 6,000 & 5.4 & 85.2 & 1 (2) & 0.024 & 48.3 & 64.9 \\
+50\,\% & 6,000 & 30.6 & 97.4 & 1 (4) & 0.056 & 59.7 & 77.7 \\
+75\,\% & 6,000 & 78.2 & 99.0 & 2 (6) & 0.180 & 83.3 & 95.3 \\
+\bottomrule
+\end{tabular}
+\end{table}

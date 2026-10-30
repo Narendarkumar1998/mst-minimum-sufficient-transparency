@@ -6,7 +6,7 @@ Code and data for the article
 
 > N. Kumar, Y. Mualla, V. Hilaire, S. Galland.
 > **Enough, but No More: Minimum Sufficient Transparency for Human Oversight of Multi-Agent Systems.**
-> Submitted to *Autonomous Agents and Multi-Agent Systems* (2026).
+> Submitted to *Complex & Intelligent Systems* (2026).
 
 MST is the selection capability of the assistant agent in a human-supervised
 multi-agent system. For each stakeholder role it selects the subset of
@@ -28,6 +28,8 @@ is sufficient, it reports `INFEASIBLE` instead of crossing the disclosure policy
 | `data/coverage/` | Coverage-utility benchmark (24,000 conditions) and its audits. |
 | `data/optimization/` | Solver validation, scaling, genetic-algorithm, and Pareto results. |
 | `data/comparison/` | One row per method and condition for the comparison. |
+| `data/benchmark_v3/` | **Results of the revised article** (cost and size normalized by fixed reference scales, `optimization/scales.py`): product and coverage benchmarks, SCIP validation, scaling (20 replicates), metaheuristics, convergence and GA sensitivity, chain MILP, robustness, admissibility levels, NSGA-II. |
+| `case_study_lbnl/`, `data/case_study_lbnl/` | Case study on the public LBNL Building 59 data set (Luo et al., *Scientific Data* 9, 156, 2022; Dryad doi:10.7941/D1N33Q, CC BY 4.0): preprocessing of the raw files to hourly data, and the case study itself. |
 | `data/sarl/` | The 36-condition SARL execution output and its reconstruction audits. |
 | `data/audits/` | Integrity and consistency audits. |
 | `tables/` | Summary tables, bootstrap intervals, and contrasts. |
@@ -60,7 +62,26 @@ print(greedy_mst(items, 0.90, lambda_privacy=0, lambda_cognitive=1, lambda_cardi
 # -> selected ('a', 'b'), disclosure_cost ~ 0.6842
 ```
 
-## Reproducing the paper
+## Reproducing the revised article
+
+All results of the revised article are in `data/benchmark_v3/`, `data/comparison/` and `data/case_study_lbnl/`.
+
+```bash
+python optimization/run_benchmark_v3.py      # product benchmark, 24,000 conditions
+python optimization/run_coverage_v3.py       # coverage benchmark
+python optimization/run_scip_validation.py && python optimization/run_scip_coverage.py
+python optimization/run_scaling_v2.py --replicates 20
+python optimization/run_metaheuristics.py && python optimization/run_convergence.py
+python optimization/run_milp_cold.py && python optimization/run_robustness.py
+python optimization/run_admissibility.py && python optimization/run_nsga2.py
+python comparison/run_comparison.py && python comparison/sensitivity.py
+python case_study_lbnl/prepare_data.py "<path to Bldg59_clean data>"   # only to rebuild the hourly file
+python case_study_lbnl/run_case_study.py
+python optimization/stats_analysis.py
+python optimization/make_figures_v5.py && python optimization/make_tables_v5.py
+```
+
+## Reproducing the first version
 
 | Paper result | Files | Script |
 |---|---|---|
