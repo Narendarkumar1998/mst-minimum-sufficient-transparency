@@ -208,6 +208,38 @@ def robustness():
           "Method & Noise & Changed, \\% & Insufficient, \\% & Infeasible, \\% & Mean excess & P95 excess", rows)
 
 
+def comparison_all():
+    sys.path.insert(0, str(ROOT / "comparison"))
+    import methods as mm
+    from make_figures_v5 import requirements
+    d = pd.read_csv(ROOT / "data" / "comparison" / "comparison_rows.csv.gz", low_memory=False)
+    rows = []
+    for k, (_, group, lab) in mm.METHODS.items():
+        g = d[d.method == k]
+        r1, r2, r3, al = requirements(g)
+        e = g.loc[g.valid.astype(bool) & g.instance_feasible, "objective_excess_pct"].dropna()
+        rp = g.loc[g.instance_feasible, "repair_excess_pct"].dropna()
+        lab = lab[0].upper() + lab[1:]
+        rows.append(f"{lab} & {group} & {f(r1)} & {f(r2)} & {f(r3)} & {f(al)} & "
+                    f"{f(100 * (e <= 1e-7).mean()) if len(e) else '--'} & {f(e.max()) if len(e) else '--'} & "
+                    f"{f(rp.median(), 1)} [{f(rp.quantile(0.25), 1)}, {f(rp.quantile(0.75), 1)}]")
+    write("tab_S_comparison_all",
+          "All compared methods on the 24{,}000 comparison conditions: requirements R1 to R3 and all three together "
+          "(percent of conditions, denominators as in Fig.~5 of the article); among outputs that meet R1 to R3 in feasible "
+          "conditions, the share equal to the MST optimum and the maximum objective excess in percent; and the median "
+          "[interquartile range] excess in percent after repair, in which prohibited items are removed and admissible "
+          "items are added by the Dynamic Greedy-MST rule until the output is sufficient.",
+          "tab:S-comparison-all", "@{}l l cccc cc c@{}",
+          "Method & Group & R1 & R2 & R3 & All & = MST & Max excess & Repair excess", rows, size="\\scriptsize")
+
+
+def comparison_sensitivity():
+    t = pd.read_csv(TAB / "comparison_parameter_sensitivity.csv")
+    print(t.columns.tolist())
+    print(t.head(20).to_string())
+
+
+
 ALL = {"scaling": scaling,
        "stats": lambda: (stats("benchmark", "Constructive heuristics on the 23{,}784 feasible benchmark conditions "
                                "(gaps in percent).", "tab:S-stats-benchmark"),
@@ -215,7 +247,7 @@ ALL = {"scaling": scaling,
                                "conditions of replicates 0 to 4 with a proven optimum (gaps in percent; an infeasible "
                                "return counts as the largest observed gap).", "tab:S-stats-scaling")),
        "ga_sensitivity": ga_sensitivity, "greedy_strata": greedy_strata, "coverage": coverage,
-       "admissibility": admissibility, "case_items": case_items, "robustness": robustness}
+       "admissibility": admissibility, "comparison_all": comparison_all, "comparison_sensitivity": comparison_sensitivity, "case_items": case_items, "robustness": robustness}
 
 if __name__ == "__main__":
     for k in (sys.argv[1:] or ALL):
