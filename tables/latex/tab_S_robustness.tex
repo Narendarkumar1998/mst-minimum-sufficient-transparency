@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\caption{Selection on noisy estimates, evaluated on the true values (47,520 feasible conditions per noise level: 150 pools, 20 noise draws, four thresholds, four weight profiles). Changed: selection differs from the true optimum; insufficient: true utility below the threshold; infeasible: no selection returned on the estimates; excess: objective under the true values relative to the true optimum, in percent (mean and 95th percentile).}
+\label{tab:S-robustness}
+\footnotesize
+\begin{tabular}{@{}l c cccc c@{}}
+\toprule
+Method & Noise & Changed, \% & Insufficient, \% & Infeasible, \% & Mean excess & P95 excess \\
+\midrule
+Exact MST on estimates & $\pm$10\,\% & 57.0 & 31.96 & 0.03 & -0.79 & 10.8 \\
+Exact MST on estimates & $\pm$20\,\% & 76.7 & 51.03 & 0.10 & -2.52 & 17.6 \\
+Greedy (paper) & $\pm$10\,\% & 71.1 & 11.36 & 0.03 & 5.02 & 29.0 \\
+Greedy (paper) & $\pm$20\,\% & 79.1 & 26.20 & 0.10 & 3.39 & 31.9 \\
+Truncated greedy + deletion & $\pm$10\,\% & 65.1 & 21.35 & 0.03 & 3.76 & 26.2 \\
+Truncated greedy + deletion & $\pm$20\,\% & 78.3 & 40.67 & 0.10 & 2.37 & 30.0 \\
+Robust MST & $\pm$10\,\% & 88.1 & 0.00 & 1.26 & 16.64 & 42.7 \\
+Robust MST & $\pm$20\,\% & 97.8 & 0.00 & 5.58 & 36.30 & 67.3 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -389,7 +389,7 @@ def fig_comparison():
 
 # ---------------------------------------------------------------------------------------------
 def fig_robustness():
-    r = pd.read_csv(D3 / "robustness.csv")
+    r = pd.read_csv(D3 / "robustness.csv", low_memory=False)
     meths = [("exact", "Exact MST on estimates"), ("greedy", "Greedy (paper)"),
              ("greedy_truncated_rd", "Truncated greedy + deletion"), ("robust", "Robust MST (deflated $u$)")]
     dcol = {0.1: ("#86b6ef", "o", "$\\pm$10% noise"), 0.2: ("#1c5cab", "s", "$\\pm$20% noise")}
@@ -413,12 +413,17 @@ def fig_robustness():
         a.set_xlabel(xl)
         a.grid(axis="x", color=GRID, lw=0.5)
         a.set_axisbelow(True)
-        a.set_xlim(left=0)
+        if met == "regret_pct":
+            a.axvline(0, color=INK2, lw=0.6)
+        else:
+            a.set_xlim(0, 102)
         a.tick_params(axis="y", length=0)
     ax[0].set_yticks(range(len(meths)), [l for _, l in meths])
     ax[0].invert_yaxis()
-    ax[0].legend(loc="lower right", fontsize=6.2, handletextpad=0.2)
+    h, l = ax[0].get_legend_handles_labels()
     fig.tight_layout(w_pad=0.8)
+    fig.subplots_adjust(top=0.86)
+    fig.legend(h, l, loc="upper center", ncol=2, bbox_to_anchor=(0.6, 1.0), fontsize=6.5)
     save(fig, "fig_robustness")
 
 
