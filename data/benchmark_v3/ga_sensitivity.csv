@@ -1,0 +1,217 @@
+n_items,regime,configuration,population,mutation,crossover,objective,gap_percent,evaluations
+64,independent,plain,50,0.5/m,two_point,0.284569068533324,11.752768609031646,7456
+64,independent,plain,50,0.5/m,uniform,0.25464162729506257,2.1799715867718297e-14,11606
+64,independent,plain,50,1.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,14956
+64,independent,plain,50,1.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,16656
+64,independent,plain,50,2.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,17406
+64,independent,plain,50,2.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,17306
+64,independent,plain,100,0.5/m,two_point,0.25464162729506257,2.1799715867718297e-14,10556
+64,independent,plain,100,0.5/m,uniform,0.25464162729506257,2.1799715867718297e-14,15056
+64,independent,plain,100,1.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,14856
+64,independent,plain,100,1.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,15056
+64,independent,plain,100,2.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,17356
+64,independent,plain,100,2.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,15856
+64,independent,plain,200,0.5/m,two_point,0.25464162729506257,2.1799715867718297e-14,13256
+64,independent,plain,200,0.5/m,uniform,0.25464162729506257,2.1799715867718297e-14,14856
+64,independent,plain,200,1.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,16256
+64,independent,plain,200,1.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,18856
+64,independent,plain,200,2.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,19256
+64,independent,plain,200,2.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,18856
+64,independent,"seeded, repair",50,0.5/m,two_point,0.25464162729506257,2.1799715867718297e-14,2392
+64,independent,"seeded, repair",50,0.5/m,uniform,0.25464162729506257,2.1799715867718297e-14,3592
+64,independent,"seeded, repair",50,1.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,3542
+64,independent,"seeded, repair",50,1.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,4592
+64,independent,"seeded, repair",50,2.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,5742
+64,independent,"seeded, repair",50,2.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,5692
+64,independent,"seeded, repair",100,0.5/m,two_point,0.25464162729506257,2.1799715867718297e-14,2718
+64,independent,"seeded, repair",100,0.5/m,uniform,0.25464162729506257,2.1799715867718297e-14,3318
+64,independent,"seeded, repair",100,1.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,3018
+64,independent,"seeded, repair",100,1.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,3618
+64,independent,"seeded, repair",100,2.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,5618
+64,independent,"seeded, repair",100,2.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,7218
+64,independent,"seeded, repair",200,0.5/m,two_point,0.25464162729506257,2.1799715867718297e-14,2365
+64,independent,"seeded, repair",200,0.5/m,uniform,0.25464162729506257,2.1799715867718297e-14,3965
+64,independent,"seeded, repair",200,1.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,3965
+64,independent,"seeded, repair",200,1.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,3565
+64,independent,"seeded, repair",200,2.0/m,two_point,0.25464162729506257,2.1799715867718297e-14,3565
+64,independent,"seeded, repair",200,2.0/m,uniform,0.25464162729506257,2.1799715867718297e-14,5165
+64,utility_burden_conflict,plain,50,0.5/m,two_point,0.38193051059356986,1.0134141531251994,11956
+64,utility_burden_conflict,plain,50,0.5/m,uniform,0.38193051059356986,1.0134141531251994,12706
+64,utility_burden_conflict,plain,50,1.0/m,two_point,0.38193051059356986,1.0134141531251994,10906
+64,utility_burden_conflict,plain,50,1.0/m,uniform,0.38193051059356986,1.0134141531251994,13356
+64,utility_burden_conflict,plain,50,2.0/m,two_point,0.38193051059356986,1.0134141531251994,15456
+64,utility_burden_conflict,plain,50,2.0/m,uniform,0.37809880380303285,0.0,17256
+64,utility_burden_conflict,plain,100,0.5/m,two_point,0.39230524786083654,3.7573364197164745,10256
+64,utility_burden_conflict,plain,100,0.5/m,uniform,0.38193051059356986,1.0134141531251994,15256
+64,utility_burden_conflict,plain,100,1.0/m,two_point,0.37809880380303285,0.0,14356
+64,utility_burden_conflict,plain,100,1.0/m,uniform,0.38193051059356986,1.0134141531251994,12556
+64,utility_burden_conflict,plain,100,2.0/m,two_point,0.38193051059356986,1.0134141531251994,13956
+64,utility_burden_conflict,plain,100,2.0/m,uniform,0.38193051059356986,1.0134141531251994,15456
+64,utility_burden_conflict,plain,200,0.5/m,two_point,0.40064270544494107,5.9624366475521215,9856
+64,utility_burden_conflict,plain,200,0.5/m,uniform,0.38193051059356986,1.0134141531251994,12256
+64,utility_burden_conflict,plain,200,1.0/m,two_point,0.4045456992352461,6.994704867141158,11856
+64,utility_burden_conflict,plain,200,1.0/m,uniform,0.37809880380303285,0.0,14056
+64,utility_burden_conflict,plain,200,2.0/m,two_point,0.37922059832601485,0.29669348638468296,17456
+64,utility_burden_conflict,plain,200,2.0/m,uniform,0.3834220239585936,1.4078912977291067,16256
+64,utility_burden_conflict,"seeded, repair",50,0.5/m,two_point,0.37809880380303285,0.0,4695
+64,utility_burden_conflict,"seeded, repair",50,0.5/m,uniform,0.37809880380303285,0.0,5045
+64,utility_burden_conflict,"seeded, repair",50,1.0/m,two_point,0.37809880380303285,0.0,4995
+64,utility_burden_conflict,"seeded, repair",50,1.0/m,uniform,0.37809880380303285,0.0,5895
+64,utility_burden_conflict,"seeded, repair",50,2.0/m,two_point,0.37809880380303285,0.0,6645
+64,utility_burden_conflict,"seeded, repair",50,2.0/m,uniform,0.37809880380303285,0.0,8595
+64,utility_burden_conflict,"seeded, repair",100,0.5/m,two_point,0.37809880380303285,0.0,4623
+64,utility_burden_conflict,"seeded, repair",100,0.5/m,uniform,0.37809880380303285,0.0,6123
+64,utility_burden_conflict,"seeded, repair",100,1.0/m,two_point,0.37809880380303285,0.0,4423
+64,utility_burden_conflict,"seeded, repair",100,1.0/m,uniform,0.37809880380303285,0.0,7223
+64,utility_burden_conflict,"seeded, repair",100,2.0/m,two_point,0.37809880380303285,0.0,7723
+64,utility_burden_conflict,"seeded, repair",100,2.0/m,uniform,0.37809880380303285,0.0,8723
+64,utility_burden_conflict,"seeded, repair",200,0.5/m,two_point,0.37809880380303285,0.0,3560
+64,utility_burden_conflict,"seeded, repair",200,0.5/m,uniform,0.37809880380303285,0.0,4960
+64,utility_burden_conflict,"seeded, repair",200,1.0/m,two_point,0.37809880380303285,0.0,5560
+64,utility_burden_conflict,"seeded, repair",200,1.0/m,uniform,0.37809880380303285,0.0,6760
+64,utility_burden_conflict,"seeded, repair",200,2.0/m,two_point,0.37809880380303285,0.0,6560
+64,utility_burden_conflict,"seeded, repair",200,2.0/m,uniform,0.37809880380303285,0.0,7960
+64,utility_burden_alignment,plain,50,0.5/m,two_point,0.20429049397900376,-1.3586327525587916e-14,10206
+64,utility_burden_alignment,plain,50,0.5/m,uniform,0.20429049397900376,-1.3586327525587916e-14,12656
+64,utility_burden_alignment,plain,50,1.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,13756
+64,utility_burden_alignment,plain,50,1.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,14556
+64,utility_burden_alignment,plain,50,2.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,14656
+64,utility_burden_alignment,plain,50,2.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,18506
+64,utility_burden_alignment,plain,100,0.5/m,two_point,0.20429049397900376,-1.3586327525587916e-14,12856
+64,utility_burden_alignment,plain,100,0.5/m,uniform,0.20429049397900376,-1.3586327525587916e-14,14556
+64,utility_burden_alignment,plain,100,1.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,15156
+64,utility_burden_alignment,plain,100,1.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,15556
+64,utility_burden_alignment,plain,100,2.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,17056
+64,utility_burden_alignment,plain,100,2.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,19856
+64,utility_burden_alignment,plain,200,0.5/m,two_point,0.20429049397900376,-1.3586327525587916e-14,13256
+64,utility_burden_alignment,plain,200,0.5/m,uniform,0.20429049397900376,-1.3586327525587916e-14,15856
+64,utility_burden_alignment,plain,200,1.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,15656
+64,utility_burden_alignment,plain,200,1.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,17256
+64,utility_burden_alignment,plain,200,2.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,14656
+64,utility_burden_alignment,plain,200,2.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,18256
+64,utility_burden_alignment,"seeded, repair",50,0.5/m,two_point,0.20429049397900376,-1.3586327525587916e-14,2041
+64,utility_burden_alignment,"seeded, repair",50,0.5/m,uniform,0.20429049397900376,-1.3586327525587916e-14,2541
+64,utility_burden_alignment,"seeded, repair",50,1.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,2641
+64,utility_burden_alignment,"seeded, repair",50,1.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,3191
+64,utility_burden_alignment,"seeded, repair",50,2.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,3941
+64,utility_burden_alignment,"seeded, repair",50,2.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,4491
+64,utility_burden_alignment,"seeded, repair",100,0.5/m,two_point,0.20429049397900376,-1.3586327525587916e-14,1820
+64,utility_burden_alignment,"seeded, repair",100,0.5/m,uniform,0.20429049397900376,-1.3586327525587916e-14,2420
+64,utility_burden_alignment,"seeded, repair",100,1.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,2720
+64,utility_burden_alignment,"seeded, repair",100,1.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,3720
+64,utility_burden_alignment,"seeded, repair",100,2.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,4120
+64,utility_burden_alignment,"seeded, repair",100,2.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,4520
+64,utility_burden_alignment,"seeded, repair",200,0.5/m,two_point,0.20429049397900376,-1.3586327525587916e-14,1960
+64,utility_burden_alignment,"seeded, repair",200,0.5/m,uniform,0.20429049397900376,-1.3586327525587916e-14,2560
+64,utility_burden_alignment,"seeded, repair",200,1.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,2760
+64,utility_burden_alignment,"seeded, repair",200,1.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,3760
+64,utility_burden_alignment,"seeded, repair",200,2.0/m,two_point,0.20429049397900376,-1.3586327525587916e-14,3960
+64,utility_burden_alignment,"seeded, repair",200,2.0/m,uniform,0.20429049397900376,-1.3586327525587916e-14,4160
+256,independent,plain,50,0.5/m,two_point,0.23946638086999392,-1.159059385070733e-14,33218
+256,independent,plain,50,0.5/m,uniform,0.23946638086999392,-1.159059385070733e-14,39568
+256,independent,plain,50,1.0/m,two_point,0.23946638086999392,-1.159059385070733e-14,38918
+256,independent,plain,50,1.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,46168
+256,independent,plain,50,2.0/m,two_point,0.28587557027949806,19.3802525602538,50868
+256,independent,plain,50,2.0/m,uniform,0.28587557027949806,19.3802525602538,54518
+256,independent,plain,100,0.5/m,two_point,0.28587557027949806,19.3802525602538,37768
+256,independent,plain,100,0.5/m,uniform,0.23946638086999392,-1.159059385070733e-14,43168
+256,independent,plain,100,1.0/m,two_point,0.28587557027949806,19.3802525602538,45768
+256,independent,plain,100,1.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,41468
+256,independent,plain,100,2.0/m,two_point,0.2580305217395831,7.752295250024087,51468
+256,independent,plain,100,2.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,46468
+256,independent,plain,200,0.5/m,two_point,0.23946638086999392,-1.159059385070733e-14,31768
+256,independent,plain,200,0.5/m,uniform,0.23946638086999392,-1.159059385070733e-14,38568
+256,independent,plain,200,1.0/m,two_point,0.2415391514916383,0.8655789652450854,37568
+256,independent,plain,200,1.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,41768
+256,independent,plain,200,2.0/m,two_point,0.23946638086999392,-1.159059385070733e-14,42168
+256,independent,plain,200,2.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,44768
+256,independent,"seeded, repair",50,0.5/m,two_point,0.23946638086999392,-1.159059385070733e-14,2989
+256,independent,"seeded, repair",50,0.5/m,uniform,0.23946638086999392,-1.159059385070733e-14,4653
+256,independent,"seeded, repair",50,1.0/m,two_point,0.23946638086999392,-1.159059385070733e-14,4153
+256,independent,"seeded, repair",50,1.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,6953
+256,independent,"seeded, repair",50,2.0/m,two_point,0.23946638086999392,-1.159059385070733e-14,7153
+256,independent,"seeded, repair",50,2.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,9853
+256,independent,"seeded, repair",100,0.5/m,two_point,0.23946638086999392,-1.159059385070733e-14,3410
+256,independent,"seeded, repair",100,0.5/m,uniform,0.23946638086999392,-1.159059385070733e-14,5122
+256,independent,"seeded, repair",100,1.0/m,two_point,0.23946638086999392,-1.159059385070733e-14,4822
+256,independent,"seeded, repair",100,1.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,7522
+256,independent,"seeded, repair",100,2.0/m,two_point,0.23946638086999392,-1.159059385070733e-14,7522
+256,independent,"seeded, repair",100,2.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,11222
+256,independent,"seeded, repair",200,0.5/m,two_point,0.23946638086999392,-1.159059385070733e-14,3022
+256,independent,"seeded, repair",200,0.5/m,uniform,0.23946638086999392,-1.159059385070733e-14,4640
+256,independent,"seeded, repair",200,1.0/m,two_point,0.23946638086999392,-1.159059385070733e-14,4840
+256,independent,"seeded, repair",200,1.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,6840
+256,independent,"seeded, repair",200,2.0/m,two_point,0.23946638086999392,-1.159059385070733e-14,7040
+256,independent,"seeded, repair",200,2.0/m,uniform,0.23946638086999392,-1.159059385070733e-14,10240
+256,utility_burden_conflict,plain,50,0.5/m,two_point,0.3486333046640456,0.0,39930
+256,utility_burden_conflict,plain,50,0.5/m,uniform,0.3798486587054677,8.953635130040789,45780
+256,utility_burden_conflict,plain,50,1.0/m,two_point,0.3534177275188646,1.3723367190720432,40730
+256,utility_burden_conflict,plain,50,1.0/m,uniform,0.3486333046640456,0.0,47180
+256,utility_burden_conflict,plain,50,2.0/m,two_point,0.3534177275188646,1.3723367190720432,52830
+256,utility_burden_conflict,plain,50,2.0/m,uniform,0.3486333046640456,0.0,54080
+256,utility_burden_conflict,plain,100,0.5/m,two_point,0.352391485173137,1.077975184474398,41880
+256,utility_burden_conflict,plain,100,0.5/m,uniform,0.3486333046640456,0.0,39980
+256,utility_burden_conflict,plain,100,1.0/m,two_point,0.3736639763286368,7.179655910588229,42780
+256,utility_burden_conflict,plain,100,1.0/m,uniform,0.3486333046640456,0.0,45480
+256,utility_burden_conflict,plain,100,2.0/m,two_point,0.3534177275188646,1.3723367190720432,54280
+256,utility_burden_conflict,plain,100,2.0/m,uniform,0.35525460031347544,1.8992148945179999,51480
+256,utility_burden_conflict,plain,200,0.5/m,two_point,0.36153788696307865,3.7014772043848048,35880
+256,utility_burden_conflict,plain,200,0.5/m,uniform,0.3486333046640456,0.0,37680
+256,utility_burden_conflict,plain,200,1.0/m,two_point,0.3585775105360822,2.852339618447873,36880
+256,utility_burden_conflict,plain,200,1.0/m,uniform,0.352391485173137,1.077975184474398,37680
+256,utility_burden_conflict,plain,200,2.0/m,two_point,0.3534177275188646,1.3723367190720432,36680
+256,utility_burden_conflict,plain,200,2.0/m,uniform,0.35420923478608424,1.5993681749400883,38480
+256,utility_burden_conflict,"seeded, repair",50,0.5/m,two_point,0.3486333046640456,0.0,3352
+256,utility_burden_conflict,"seeded, repair",50,0.5/m,uniform,0.3486333046640456,0.0,4512
+256,utility_burden_conflict,"seeded, repair",50,1.0/m,two_point,0.3486333046640456,0.0,5412
+256,utility_burden_conflict,"seeded, repair",50,1.0/m,uniform,0.3486333046640456,0.0,7512
+256,utility_burden_conflict,"seeded, repair",50,2.0/m,two_point,0.3486333046640456,0.0,7312
+256,utility_burden_conflict,"seeded, repair",50,2.0/m,uniform,0.3486333046640456,0.0,11112
+256,utility_burden_conflict,"seeded, repair",100,0.5/m,two_point,0.3486333046640456,0.0,3614
+256,utility_burden_conflict,"seeded, repair",100,0.5/m,uniform,0.3486333046640456,0.0,4628
+256,utility_burden_conflict,"seeded, repair",100,1.0/m,two_point,0.3486333046640456,0.0,5129
+256,utility_burden_conflict,"seeded, repair",100,1.0/m,uniform,0.3486333046640456,0.0,7229
+256,utility_burden_conflict,"seeded, repair",100,2.0/m,two_point,0.3486333046640456,0.0,7729
+256,utility_burden_conflict,"seeded, repair",100,2.0/m,uniform,0.3486333046640456,0.0,10829
+256,utility_burden_conflict,"seeded, repair",200,0.5/m,two_point,0.3486333046640456,0.0,3148
+256,utility_burden_conflict,"seeded, repair",200,0.5/m,uniform,0.3486333046640456,0.0,3966
+256,utility_burden_conflict,"seeded, repair",200,1.0/m,two_point,0.3486333046640456,0.0,4566
+256,utility_burden_conflict,"seeded, repair",200,1.0/m,uniform,0.3486333046640456,0.0,6766
+256,utility_burden_conflict,"seeded, repair",200,2.0/m,two_point,0.3486333046640456,0.0,7166
+256,utility_burden_conflict,"seeded, repair",200,2.0/m,uniform,0.3486333046640456,0.0,9566
+256,utility_burden_alignment,plain,50,0.5/m,two_point,0.1798950445053007,0.0,32168
+256,utility_burden_alignment,plain,50,0.5/m,uniform,0.1798950445053007,0.0,38768
+256,utility_burden_alignment,plain,50,1.0/m,two_point,0.1798950445053007,0.0,38818
+256,utility_burden_alignment,plain,50,1.0/m,uniform,0.1798950445053007,0.0,39668
+256,utility_burden_alignment,plain,50,2.0/m,two_point,0.1798950445053007,0.0,44918
+256,utility_burden_alignment,plain,50,2.0/m,uniform,0.1798950445053007,0.0,47118
+256,utility_burden_alignment,plain,100,0.5/m,two_point,0.1798950445053007,0.0,29168
+256,utility_burden_alignment,plain,100,0.5/m,uniform,0.1798950445053007,0.0,30968
+256,utility_burden_alignment,plain,100,1.0/m,two_point,0.1798950445053007,0.0,35768
+256,utility_burden_alignment,plain,100,1.0/m,uniform,0.1798950445053007,0.0,42968
+256,utility_burden_alignment,plain,100,2.0/m,two_point,0.1798950445053007,0.0,42668
+256,utility_burden_alignment,plain,100,2.0/m,uniform,0.1798950445053007,0.0,50668
+256,utility_burden_alignment,plain,200,0.5/m,two_point,0.1816657214020962,0.9842833090065046,32568
+256,utility_burden_alignment,plain,200,0.5/m,uniform,0.1798950445053007,0.0,33568
+256,utility_burden_alignment,plain,200,1.0/m,two_point,0.1816657214020962,0.9842833090065046,32368
+256,utility_burden_alignment,plain,200,1.0/m,uniform,0.1798950445053007,0.0,36568
+256,utility_burden_alignment,plain,200,2.0/m,two_point,0.18199709517575324,1.1684872566851672,41168
+256,utility_burden_alignment,plain,200,2.0/m,uniform,0.1798950445053007,0.0,44368
+256,utility_burden_alignment,"seeded, repair",50,0.5/m,two_point,0.1798950445053007,0.0,2426
+256,utility_burden_alignment,"seeded, repair",50,0.5/m,uniform,0.1798950445053007,0.0,3297
+256,utility_burden_alignment,"seeded, repair",50,1.0/m,two_point,0.1798950445053007,0.0,4048
+256,utility_burden_alignment,"seeded, repair",50,1.0/m,uniform,0.1798950445053007,0.0,4998
+256,utility_burden_alignment,"seeded, repair",50,2.0/m,two_point,0.1798950445053007,0.0,5048
+256,utility_burden_alignment,"seeded, repair",50,2.0/m,uniform,0.1798950445053007,0.0,9198
+256,utility_burden_alignment,"seeded, repair",100,0.5/m,two_point,0.1798950445053007,0.0,2672
+256,utility_burden_alignment,"seeded, repair",100,0.5/m,uniform,0.1798950445053007,0.0,3510
+256,utility_burden_alignment,"seeded, repair",100,1.0/m,two_point,0.1798950445053007,0.0,3913
+256,utility_burden_alignment,"seeded, repair",100,1.0/m,uniform,0.1798950445053007,0.0,6013
+256,utility_burden_alignment,"seeded, repair",100,2.0/m,two_point,0.1798950445053007,0.0,6213
+256,utility_burden_alignment,"seeded, repair",100,2.0/m,uniform,0.1798950445053007,0.0,8813
+256,utility_burden_alignment,"seeded, repair",200,0.5/m,two_point,0.1798950445053007,0.0,2384
+256,utility_burden_alignment,"seeded, repair",200,0.5/m,uniform,0.1798950445053007,0.0,3631
+256,utility_burden_alignment,"seeded, repair",200,1.0/m,two_point,0.1798950445053007,0.0,3838
+256,utility_burden_alignment,"seeded, repair",200,1.0/m,uniform,0.1798950445053007,0.0,5440
+256,utility_burden_alignment,"seeded, repair",200,2.0/m,two_point,0.1798950445053007,0.0,6440
+256,utility_burden_alignment,"seeded, repair",200,2.0/m,uniform,0.1798950445053007,0.0,7240

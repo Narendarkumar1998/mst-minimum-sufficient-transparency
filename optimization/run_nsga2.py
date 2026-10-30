@@ -6,7 +6,7 @@ obtained by enumeration, and with the MST solutions of the four weight profiles.
 Product-form benchmark pools, sizes 12 and 16, replicates 0-9, three regimes,
 four thresholds (240 instance-threshold pairs).
 
-Writes data/optimization/nsga2_pareto.csv and figures/fig_pareto_example.pdf
+Writes data/benchmark_v3/nsga2_pareto.csv and pareto_example.csv
 Usage: python optimization/run_nsga2.py
 """
 
@@ -15,10 +15,6 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-import matplotlib
-
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 
@@ -29,8 +25,8 @@ import benchmark_pools as bp  # noqa: E402
 import ga_pymoo as ga  # noqa: E402
 import methods as m  # noqa: E402
 
-OUT = ROOT / "data" / "optimization" / "nsga2_pareto.csv"
-FIG = ROOT / "figures" / "fig_pareto_example.pdf"
+OUT = ROOT / "data" / "benchmark_v3" / "nsga2_pareto.csv"
+EX_OUT = ROOT / "data" / "benchmark_v3" / "pareto_example.csv"
 SIZES = {12: 2, 16: 4}
 REPLICATES = 10
 
@@ -80,40 +76,22 @@ def analyse(n, si, r, regime, tau, example=False):
     return row
 
 
-plt.rcParams.update({"font.family": "sans-serif", "font.sans-serif": ["Liberation Sans", "DejaVu Sans"],
-                     "font.size": 8, "pdf.fonttype": 42})
-EXAMPLE = (16, 9, "utility_burden_conflict", 0.80)   # chosen as an instance whose four weight profiles give distinct MST solutions
+EXAMPLE = (16, 9, "utility_burden_conflict", 0.80)   # example pool drawn in figures/fig_pareto_example.pdf
 
 
-def figure(ex, tau):
+def save_example(ex):
+    """Every sufficient subset of the example pool with its objectives and membership flags
+    (exact front, NSGA-II solution, MST optimum of each weight profile); drawn by
+    optimization/make_figures_v5.py."""
     inst, feas, front, masks, mst_masks = ex
-    fig, ax = plt.subplots(figsize=(4.8, 3.4))
-    ax.scatter(inst.P[feas], inst.Cn[feas], s=4, color="#d4d2cc", label="sufficient subsets", rasterized=True)
-    ax.scatter(inst.P[front], inst.Cn[front], s=14, color="#2a78d6", label="exact Pareto front")
-    mk = np.array(sorted(masks))
-    ax.scatter(inst.P[mk], inst.Cn[mk], s=34, facecolors="none", edgecolors="#eb6834", lw=1.0,
-               label="NSGA-II solutions")
-    labels = {}
-    for name, sel in mst_masks.items():
-        labels.setdefault(sel, []).append(name.split("_")[0])
-    offsets = [(18, 26), (22, 12), (22, -14), (18, -26)]
-    for k, (sel, names) in enumerate(sorted(labels.items(), key=lambda kv: inst.P[kv[0]])):
-        ax.scatter(inst.P[sel], inst.Cn[sel], s=70, marker="*", color="#0b0b0b", zorder=5)
-        ax.annotate(", ".join(names) + f" ({int(inst.card[sel])} items)", (inst.P[sel], inst.Cn[sel]),
-                    xytext=offsets[k % 4], textcoords="offset points", fontsize=6.5,
-                    arrowprops=dict(arrowstyle="-", lw=0.5, color="#52514e"))
-    fp, fc = inst.P[front], inst.Cn[front]
-    ax.set_xlim(fp.min() - 0.02, fp.max() + 0.10)
-    ax.set_ylim(fc.min() - 0.03, fc.max() + 0.18)
-    ax.set_xlabel("Relative privacy exposure P(S)")
-    ax.set_ylabel("Normalized interpretation cost C(S)")
-    ax.set_title(f"One 16-item pool, tau = {tau}; stars: MST under each weight profile", fontsize=7.5, loc="left")
-    for sp in ("top", "right"):
-        ax.spines[sp].set_visible(False)
-    ax.legend(frameon=False, fontsize=6.5, loc="upper right")
-    fig.tight_layout()
-    fig.savefig(FIG, bbox_inches="tight", dpi=300)
-    plt.close(fig)
+    fr = set(int(x) for x in front)
+    rows = []
+    for k in feas:
+        k = int(k)
+        rows.append(dict(mask=k, P=float(inst.P[k]), C=float(inst.Cn[k]), K=float(inst.K[k]),
+                         items=int(inst.card[k]), on_front=k in fr, nsga2=k in masks,
+                         **{f"mst_{name}": k == v for name, v in mst_masks.items()}))
+    pd.DataFrame(rows).to_csv(EX_OUT, index=False)
 
 
 def main():
@@ -124,7 +102,7 @@ def main():
                 for tau in bp.TAU_LEVELS:
                     if (n, r, regime, tau) == EXAMPLE:
                         row, ex = analyse(n, si, r, regime, tau, example=True)
-                        figure(ex, tau)
+                        save_example(ex)
                     else:
                         row = analyse(n, si, r, regime, tau)
                     if row:

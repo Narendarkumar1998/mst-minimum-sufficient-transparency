@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\caption{Coverage-utility benchmark (24{,}000 conditions, all feasible): paper greedy and greedy with reverse deletion against enumeration, by pool size (gaps in percent). The exact linearization solved with SCIP returned the enumeration subset in 4,800 of 4,800 stratified conditions.}
+\label{tab:S-coverage}
+\footnotesize
+\begin{tabular}{@{}rr cccc ccc@{}}
+\toprule
+$M$ & $N$ & \multicolumn{4}{c}{Greedy (paper)} & \multicolumn{3}{c}{Greedy + deletion} \\ & & opt.\,\% & median & mean & max & opt.\,\% & mean & max \\
+\midrule
+8 & 4,800 & 50.3 & 0.00 & 6.06 & 90.4 & 59.2 & 3.40 & 90.4 \\
+10 & 4,800 & 44.3 & 1.61 & 7.13 & 68.9 & 54.2 & 3.92 & 55.1 \\
+12 & 4,800 & 38.6 & 2.95 & 8.13 & 118.9 & 48.0 & 4.59 & 58.5 \\
+14 & 4,800 & 35.0 & 3.59 & 8.62 & 72.9 & 44.1 & 4.87 & 60.0 \\
+16 & 4,800 & 31.6 & 5.06 & 9.49 & 78.6 & 42.0 & 5.58 & 64.7 \\
+\bottomrule
+\end{tabular}
+\end{table}

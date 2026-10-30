@@ -3,7 +3,7 @@ Exact mixed-integer linear model (product chain with McCormick envelopes) withou
 starting solution, on replicate 0 of the scaling instances (288 conditions), to compare
 with the nonlinear model without a start (scip_* columns of scaling_v2.csv).
 
-Writes data/optimization/milp_cold.csv
+Writes data/benchmark_v3/milp_cold.csv (resumable)
 """
 
 from __future__ import annotations
@@ -40,9 +40,19 @@ def run(job):
 
 if __name__ == "__main__":
     jobs = sorted([(si, n, 0, g) for si, n in enumerate(SIZES) for g in bp.INSTANCE_REGIMES], key=lambda j: -j[1])
+    part = OUT.with_suffix(".partial.csv")
+    done = []
+    if part.exists():                                   # resume after an interruption
+        prev = pd.read_csv(part)
+        done = prev.to_dict("records")
+        have = set(zip(prev.n_items, prev.regime))
+        jobs = [j for j in jobs if (j[1], j[3]) not in have]
     with Pool(2) as pool:
-        res = pool.map(run, jobs, chunksize=1)
-    df = pd.DataFrame([r for rows in res for r in rows])
+        for rows in pool.imap_unordered(run, jobs, chunksize=1):
+            done.extend(rows)
+            pd.DataFrame(done).to_csv(part, index=False)
+    df = pd.DataFrame(done)
     df.to_csv(OUT, index=False)
+    part.unlink(missing_ok=True)
     print(df.groupby("n_items").agg(opt=("milpcold_status", lambda s: (s == "OPTIMAL").mean()),
                                      rt=("milpcold_runtime_s", "median")))

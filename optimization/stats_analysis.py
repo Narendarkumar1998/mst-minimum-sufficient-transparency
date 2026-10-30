@@ -117,8 +117,8 @@ def friedman_cd(G, name):
     for t in range(lo, hi + 1):
         ax.plot([t, t], [y0, y0 + 0.03], color="#0b0b0b", lw=0.8)
         ax.text(t, y0 + 0.06, str(t), ha="center", va="bottom")
-    ax.plot([lo, lo + cd], [0.98, 0.98], color="#eb6834", lw=1.5)
-    ax.text(lo + cd / 2, 1.0, f"CD = {cd:.3f}", ha="center", va="bottom", color="#eb6834")
+    ax.plot([lo, lo + cd], [0.98, 0.98], color="#0b0b0b", lw=1.5)
+    ax.text(lo + cd / 2, 1.0, f"CD = {cd:.3f}", ha="center", va="bottom", color="#0b0b0b")
     items = list(mean_ranks.items())
     half = (len(items) + 1) // 2
     step = 0.7 / max(half, 1)
@@ -139,8 +139,8 @@ def friedman_cd(G, name):
         if j > i and not any(a <= i and j <= b for a, b in cliques):
             cliques.append((i, j))
     for c, (i, j) in enumerate(cliques):
-        yy = y0 - 0.04 - 0.035 * c
-        ax.plot([vals[i] - 0.03, vals[j] + 0.03], [yy, yy], color="#2a78d6", lw=2.2, solid_capstyle="round")
+        yy = y0 - 0.045 - 0.05 * c
+        ax.plot([vals[i] - 0.03, vals[j] + 0.03], [yy, yy], color="#0b0b0b", lw=2.0, solid_capstyle="round")
     fig.savefig(FIG / f"fig_cd_{name}.pdf", bbox_inches="tight")
     plt.close(fig)
     return chi2, p, cd, mean_ranks
